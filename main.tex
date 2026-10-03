@@ -1,0 +1,46 @@
+\documentclass[12pt,a4paper,twoside,openany]{book}
+
+% ================== THÔNG TIN TÀI LIỆU ==================
+\newcommand{\TenTaiLieu}{ÔN THI VÀO 10 CHUYÊN HÓA}
+\newcommand{\TenChuyenDe}{CÔNG CỤ ĐỊNH LƯỢNG TRONG HÓA HỌC}
+\newcommand{\TenTruong}{TRƯỜNG THPT CHUYÊN BẢO LỘC}
+\newcommand{\ToBoMon}{TỔ HÓA - SINH}
+\newcommand{\NamHoc}{2026--2027}
+
+\input{preamble}
+
+\begin{document}
+
+\begin{titlepage}
+\thispagestyle{empty}
+\begin{tikzpicture}[remember picture,overlay]
+  \fill[ChemCyan!7] (current page.north west) rectangle (current page.south east);
+  \fill[ChemCyan] (current page.north west) rectangle ([yshift=-10mm]current page.north east);
+  \fill[ChemBlue] (current page.south west) rectangle ([yshift=7mm]current page.south east);
+\end{tikzpicture}
+\centering
+\vspace*{2.2cm}
+{\large\bfseries \TenTruong\par}
+{\large\bfseries \ToBoMon\par}
+\vspace{2.3cm}
+{\Huge\bfseries\color{ChemBlue}\TenTaiLieu\par}
+\vspace{8mm}
+{\LARGE\bfseries\color{ChemRed}\TenChuyenDe\par}
+\vfill
+{\large Năm học \NamHoc\par}
+\end{titlepage}
+
+\frontmatter
+\tableofcontents
+\mainmatter
+
+\chapter{Công cụ định lượng trong hóa học}
+\chaptertoc
+
+\input{data/buoi01}
+\input{data/buoi02}
+\input{data/buoi03}
+\input{data/buoi04}
+\input{data/baitap_chuyende}
+
+\end{document}
