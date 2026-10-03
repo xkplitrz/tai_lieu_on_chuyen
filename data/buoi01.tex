@@ -1,0 +1,104 @@
+\section{Tính toán và đơn vị}
+
+Trong các bài toán Hóa học, sai đơn vị thường dẫn đến sai toàn bộ phép tính dù phương pháp đúng. Trước khi lập công thức hay thay số, cần tập thói quen đọc kỹ \textbf{đại lượng -- đơn vị -- bậc của số liệu}. Ở cấp THCS và trong các bài toán thực tế, các đơn vị thường gặp nhất là \si{\gram}, \si{\kilo\gram}, \si{\ton}, \si{\milli\liter}, \si{\liter}, \si{\cubic\metre}, cùng các đơn vị nồng độ như \si{\gram\per\liter}, \si{\mole\per\liter}, \si{\kilo\gram\per\cubic\metre}.
+
+\begin{ghinho}
+\textbf{Một số đổi đơn vị cần thuộc:}
+\[
+\SI{1}{\ton}=\SI{1000}{\kilo\gram}=10^6\,\si{\gram},\qquad
+\SI{1}{\cubic\metre}=\SI{1000}{\liter},\qquad
+\SI{1}{\liter}=\SI{1000}{\milli\liter}.
+\]
+\[
+\SI{1}{\kilo\gram\per\cubic\metre}=\SI{1}{\gram\per\liter},\qquad
+\SI{1}{\gram\per\milli\liter}=\SI{1}{\kilo\gram\per\liter}.
+\]
+Khi đổi đơn vị có lũy thừa, phải đổi cả lũy thừa của đơn vị. Ví dụ: \(\SI{1}{\cubic\centi\metre}=\SI{1}{\milli\liter}\) và \(\SI{1}{\cubic\metre}=10^6\,\si{\cubic\centi\metre}\).
+\end{ghinho}
+
+\begin{vidu}
+Một nhà máy cần vận chuyển \SI{2.40}{\ton} nguyên liệu bằng các bao, mỗi bao chứa \SI{25}{\kilo\gram}. Tính số bao cần dùng.
+\end{vidu}
+\begin{loigiai}
+\(\SI{2.40}{\ton}=\SI{2400}{\kilo\gram}\), do đó
+\[
+N=\frac{2400}{25}=96.
+\]
+Vậy cần \(96\) bao.
+\end{loigiai}
+
+\begin{vidu}
+Một bể chứa \SI{3.5}{\cubic\metre} dung dịch. Người ta rót dung dịch vào các can \SI{20}{\liter}. Bỏ qua hao hụt, tối đa rót đầy được bao nhiêu can?
+\end{vidu}
+\begin{loigiai}
+\[
+\SI{3.5}{\cubic\metre}=\SI{3500}{\liter},\qquad N=\frac{3500}{20}=175.
+\]
+\end{loigiai}
+
+\begin{unitbox}
+Cách đổi đơn vị ít sai nhất là dùng \textbf{thừa số chuyển đổi}: nhân số liệu với một phân số có giá trị bằng 1 sao cho đơn vị cần khử xuất hiện ở cả tử và mẫu.
+\[
+\SI{1.8}{\ton}\times\frac{\SI{1000}{\kilo\gram}}{\SI{1}{\ton}}=\SI{1800}{\kilo\gram},
+\]
+\[
+\SI{2.5}{\cubic\metre}\times\frac{\SI{1000}{\liter}}{\SI{1}{\cubic\metre}}=\SI{2500}{\liter}.
+\]
+Trong bài nhiều bước, nên đổi đơn vị trước rồi mới thay số.
+\end{unitbox}
+
+\begin{vidu}
+Khối lượng riêng của ethanol là \SI{0.789}{\gram\per\milli\liter}. Tính khối lượng của \SI{300}{\milli\liter} ethanol theo gam và kilogram.
+\end{vidu}
+\begin{loigiai}
+Từ \(D=m/V\):
+\[
+m=DV=0.789\times300=\SI{236.7}{\gram}=\SI{0.2367}{\kilo\gram}.
+\]
+\end{loigiai}
+
+\begin{casiobox}
+\textbf{CALC:} dùng khi một biểu thức giữ nguyên nhưng cần tính với nhiều bộ giá trị.\par
+\textbf{SOLVE:} dùng để tìm nghiệm gần đúng của phương trình một ẩn sau khi đã thiết lập đúng phương trình từ dữ kiện Hóa học.\par
+\textbf{Số dạng khoa học:} nên dùng phím \key{\(\times10^x\)} để nhập các số có nhiều chữ số 0.\par
+\textbf{CONV:} có thể dùng để kiểm tra một số phép đổi đơn vị vật lí có sẵn trên máy. Các phép đổi mang bản chất hóa học, chẳng hạn \si{\mole\per\liter} sang \si{\gram\per\liter}, vẫn phải dựa vào khối lượng mol.
+\end{casiobox}
+
+\begin{vidu}
+Dung dịch \ce{NaCl} có \(C_M=\SI{0.53}{\mole\per\liter}\). Tính nồng độ khối lượng theo \si{\gram\per\liter}. Cho \(M_{\ce{NaCl}}=\SI{58.5}{\gram\per\mole}\).
+\end{vidu}
+\begin{loigiai}
+Trong \SI{1}{\liter} dung dịch có \SI{0.53}{\mole} \ce{NaCl}:
+\[
+m=0.53\times58.5\approx\SI{31.0}{\gram}.
+\]
+Vậy nồng độ khối lượng xấp xỉ \SI{31.0}{\gram\per\liter}.
+\end{loigiai}
+
+\begin{tuluyen}
+Chuyển đổi các đại lượng sau:
+\begin{tasks}(2)
+\task \SI{4.25}{\ton} sang \si{\kilo\gram}.
+\task \SI{780}{\kilo\gram} sang \si{\ton}.
+\task \SI{2.70}{\cubic\metre} sang \si{\liter}.
+\task \SI{1250}{\liter} sang \si{\cubic\metre}.
+\task \SI{1.35}{\gram\per\milli\liter} sang \si{\kilo\gram\per\liter}.
+\task \SI{480}{\milli\gram} sang \si{\gram}.
+\end{tasks}
+\dapso{\SI{4250}{\kilo\gram}; \SI{0.780}{\ton}; \SI{2700}{\liter}; \SI{1.250}{\cubic\metre}; \SI{1.35}{\kilo\gram\per\liter}; \SI{0.480}{\gram}.}
+\end{tuluyen}
+
+\begin{tuluyen}
+Một bồn chứa \SI{6.0}{\cubic\metre} nước. Mỗi ngày sử dụng \SI{750}{\liter}. Nếu không bổ sung, bồn đủ dùng trong bao nhiêu ngày?
+\dapso{8 ngày.}
+\end{tuluyen}
+
+\begin{tuluyen}
+Một dung dịch có khối lượng riêng \SI{1.20}{\gram\per\milli\liter}. Tính khối lượng của \SI{2.5}{\liter} dung dịch theo kilogram.
+\dapso{\SI{3.00}{\kilo\gram}.}
+\end{tuluyen}
+
+\begin{tuluyen}
+Một mẫu không khí \SI{50}{\liter} chứa \SI{0.012}{\milli\gram} \ce{SO2}. Tính nồng độ khối lượng theo \si{\milli\gram\per\cubic\metre}.
+\dapso{\SI{0.24}{\milli\gram\per\cubic\metre}.}
+\end{tuluyen}
