@@ -1,0 +1,100 @@
+\section{Chất dư, hiệu suất và độ tinh khiết}
+
+Trong thực tế, chất phản ứng có thể được dùng dư, nguyên liệu có thể chứa tạp chất và phản ứng thường không đạt hiệu suất \(100\%\).
+
+\subsection{Chất hết và chất dư}
+\begin{ghinho}
+Với phản ứng \(a\ce{A}+b\ce{B}\to\text{sản phẩm}\), so sánh
+\[
+\frac{n_{\ce{A}}}{a}\quad\text{và}\quad\frac{n_{\ce{B}}}{b}.
+\]
+Chất có giá trị nhỏ hơn là chất hết trước và quyết định lượng sản phẩm tối đa.
+\end{ghinho}
+
+\begin{vidu}
+Trộn \SI{0.30}{\mole} \ce{NaOH} với \SI{0.20}{\mole} \ce{H2SO4}:
+\[
+\ce{H2SO4 + 2NaOH -> Na2SO4 + 2H2O}.
+\]
+Xác định chất còn dư sau phản ứng.
+\end{vidu}
+\begin{loigiai}
+\[
+\frac{0.20}{1}=0.20,\qquad \frac{0.30}{2}=0.15.
+\]
+\ce{NaOH} hết trước. Số mol \ce{H2SO4} đã phản ứng là \SI{0.15}{\mole}, nên \ce{H2SO4} còn dư \SI{0.05}{\mole}.
+\end{loigiai}
+
+\subsection{Hiệu suất và độ tinh khiết}
+\begin{ghinho}
+\[
+H=\frac{\text{lượng thực tế}}{\text{lượng lý thuyết}}\times100\%,
+\qquad
+m_{\text{chất tinh khiết}}=m_{\text{mẫu}}\times\frac{w}{100}.
+\]
+Khi tính ngược lượng nguyên liệu cần dùng:
+\[
+\text{lượng lý thuyết cần}=\frac{\text{lượng thực tế cần}}{H/100}.
+\]
+\end{ghinho}
+
+\begin{vidu}
+Quặng bauxite chứa \(80\%\) \ce{Al2O3}; chỉ \(85\%\) lượng \ce{Al2O3} chuyển thành Al. Tính khối lượng quặng tối thiểu để thu được \SI{5.40}{\ton} Al. Cho \(M_{\ce{Al2O3}}=102\), \(M_{\ce{Al}}=27\) g/mol.
+\source{Phỏng theo câu sản xuất aluminium từ bauxite, đề chuyên Hóa Lâm Đồng 2026.}
+\end{vidu}
+\begin{loigiai}
+Theo tỉ lệ \(102\) g \ce{Al2O3} \(\to54\) g Al:
+\[
+m_{\ce{Al2O3}}=5.40\times\frac{102}{54}\times\frac{1}{0.85}=\SI{12.0}{\ton}.
+\]
+Do quặng chứa \(80\%\) \ce{Al2O3}:
+\[
+m_{\text{quặng}}=\frac{12.0}{0.80}=\SI{15.0}{\ton}.
+\]
+\end{loigiai}
+
+\begin{vidu}
+Dùng \SI{1.8}{\ton} gạo chứa \(75\%\) tinh bột để sản xuất glucose:
+\[
+\ce{(C6H10O5)n + nH2O -> nC6H12O6}.
+\]
+Hiệu suất quá trình là \(80\%\). Tính khối lượng glucose thu được. Biết tỉ lệ khối lượng \(162\to180\).
+\source{Phỏng theo bài sản xuất dung dịch truyền G-5, đề chuyên Hóa Lâm Đồng 2026.}
+\end{vidu}
+\begin{loigiai}
+\[
+m_{\text{tinh bột}}=1.8\times0.75=\SI{1.35}{\ton}.
+\]
+Glucose lý thuyết:
+\[
+1.35\times\frac{180}{162}=\SI{1.50}{\ton}.
+\]
+Thực tế:
+\[
+1.50\times0.80=\SI{1.20}{\ton}.
+\]
+\end{loigiai}
+
+\begin{casiobox}
+Với bài có nhiều hệ số phần trăm, nên nhập một biểu thức duy nhất để hạn chế làm tròn. Khi đại lượng cần tìm nằm trong phương trình có nhiều hệ số, có thể dùng \key{SOLVE}, nhưng trước tiên phải lập đúng phương trình từ dữ kiện.
+\end{casiobox}
+
+\begin{tuluyen}
+Cho \SI{13}{\gram} Zn phản ứng với \SI{10.95}{\gram} \ce{HCl}. Xác định chất hết và thể tích \ce{H2} ở \(V_m=\SI{24.8}{\liter\per\mole}\).
+\dapso{\ce{HCl} hết; \SI{3.72}{\liter} \ce{H2}.}
+\end{tuluyen}
+
+\begin{tuluyen}
+Nung \SI{2.0}{\ton} đá vôi chứa \(90\%\) \ce{CaCO3}. Phản ứng phân hủy hoàn toàn. Tính khối lượng \ce{CaO}.
+\dapso{\SI{1.008}{\ton}.}
+\end{tuluyen}
+
+\begin{tuluyen}
+Từ \SI{1.00}{\ton} \ce{Fe2O3} tinh khiết, thực tế thu được \SI{0.63}{\ton} Fe. Tính hiệu suất. Cho \(M_{\ce{Fe2O3}}=160\), \(M_{\ce{Fe}}=56\) g/mol.
+\dapso{\(90\%\).}
+\end{tuluyen}
+
+\begin{tuluyen}
+Quặng chứa \(80\%\) \ce{ZnS}. Từ \SI{1.50}{\ton} quặng, quá trình \ce{ZnS -> ZnO -> Zn} đạt hiệu suất toàn quá trình \(90\%\). Tính khối lượng Zn. Cho \(M_{\ce{ZnS}}=97\), \(M_{\ce{Zn}}=65\) g/mol.
+\dapso{\(\approx\SI{0.724}{\ton}\).}
+\end{tuluyen}
