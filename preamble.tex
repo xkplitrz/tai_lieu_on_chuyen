@@ -1,0 +1,283 @@
+% =============================================================
+% PREAMBLE - TAI LIEU ON THI VAO 10 CHUYEN HOA
+% LuaLaTeX recommended
+% Visual language adapted from the supplied Mathematics sample,
+% simplified for Chemistry and backward-design teaching materials.
+% =============================================================
+
+% ---------- Vietnamese + fonts ----------
+\usepackage[vietnamese]{babel}
+\usepackage{fontspec}
+\usepackage{unicode-math}
+\IfFontExistsTF{TeX Gyre Termes}{
+  \setmainfont{TeX Gyre Termes}
+}{
+  \setmainfont{Latin Modern Roman}
+}
+\IfFontExistsTF{TeX Gyre Termes Math}{
+  \setmathfont{TeX Gyre Termes Math}
+}{
+  \setmathfont{Latin Modern Math}
+}
+
+% ---------- Page + typography ----------
+\usepackage[a4paper,left=1.65cm,right=1.45cm,top=1.70cm,bottom=1.55cm,
+            headsep=5mm,footskip=8mm]{geometry}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{2.2pt plus 0.5pt minus 0.3pt}
+\linespread{1.03}
+\usepackage{microtype}
+\usepackage{setspace}
+\usepackage{ragged2e}
+
+% ---------- Mathematics ----------
+\usepackage{amsmath,mathtools}
+\allowdisplaybreaks
+\usepackage{xfrac}
+\usepackage{cancel}
+
+% ---------- Chemistry packages (kept from the user's Chemistry setup) ----------
+\usepackage{chemfig}
+\setchemfig{atom sep=18pt}
+\newcommand{\cfig}{\chemfig}
+\usepackage{xymtexpdf}
+\usepackage[version=4]{mhchem}
+\usepackage{chemmacros}
+\RenewChemPhase\gas{k}
+
+% ---------- SI units (adapted from the user's Chemistry setup) ----------
+\usepackage{siunitx}
+\sisetup{
+  retain-explicit-plus,
+  output-decimal-marker={,},
+  exponent-product={\cdot},
+  range-phrase=\text{--},
+  list-units=single,
+  list-final-separator=\text{ và },
+  per-mode=symbol
+}
+\DeclareSIUnit\mola{\mole\per\liter}
+\DeclareSIUnit\Mola{M}
+\DeclareSIUnit\rates{\mole\per\liter\per\second}
+\DeclareSIUnit\ratem{mol\,L^{-1}\,phút^{-1}}
+\DeclareSIUnit\rateh{mol\,L^{-1}\,giờ^{-1}}
+\DeclareSIUnit\rconstsec{\liter\per\mole\per\second}
+\DeclareSIUnit\klr{\gram\per\cubic\centi\metre}
+\DeclareSIUnit\klrl{\gram\per\milli\liter}
+\DeclareSIUnit\cpm{\joule\per\kelvin\per\mole}
+\DeclareSIUnit\cps{\joule\per\kelvin\per\gram}
+\DeclareSIUnit\dc{\degreeCelsius}
+\DeclareSIUnit\pm{\pico\metre}
+\DeclareSIUnit\nm{\nano\metre}
+\DeclareSIUnit\hou{giờ}
+\DeclareSIUnit\minu{phút}
+\DeclareSIUnit\day{ngày}
+\DeclareSIUnit\yea{năm}
+\DeclareSIUnit\amu{u}
+\DeclareSIUnit\kjm{\kilo\joule\per\mole}
+\DeclareSIUnit\kv{\kelvin}
+\DeclareSIUnit\ml{\milli\liter}
+\DeclareSIUnit\pc{\percent}
+\DeclareSIUnit\atm{atm}
+\DeclareSIUnit\barunit{bar}
+\DeclareSIUnit\mmHg{mmHg}
+\DeclareSIUnit\ev{\electronvolt}
+\DeclareSIUnit\mps{\metre\per\second}
+\DeclareSIUnit\kpa{\kilo\pascal}
+\DeclareSIUnit\ton{tấn}
+
+% Convenience chemistry notation
+\newcommand{\dd}{\text{dd}}
+\newcommand{\kt}{\text{kết tủa}}
+\newcommand{\du}{\text{dư}}
+\newcommand{\HieuSuat}{H}
+\newcommand{\Cpercent}{C\%}
+\newcommand{\CM}{C_{\mathrm{M}}}
+
+% ---------- Tables, lists, graphics ----------
+\usepackage{graphicx}
+\usepackage{booktabs,longtable,multirow,makecell,array,tabularx}
+\renewcommand{\arraystretch}{1.18}
+\setlength{\tabcolsep}{5pt}
+\newcolumntype{Y}{>{\RaggedRight\arraybackslash}X}
+\newcolumntype{C}[1]{>{\Centering\arraybackslash}p{#1}}
+\usepackage[inline]{enumitem}
+\setlist{nosep,leftmargin=*}
+\setlist[enumerate,1]{label=\alph*),ref=\alph*)}
+\usepackage{tasks}
+\settasks{label-width=18pt,item-indent=0pt,column-sep=1em,after-item-skip=1pt}
+
+% ---------- Color + drawing ----------
+\usepackage{xcolor}
+\definecolor{ChemCyan}{HTML}{0097A7}
+\definecolor{ChemBlue}{HTML}{0D47A1}
+\definecolor{ChemRed}{HTML}{B71C1C}
+\definecolor{ChemOrange}{HTML}{EF6C00}
+\definecolor{ChemGreen}{HTML}{2E7D32}
+\definecolor{ChemViolet}{HTML}{6A1B9A}
+\definecolor{ChemGray}{HTML}{455A64}
+\definecolor{ChemLight}{HTML}{F5F8FA}
+\usepackage{tikz}
+\usetikzlibrary{calc,positioning,arrows.meta,shapes.geometric,shadows.blur}
+\usepackage[most]{tcolorbox}
+\usepackage{fontawesome5}
+
+% ---------- Links / TOC ----------
+\usepackage[hidelinks,unicode]{hyperref}
+\usepackage{bookmark}
+\usepackage{etoc}
+
+% ---------- Header / footer, simplified from Mathematics sample ----------
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\setlength{\headheight}{14pt}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\fancyhead[LE]{\small\color{ChemViolet}\nouppercase{\leftmark}}
+\fancyhead[RO]{\small\color{ChemViolet}\nouppercase{\rightmark}}
+\fancyhead[LO,RE]{\small\color{ChemGray}Ôn thi vào 10 chuyên Hóa}
+\fancyfoot[C]{\small\color{ChemGray}\thepage/\pageref{LastPage}}
+\fancyfoot[LE,RO]{\small\color{ChemCyan}\faFlask\, HÓA HỌC}
+\fancyheadoffset{0pt}
+
+% thin decorative rules
+\AddToHook{shipout/background}{%
+\begin{tikzpicture}[remember picture,overlay]
+  \draw[ChemCyan,line width=.55pt]
+    ([yshift=-1.15cm]current page.north west) --
+    ([yshift=-1.15cm]current page.north east);
+  \draw[ChemCyan!60,line width=.45pt]
+    ([yshift=1.05cm]current page.south west) --
+    ([yshift=1.05cm]current page.south east);
+\end{tikzpicture}%
+}
+
+% ---------- Chapter / section styling ----------
+\usepackage[explicit]{titlesec}
+\titleformat{\chapter}[display]
+  {\normalfont\bfseries\color{ChemBlue}}
+  {\begin{tikzpicture}[baseline=(n.base)]
+     \node[fill=ChemCyan,text=white,rounded corners=3pt,
+           inner xsep=8pt,inner ysep=4pt,font=\Large\bfseries] (n)
+           {CHUYÊN ĐỀ \thechapter};
+   \end{tikzpicture}}
+  {6pt}
+  {\Huge #1}
+\titlespacing*{\chapter}{0pt}{-8pt}{12pt}
+
+\titleformat{\section}
+  {\Large\bfseries\color{ChemRed}}
+  {\thesection.}{.5em}{#1}
+\titlespacing*{\section}{0pt}{11pt}{5pt}
+
+\titleformat{\subsection}
+  {\large\bfseries\color{ChemBlue}}
+  {\thesubsection.}{.5em}{#1}
+\titlespacing*{\subsection}{0pt}{8pt}{4pt}
+
+% ---------- Môi trường trình bày nội dung ----------
+% Thiết kế ngược vẫn được dùng ở tầng biên soạn, nhưng tên gọi trong tài liệu
+% giữ theo phong cách sách học: Ví dụ -> Ghi nhớ -> Bài tập tự luyện.
+
+\newcounter{vidu}[section]
+\renewcommand{\thevidu}{\arabic{vidu}}
+\newtcolorbox[use counter=vidu]{vidu}[1][]{
+  enhanced,breakable,sharp corners,
+  colback=ChemRed!2,colframe=ChemRed!72!black,boxrule=.65pt,
+  left=2mm,right=2mm,top=1.5mm,bottom=1.5mm,
+  before skip=5pt,after skip=3pt,
+  title={VÍ DỤ \thevidu},fonttitle=\bfseries,
+  coltitle=white,colbacktitle=ChemRed!82!black,#1
+}
+
+\newtcolorbox{loigiai}[1][]{
+  enhanced,breakable,frame hidden,
+  borderline west={1.4pt}{0pt}{ChemCyan!75!black},
+  colback=ChemCyan!2,
+  left=3mm,right=2mm,top=1mm,bottom=1mm,
+  before skip=1pt,after skip=5pt,
+  title={Lời giải},fonttitle=\bfseries\color{ChemBlue},
+  coltitle=ChemBlue,colbacktitle=ChemCyan!2,#1
+}
+
+\newtcolorbox{ghinho}[1][]{
+  enhanced,breakable,arc=1.5pt,
+  colback=ChemBlue!3,colframe=ChemBlue!65!black,boxrule=.55pt,
+  left=2mm,right=2mm,top=1.5mm,bottom=1.5mm,
+  title={GHI NHỚ},fonttitle=\bfseries,
+  coltitle=white,colbacktitle=ChemBlue!82!black,#1
+}
+
+\newtcolorbox{casiobox}[1][]{
+  enhanced,breakable,arc=1.5pt,
+  colback=ChemViolet!3,colframe=ChemViolet!72!black,boxrule=.6pt,
+  left=2mm,right=2mm,top=1.5mm,bottom=1.5mm,
+  title={SỬ DỤNG MÁY TÍNH CASIO},fonttitle=\bfseries,
+  coltitle=white,colbacktitle=ChemViolet!82!black,#1
+}
+
+\newtcolorbox{unitbox}[1][]{
+  enhanced,breakable,arc=1.5pt,
+  colback=ChemGreen!3,colframe=ChemGreen!67!black,boxrule=.6pt,
+  left=2mm,right=2mm,top=1.5mm,bottom=1.5mm,
+  title={ĐỔI ĐƠN VỊ},fonttitle=\bfseries,
+  coltitle=white,colbacktitle=ChemGreen!80!black,#1
+}
+
+\newcounter{tuluyen}[section]
+\renewcommand{\thetuluyen}{\arabic{tuluyen}}
+\newtcolorbox[use counter=tuluyen]{tuluyen}[1][]{
+  enhanced,breakable,sharp corners,
+  colback=yellow!2,colframe=ChemCyan!78!black,boxrule=.5pt,
+  left=2mm,right=2mm,top=1.5mm,bottom=1.5mm,
+  title={BÀI TẬP TỰ LUYỆN \thetuluyen},fonttitle=\bfseries,
+  coltitle=ChemBlue,colbacktitle=ChemCyan!10,#1
+}
+
+\newcommand{\dapso}[1]{%
+  \par\smallskip{\footnotesize\color{ChemGray}\textbf{Đáp số:} #1}\par
+}
+
+\newtcolorbox{thuthach}[1][]{
+  enhanced,breakable,sharp corners,
+  colback=black!2,colframe=ChemGray,boxrule=.65pt,
+  left=2mm,right=2mm,top=1.5mm,bottom=1.5mm,
+  title={BÀI TOÁN THỬ THÁCH},fonttitle=\bfseries,
+  coltitle=white,colbacktitle=ChemGray,#1
+}
+
+\newtcolorbox{notechem}[1][]{
+  enhanced,breakable,frame hidden,
+  borderline west={2pt}{0pt}{ChemCyan},
+  colback=ChemCyan!4,left=3mm,right=2mm,top=1mm,bottom=1mm,
+  #1
+}
+
+% ---------- Source / skill tags ----------
+\newcommand{\source}[1]{\par\smallskip{\footnotesize\color{ChemGray}\textit{Nguồn/kiểu bài: #1}}}
+\newcommand{\skill}[1]{\tcbox[on line,boxsep=.5pt,left=2pt,right=2pt,top=1pt,bottom=1pt,
+  colback=ChemCyan!8,colframe=ChemCyan!45!black]{\scriptsize\bfseries #1}}
+
+% ---------- CASIO key notation ----------
+\newcommand{\key}[1]{\tcbox[on line,boxsep=.2pt,left=2pt,right=2pt,top=.6pt,bottom=.6pt,
+  colback=black!4,colframe=black!55,arc=1pt]{\sffamily\scriptsize #1}}
+\newcommand{\casioseq}[1]{\texttt{#1}}
+
+% ---------- Useful Chemistry display helpers ----------
+\newcommand{\rxn}[1]{\[\ce{#1}\]}
+\newcommand{\given}[1]{\textbf{Dữ kiện:} #1}
+\newcommand{\ask}[1]{\textbf{Yêu cầu:} #1}
+\newcommand{\result}[1]{\hfill\textbf{Kết quả: }#1}
+
+% ---------- A compact chapter-local TOC ----------
+\newcommand{\chaptertoc}{%
+  \begin{tcolorbox}[colback=black!1,colframe=black!18,boxrule=.4pt,
+    title={Nội dung chuyên đề},fonttitle=\bfseries,coltitle=ChemBlue,
+    colbacktitle=black!2]
+  \etocsettocstyle{}{}
+  \etocsetnexttocdepth{section}
+  \localtableofcontents
+  \end{tcolorbox}
+}
