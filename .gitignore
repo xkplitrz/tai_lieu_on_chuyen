@@ -1,0 +1,37 @@
+# ===== LaTeX build files =====
+*.aux
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.xdv
+*.bcf
+*.run.xml
+*.blg
+*.bbl
+*.idx
+*.ilg
+*.ind
+*.nav
+*.snm
+*.vrb
+
+# ===== Generated PDF =====
+*.pdf
+
+# ===== Temporary / editor files =====
+*.tmp
+*.bak
+*.swp
+*.swo
+*~
+.DS_Store
+
+# ===== Build folders =====
+build/
+out/
+output/
