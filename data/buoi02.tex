@@ -1,0 +1,94 @@
+\section{Phương trình hóa học và tính theo phương trình}
+
+Sau khi đổi dữ kiện về các đại lượng thích hợp, mối liên hệ giữa các chất được xác định bởi \textbf{tỉ lệ hệ số trong phương trình hóa học đã cân bằng}.
+
+\begin{ghinho}
+Quy trình cơ bản:
+\begin{enumerate}
+\item Viết và cân bằng phương trình hóa học.
+\item Đổi dữ kiện về số mol nếu cần.
+\item Dùng tỉ lệ hệ số để tìm số mol chất cần tính.
+\item Đổi số mol về đại lượng đề yêu cầu.
+\item Kiểm tra đơn vị và độ lớn kết quả.
+\end{enumerate}
+\end{ghinho}
+
+\begin{vidu}
+Cho \SI{13}{\gram} Zn phản ứng hoàn toàn với dung dịch \ce{HCl} dư:
+\[
+\ce{Zn + 2HCl -> ZnCl2 + H2}.
+\]
+Tính thể tích \ce{H2} thu được ở điều kiện \(V_m=\SI{24.8}{\liter\per\mole}\). Cho \(M_{\ce{Zn}}=65\) g/mol.
+\end{vidu}
+\begin{loigiai}
+\[
+n_{\ce{Zn}}=\frac{13}{65}=\SI{0.20}{\mole}.
+\]
+Theo phương trình, \(n_{\ce{H2}}=\SI{0.20}{\mole}\), nên
+\[
+V_{\ce{H2}}=0.20\times24.8=\SI{4.96}{\liter}.
+\]
+\end{loigiai}
+
+\begin{vidu}
+Đốt cháy hoàn toàn \SI{1.5}{\ton} quặng sphalerite chứa \(80\%\) \ce{ZnS}:
+\[
+\ce{2ZnS + 3O2 -> 2ZnO + 2SO2}.
+\]
+Tính khối lượng \ce{ZnO} tối đa thu được. Cho \(M_{\ce{ZnS}}=97\), \(M_{\ce{ZnO}}=81\) g/mol.
+\source{Phỏng theo bài luyện Zn từ quặng sphalerite, đề chuyên Hóa Lâm Đồng 2026.}
+\end{vidu}
+\begin{loigiai}
+\[
+m_{\ce{ZnS}}=1.5\times0.80=\SI{1.20}{\ton}.
+\]
+Vì tỉ lệ mol \(\ce{ZnS}:\ce{ZnO}=1:1\):
+\[
+m_{\ce{ZnO}}=1.20\times\frac{81}{97}\approx\SI{1.00}{\ton}.
+\]
+\end{loigiai}
+
+\begin{casiobox}
+Trong bài nhiều bước, nên giữ một biểu thức tính hoàn chỉnh rồi mới bấm máy để giảm sai số do làm tròn trung gian. Ví dụ:
+\[
+1.5\times0.80\times\frac{81}{97}.
+\]
+Nếu cần thử nhiều giá trị phần trăm quặng khác nhau, có thể nhập biểu thức theo biến rồi dùng \key{CALC}.
+\end{casiobox}
+
+\begin{vidu}
+Đốt cháy hoàn toàn \SI{5.4}{\gram} Al:
+\[
+\ce{4Al + 3O2 -> 2Al2O3}.
+\]
+Tính khối lượng \ce{Al2O3} thu được. Cho \(M_{\ce{Al}}=27\), \(M_{\ce{Al2O3}}=102\) g/mol.
+\end{vidu}
+\begin{loigiai}
+\[
+n_{\ce{Al}}=\frac{5.4}{27}=\SI{0.20}{\mole},\qquad
+n_{\ce{Al2O3}}=\frac{2}{4}\times0.20=\SI{0.10}{\mole}.
+\]
+\[
+m_{\ce{Al2O3}}=0.10\times102=\SI{10.2}{\gram}.
+\]
+\end{loigiai}
+
+\begin{tuluyen}
+Cho \SI{11.2}{\gram} Fe phản ứng hoàn toàn với \ce{HCl} dư. Tính số mol và thể tích \ce{H2} ở \(V_m=\SI{24.8}{\liter\per\mole}\). Cho \(M_{\ce{Fe}}=56\) g/mol.
+\dapso{\SI{0.20}{\mole}; \SI{4.96}{\liter}.}
+\end{tuluyen}
+
+\begin{tuluyen}
+Nung \SI{500}{\kilo\gram} \ce{CaCO3} tinh khiết: \(\ce{CaCO3 -> CaO + CO2}\). Tính khối lượng \ce{CaO} tối đa. Cho \(M_{\ce{CaCO3}}=100\), \(M_{\ce{CaO}}=56\) g/mol.
+\dapso{\SI{280}{\kilo\gram}.}
+\end{tuluyen}
+
+\begin{tuluyen}
+Từ \SI{2.00}{\ton} \ce{Fe2O3} tinh khiết, khử hoàn toàn bằng CO: \(\ce{Fe2O3 + 3CO -> 2Fe + 3CO2}\). Tính khối lượng Fe tối đa. Cho \(M_{\ce{Fe2O3}}=160\), \(M_{\ce{Fe}}=56\) g/mol.
+\dapso{\SI{1.40}{\ton}.}
+\end{tuluyen}
+
+\begin{tuluyen}
+Dùng \SI{800}{\kilo\gram} \ce{ZnS} tinh khiết để sản xuất Zn theo hai bước \ce{ZnS -> ZnO -> Zn}. Giả sử các phản ứng hoàn toàn. Tính khối lượng Zn. Cho \(M_{\ce{ZnS}}=97\), \(M_{\ce{Zn}}=65\) g/mol.
+\dapso{\(\approx\SI{536}{\kilo\gram}\).}
+\end{tuluyen}
