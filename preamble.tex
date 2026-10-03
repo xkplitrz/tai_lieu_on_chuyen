@@ -105,7 +105,14 @@
 \setlist{nosep,leftmargin=*}
 \setlist[enumerate,1]{label=\alph*),ref=\alph*)}
 \usepackage{tasks}
-\settasks{label-width=18pt,item-indent=0pt,column-sep=1em,after-item-skip=1pt}
+\settasks{
+  label=\alph*),
+  label-width=18pt,
+  label-offset=4pt,
+  item-indent=24pt,
+  column-sep=1em,
+  after-item-skip=1pt
+}
 
 % ---------- Color + drawing ----------
 \usepackage{xcolor}
@@ -193,13 +200,18 @@
 }
 
 \newtcolorbox{loigiai}[1][]{
-  enhanced,breakable,frame hidden,
-  borderline west={1.4pt}{0pt}{ChemCyan!75!black},
-  colback=ChemCyan!2,
-  left=3mm,right=2mm,top=1mm,bottom=1mm,
+  enhanced,breakable,sharp corners,
+  colback=ChemCyan!1.5,
+  colframe=ChemCyan!52!black,
+  boxrule=.32pt,
+  left=2.4mm,right=2.4mm,top=1.2mm,bottom=1.4mm,
   before skip=1pt,after skip=5pt,
-  title={Lời giải},fonttitle=\bfseries\color{ChemBlue},
-  coltitle=ChemBlue,colbacktitle=ChemCyan!2,#1
+  title={Lời giải},
+  fonttitle=\bfseries\color{ChemBlue},
+  coltitle=ChemBlue,
+  colbacktitle=ChemCyan!1.5,
+  titlerule=0pt,
+  #1
 }
 
 \newtcolorbox{ghinho}[1][]{
@@ -226,26 +238,22 @@
   coltitle=white,colbacktitle=ChemGreen!80!black,#1
 }
 
-\newcounter{tuluyen}[section]
+\newcounter{tuluyen}[chapter]
 \renewcommand{\thetuluyen}{\arabic{tuluyen}}
-\newtcolorbox[use counter=tuluyen]{tuluyen}[1][]{
-  enhanced,breakable,sharp corners,
-  colback=yellow!2,colframe=ChemCyan!78!black,boxrule=.5pt,
-  left=2mm,right=2mm,top=1.5mm,bottom=1.5mm,
-  title={BÀI TẬP TỰ LUYỆN \thetuluyen},fonttitle=\bfseries,
-  coltitle=ChemBlue,colbacktitle=ChemCyan!10,#1
+\newenvironment{tuluyen}{%
+  \refstepcounter{tuluyen}%
+  \par\medskip\noindent
+  \textbf{\color{ChemBlue}Bài \thetuluyen.}\enspace
+  \ignorespaces
+}{%
+  \par\smallskip
 }
+
+% Lời giải bài tập được lưu trong mã nguồn nhưng không in ra bản học sinh.
+\NewDocumentEnvironment{loigiaiBT}{+b}{}{}
 
 \newcommand{\dapso}[1]{%
   \par\smallskip{\footnotesize\color{ChemGray}\textbf{Đáp số:} #1}\par
-}
-
-\newtcolorbox{thuthach}[1][]{
-  enhanced,breakable,sharp corners,
-  colback=black!2,colframe=ChemGray,boxrule=.65pt,
-  left=2mm,right=2mm,top=1.5mm,bottom=1.5mm,
-  title={BÀI TOÁN THỬ THÁCH},fonttitle=\bfseries,
-  coltitle=white,colbacktitle=ChemGray,#1
 }
 
 \newtcolorbox{notechem}[1][]{
