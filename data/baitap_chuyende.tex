@@ -92,8 +92,385 @@ Xăng E10 chứa \(10\%\) ethanol theo thể tích, phần còn lại có \(D=\S
 \dapso{\SI{1.10}{\kilo\gram}.}
 \end{tuluyen}
 
-\begin{thuthach}
+\begin{tuluyen}
 Một nhà máy dùng \SI{1.5}{\ton} quặng sphalerite chứa \(80\%\) \ce{ZnS}. Toàn bộ \ce{ZnS} được đốt thành \ce{SO2}: \(\ce{2ZnS + 3O2 -> 2ZnO + 2SO2}\). Toàn bộ \ce{SO2} dùng sản xuất \ce{H2SO4}; hiệu suất từ \ce{SO2} đến \ce{H2SO4} là \(80\%\). Sản phẩm cuối là dung dịch \ce{H2SO4} \(98\%\), \(D=\SI{1.84}{\gram\per\milli\liter}\). Tính thể tích dung dịch acid. Cho \(M_{\ce{ZnS}}=97\), \(M_{\ce{H2SO4}}=98\) g/mol.
 \source{Phỏng theo Câu 4.2b, đề chuyên Hóa Lâm Đồng 2026.}
 \dapso{\(\approx\SI{0.538}{\cubic\metre}\), tức khoảng \SI{538}{\liter}.}
-\end{thuthach}
+\begin{loigiaiBT}
+Khối lượng \ce{ZnS} tinh khiết:
+\[
+m_{\ce{ZnS}}=1.5\times0.80=\SI{1.20}{\ton}.
+\]
+Theo sơ đồ phản ứng, \(1\) mol \ce{ZnS} tạo \(1\) mol \ce{SO2}, rồi \(1\) mol \ce{SO2} tạo \(1\) mol \ce{H2SO4}. Vì vậy
+\[
+m_{\ce{H2SO4,lt}}=1.20\times\frac{98}{97}\approx\SI{1.212}{\ton}.
+\]
+Tính hiệu suất \(80\%\):
+\[
+m_{\ce{H2SO4}}=1.212\times0.80\approx\SI{0.970}{\ton}.
+\]
+Khối lượng dung dịch acid \(98\%\):
+\[
+m_{\text{dd}}=\frac{0.970}{0.98}\approx\SI{0.990}{\ton}=\SI{990}{\kilo\gram}.
+\]
+Với \(D=\SI{1.84}{\kilo\gram\per\liter}\):
+\[
+V=\frac{990}{1.84}\approx\SI{538}{\liter}=\SI{0.538}{\cubic\metre}.
+\]
+\end{loigiaiBT}
+\end{tuluyen}
+
+
+\subsection{Vận dụng cao}
+
+\begin{tuluyen}
+Trong công nghiệp, nhôm được sản xuất từ quặng bauxite. Một mẫu quặng đã làm giàu chứa \(80\%\) \ce{Al2O3} theo khối lượng, phần còn lại không chứa aluminium. Chỉ \(85\%\) lượng \ce{Al2O3} trong quặng chuyển thành Al. Một loại dây cáp nhôm có khối lượng \SI{1080}{\kilo\gram} cho mỗi kilomet.
+\begin{enumerate}
+\item Từ \SI{500}{\ton} quặng có thể sản xuất tối đa bao nhiêu kilomet dây cáp?
+\item Muốn sản xuất \SI{500}{\kilo\metre} dây cáp cần tối thiểu bao nhiêu tấn quặng?
+\end{enumerate}
+Cho \(M_{\ce{Al2O3}}=102\), \(M_{\ce{Al}}=27\) g/mol.
+\source{Tham chiếu Câu 4, ý d), trang 4/6, đề chuyên Hóa Lâm Đồng 2026.}
+\dapso{\(\approx\SI{166.7}{\kilo\metre}\); \SI{1500}{\ton} quặng.}
+\begin{loigiaiBT}
+Từ \SI{500}{\ton} quặng:
+\[
+m_{\ce{Al2O3}}=500\times0.80=\SI{400}{\ton}.
+\]
+Theo \(\ce{Al2O3 -> 2Al}\):
+\[
+m_{\ce{Al,lt}}=400\times\frac{54}{102}\approx\SI{211.765}{\ton}.
+\]
+Khối lượng Al thực tế:
+\[
+m_{\ce{Al}}=211.765\times0.85=\SI{180}{\ton}.
+\]
+Mỗi kilomet dây cần \SI{1.08}{\ton} Al, nên
+\[
+L=\frac{180}{1.08}\approx\SI{166.7}{\kilo\metre}.
+\]
+Để làm \SI{500}{\kilo\metre} dây cần \(\SI{540}{\ton}\) Al. Gọi \(m\) là khối lượng quặng:
+\[
+m\times0.80\times\frac{54}{102}\times0.85=540,
+\]
+suy ra \(m=\SI{1500}{\ton}\).
+\end{loigiaiBT}
+\end{tuluyen}
+
+\begin{tuluyen}
+Xăng E10 chứa \(10\%\) ethanol về thể tích \((D=\SI{0.789}{\gram\per\milli\liter})\), còn lại là xăng truyền thống gồm \ce{C8H18} và \ce{C9H20} có tỉ lệ mol \(3:4\), khối lượng riêng của phần xăng truyền thống là \SI{0.70}{\gram\per\milli\liter}. Trong bình xe có \SI{3.0}{\liter} E10. Nhiệt lượng tỏa ra khi đốt cháy hoàn toàn \(1\) mol ethanol, \ce{C8H18}, \ce{C9H20} lần lượt là \(1375\), \(5095\), \(6115\) kJ/mol. Để xe đi được \SI{1}{\kilo\metre}, động cơ cần \SI{210}{\kilo\joule} chuyển thành công cơ học; hiệu suất sử dụng nhiên liệu là \(32\%\).
+\begin{enumerate}
+\item Tính quãng đường tối đa xe đi được với \SI{3.0}{\liter} E10.
+\item Người lái cần đi \SI{180}{\kilo\metre}. Nếu tiếp tục dùng cùng loại E10, cần đổ thêm ít nhất bao nhiêu lít?
+\end{enumerate}
+\source{Tham chiếu Câu 2.2, trang 5/6, đề chuyên Hóa Lâm Đồng 2026.}
+\dapso{\(\approx\SI{144.8}{\kilo\metre}\); cần thêm khoảng \SI{0.73}{\liter} E10.}
+\begin{loigiaiBT}
+Ethanol chiếm \SI{0.30}{\liter}:
+\[
+m_{\ce{C2H5OH}}=300\times0.789=\SI{236.7}{\gram},
+\qquad
+n_{\ce{C2H5OH}}=\frac{236.7}{46}\approx\SI{5.146}{\mole}.
+\]
+Phần xăng truyền thống có thể tích \SI{2.70}{\liter}, khối lượng
+\[
+m=2700\times0.70=\SI{1890}{\gram}.
+\]
+Đặt \(n_{\ce{C8H18}}=3x\), \(n_{\ce{C9H20}}=4x\):
+\[
+3x\cdot114+4x\cdot128=1890\Rightarrow x\approx2.213.
+\]
+Suy ra \(n_{\ce{C8H18}}\approx6.639\) mol và \(n_{\ce{C9H20}}\approx8.852\) mol.
+Tổng nhiệt lượng khi đốt \SI{3.0}{\liter} E10:
+\[
+Q\approx5.146\cdot1375+6.639\cdot5095+8.852\cdot6115
+\approx\SI{95036}{\kilo\joule}.
+\]
+Công cơ học hữu ích:
+\[
+Q_{\mathrm{ích}}=0.32Q\approx\SI{30411}{\kilo\joule}.
+\]
+Quãng đường:
+\[
+s=\frac{30411}{210}\approx\SI{144.8}{\kilo\metre}.
+\]
+Để đi \SI{180}{\kilo\metre}, cần \(\SI{37800}{\kilo\joule}\) công hữu ích. Do cùng loại nhiên liệu, thể tích cần thêm là
+\[
+V_{\mathrm{thêm}}
+=3.0\left(\frac{37800}{30411}-1\right)
+\approx\SI{0.73}{\liter}.
+\]
+\end{loigiaiBT}
+\end{tuluyen}
+
+\begin{tuluyen}
+Khí gas hóa lỏng gồm \(40\%\) \ce{C3H8} và \(60\%\) \ce{C4H10} theo thể tích. Nhiệt lượng tỏa ra khi đốt hoàn toàn \(1\) mol \ce{C3H8} và \ce{C4H10} lần lượt là \(2220\) và \(2850\) kJ/mol. Một bình gas chứa \SI{12}{\kilo\gram} hỗn hợp trên, giá \SI{650000}{} đồng. Một gia đình cần trung bình \SI{1500}{\kilo\joule} nhiệt hữu ích mỗi ngày; hiệu suất sử dụng nhiệt là \(70\%\).
+\begin{enumerate}
+\item Ước tính một bình gas dùng được bao nhiêu ngày.
+\item Tính \textbf{số tiền trung bình gia đình phải bỏ ra cho gas trong một tháng 30 ngày}, giả sử mức sử dụng không đổi.
+\end{enumerate}
+\source{Tham chiếu Câu 6.2b, trang 6/6, đề chuyên Hóa Lâm Đồng 2026; diễn đạt lại yêu cầu về chi phí trung bình.}
+\dapso{\(\approx277.6\) ngày; khoảng \(7.02\times10^4\) đồng/tháng.}
+\begin{loigiaiBT}
+Do phần trăm thể tích bằng phần trăm mol:
+\[
+\overline M=0.4\cdot44+0.6\cdot58=\SI{52.4}{\gram\per\mole}.
+\]
+Số mol khí trong bình:
+\[
+n=\frac{12000}{52.4}\approx\SI{229.01}{\mole}.
+\]
+Nhiệt tỏa trung bình trên một mol hỗn hợp:
+\[
+\overline Q=0.4\cdot2220+0.6\cdot2850=\SI{2598}{\kilo\joule\per\mole}.
+\]
+Tổng nhiệt hữu ích của bình:
+\[
+Q_{\mathrm{ích}}=229.01\cdot2598\cdot0.70\approx\SI{416473}{\kilo\joule}.
+\]
+Số ngày sử dụng:
+\[
+t=\frac{416473}{1500}\approx277.6\text{ ngày}.
+\]
+Chi phí trung bình trong \(30\) ngày:
+\[
+C=650000\cdot\frac{30}{277.6}\approx70200\text{ đồng}.
+\]
+\end{loigiaiBT}
+\end{tuluyen}
+
+\begin{tuluyen}
+Một cơ sở dùng \SI{2.40}{\ton} gạo chứa \(75\%\) tinh bột. Quá trình thủy phân tinh bột thành glucose đạt hiệu suất \(80\%\):
+\[
+\ce{(C6H10O5)n + nH2O -> nC6H12O6}.
+\]
+Cơ sở dùng \(75\%\) lượng glucose thu được để pha dung dịch G-5, mỗi chai \SI{500}{\milli\liter}, chứa \SI{5}{\gram} glucose trong \SI{100}{\milli\liter} dung dịch. Phần glucose còn lại dùng tráng bạc; \(1\) mol glucose tạo \(2\) mol Ag, hiệu suất tráng bạc \(75\%\). Mỗi gương có diện tích \SI{0.35}{\square\metre}, lớp bạc dày \SI{0.10}{\micro\metre}, khối lượng riêng của bạc \SI{10.49}{\gram\per\cubic\centi\metre}.
+\begin{enumerate}
+\item Tính số chai G-5 sản xuất được.
+\item Tính số gương tối đa có thể tráng đủ lớp bạc nói trên.
+\end{enumerate}
+\dapso{\(48000\) chai; khoảng \(9.81\times10^5\) gương (tối đa \(980525\) gương hoàn chỉnh).}
+\begin{loigiaiBT}
+Khối lượng tinh bột:
+\[
+m=2.40\times0.75=\SI{1.80}{\ton}.
+\]
+Theo tỉ lệ \(162\to180\), glucose lý thuyết là \SI{2.00}{\ton}; thực tế:
+\[
+m_{\text{glucose}}=2.00\times0.80=\SI{1.60}{\ton}.
+\]
+Phần dùng pha G-5 là \SI{1.20}{\ton}. Mỗi chai chứa \SI{25}{\gram}, nên số chai:
+\[
+N=\frac{1.20\times10^6}{25}=48000.
+\]
+Còn \SI{0.40}{\ton}=\SI{400000}{\gram} glucose để tráng bạc.
+Khối lượng Ag thực tế:
+\[
+m_{\ce{Ag}}=\frac{400000}{180}\cdot2\cdot108\cdot0.75
+=\SI{360000}{\gram}.
+\]
+Mỗi gương cần lớp bạc có thể tích:
+\[
+V=0.35\cdot10^{-7}=\SI{3.5e-8}{\cubic\metre}
+=\SI{0.035}{\cubic\centi\metre}.
+\]
+Khối lượng bạc mỗi gương:
+\[
+m=0.035\cdot10.49=\SI{0.36715}{\gram}.
+\]
+Do đó
+\[
+N=\frac{360000}{0.36715}\approx980525.7.
+\]
+Tối đa tráng hoàn chỉnh \(980525\) gương.
+\end{loigiaiBT}
+\end{tuluyen}
+
+\begin{tuluyen}
+Từ \SI{4.8}{\ton} ethylene, nhà máy sản xuất PVC theo ba giai đoạn:
+\[
+\ce{C2H4 ->[H_1=60\%] C2H4Cl2 ->[H_2=70\%] C2H3Cl ->[H_3=80\%] PVC}.
+\]
+Biết \(1\) mol ethylene cuối cùng cho \(1\) mắt xích \ce{C2H3Cl} nếu các giai đoạn đạt \(100\%\), và sản phẩm thương mại chứa \(95\%\) PVC theo khối lượng. Tính khối lượng sản phẩm thương mại thu được.
+\source{Phỏng theo Câu 5.2b, trang 6/6, đề chuyên Hóa Lâm Đồng 2026.}
+\dapso{\(\approx\SI{3.79}{\ton}\) sản phẩm thương mại.}
+\begin{loigiaiBT}
+Khối lượng PVC tinh khiết:
+\[
+m_{\mathrm{PVC}}
+=4.8\times\frac{62.5}{28}\times0.60\times0.70\times0.80
+=\SI{3.60}{\ton}.
+\]
+Sản phẩm chứa \(95\%\) PVC:
+\[
+m_{\text{sp}}=\frac{3.60}{0.95}\approx\SI{3.79}{\ton}.
+\]
+\end{loigiaiBT}
+\end{tuluyen}
+
+\begin{tuluyen}
+Một lò nung dùng \SI{2.50}{\ton} đá vôi chứa \(88\%\) \ce{CaCO3}. Chỉ \(90\%\) lượng \ce{CaCO3} bị phân hủy:
+\[
+\ce{CaCO3 -> CaO + CO2}.
+\]
+Toàn bộ \ce{CaO} tạo thành được chuyển hoàn toàn thành \ce{Ca(OH)2}, rồi dùng trung hòa dung dịch \ce{HCl} \(2.00\) M:
+\[
+\ce{Ca(OH)2 + 2HCl -> CaCl2 + 2H2O}.
+\]
+Tính thể tích tối đa dung dịch \ce{HCl} có thể trung hòa.
+\dapso{\SI{19.8}{\cubic\metre}.}
+\begin{loigiaiBT}
+Khối lượng \ce{CaCO3} thực sự phân hủy:
+\[
+m=2.50\times0.88\times0.90=\SI{1.98}{\ton}.
+\]
+Theo phản ứng:
+\[
+m_{\ce{CaO}}=1.98\times\frac{56}{100}=\SI{1.1088}{\ton}.
+\]
+Số mol \ce{CaO}, cũng là số mol \ce{Ca(OH)2}:
+\[
+n=\frac{1.1088\times10^6}{56}=\SI{19800}{\mole}.
+\]
+Cần \(\SI{39600}{\mole}\) \ce{HCl}. Với dung dịch \(2.00\) M:
+\[
+V=\frac{39600}{2.00}=\SI{19800}{\liter}=\SI{19.8}{\cubic\metre}.
+\]
+\end{loigiaiBT}
+\end{tuluyen}
+
+\begin{tuluyen}
+Một loại phân urea chứa \(4\%\) tạp chất trơ, phần còn lại là \ce{CO(NH2)2}. Một vùng trồng trọt rộng \SI{12}{\hectare} cần thực tế \SI{80}{\kilo\gram} nitrogen được cây hấp thụ trên mỗi hectare. Giả sử cây chỉ hấp thụ được \(75\%\) lượng nitrogen bón vào. Phân được bán theo bao \SI{50}{\kilo\gram}. Tính số bao tối thiểu cần mua. Cho \(M_{\ce{CO(NH2)2}}=60\), trong đó nitrogen chiếm \(28\) g trên mỗi mol urea.
+\dapso{\(58\) bao.}
+\begin{loigiaiBT}
+Phần khối lượng nitrogen trong phân:
+\[
+w_N=0.96\times\frac{28}{60}=0.448.
+\]
+Phần nitrogen thực sự được cây hấp thụ trên mỗi kilogram phân:
+\[
+0.448\times0.75=0.336\text{ kg}.
+\]
+Tổng nitrogen cây cần:
+\[
+12\times80=\SI{960}{\kilo\gram}.
+\]
+Khối lượng phân tối thiểu:
+\[
+m=\frac{960}{0.336}\approx\SI{2857.14}{\kilo\gram}.
+\]
+Số bao:
+\[
+\frac{2857.14}{50}\approx57.14,
+\]
+nên phải mua ít nhất \(58\) bao.
+\end{loigiaiBT}
+\end{tuluyen}
+
+\begin{tuluyen}
+Một cơ sở xử lí \SI{1.00}{\ton} đá vôi chứa \(85\%\) \ce{CaCO3}, phần còn lại là tạp chất trơ. Dùng \SI{1.50}{\cubic\metre} dung dịch \ce{HCl} \(10\%\) theo khối lượng, có \(D=\SI{1.05}{\gram\per\milli\liter}\):
+\[
+\ce{CaCO3 + 2HCl -> CaCl2 + CO2 + H2O}.
+\]
+\begin{enumerate}
+\item Xác định chất phản ứng hết trước.
+\item Tính thể tích \ce{CO2} ở điều kiện \(V_m=\SI{24.8}{\liter\per\mole}\).
+\item Tính khối lượng chất rắn còn lại sau phản ứng.
+\end{enumerate}
+\dapso{\ce{HCl} hết trước; \(V_{\ce{CO2}}\approx\SI{53.5}{\cubic\metre}\); chất rắn còn lại \(\approx\SI{784}{\kilo\gram}\).}
+\begin{loigiaiBT}
+Khối lượng dung dịch \ce{HCl}:
+\[
+m=1.50\times10^6\times1.05=\SI{1.575e6}{\gram}.
+\]
+Khối lượng \ce{HCl} là \SI{157500}{\gram}, nên
+\[
+n_{\ce{HCl}}=\frac{157500}{36.5}\approx\SI{4315.07}{\mole}.
+\]
+Đá vôi chứa \SI{850}{\kilo\gram} \ce{CaCO3}, tức \SI{8500}{\mole}; do đó \ce{HCl} hết trước.
+Số mol \ce{CaCO3} phản ứng:
+\[
+n_{\ce{CaCO3}}=\frac{4315.07}{2}\approx\SI{2157.53}{\mole}.
+\]
+Suy ra
+\[
+V_{\ce{CO2}}=2157.53\times24.8\approx\SI{53507}{\liter}
+=\SI{53.5}{\cubic\metre}.
+\]
+Khối lượng \ce{CaCO3} chưa phản ứng:
+\[
+(8500-2157.53)\times100\approx\SI{634.25}{\kilo\gram}.
+\]
+Cộng \SI{150}{\kilo\gram} tạp chất trơ:
+\[
+m_{\text{rắn}}\approx\SI{784.25}{\kilo\gram}.
+\]
+\end{loigiaiBT}
+\end{tuluyen}
+
+\begin{tuluyen}
+Ở \SI{80}{\degreeCelsius}, độ tan của một muối là \(169\) g trong \SI{100}{\gram} nước; ở \SI{20}{\degreeCelsius}, độ tan là \(32\) g trong \SI{100}{\gram} nước. Có \SI{200}{\kilo\gram} dung dịch bão hòa ở \SI{80}{\degreeCelsius}. Khi làm lạnh xuống \SI{20}{\degreeCelsius}, \(5\%\) khối lượng nước ban đầu bị bay hơi. Giả sử tinh thể tách ra là muối khan. Tính khối lượng tinh thể thu được.
+\dapso{\(\approx\SI{103.0}{\kilo\gram}\).}
+\begin{loigiaiBT}
+Ở \SI{80}{\degreeCelsius}, \(269\) phần dung dịch gồm \(100\) phần nước và \(169\) phần muối. Do đó
+\[
+m_{\ce{H2O},0}=200\cdot\frac{100}{269}\approx\SI{74.349}{\kilo\gram},
+\]
+\[
+m_{\text{muối},0}=200-74.349\approx\SI{125.651}{\kilo\gram}.
+\]
+Sau khi bay hơi \(5\%\) nước:
+\[
+m_{\ce{H2O}}=74.349\times0.95\approx\SI{70.632}{\kilo\gram}.
+\]
+Ở \SI{20}{\degreeCelsius}, lượng muối còn hòa tan:
+\[
+m_{\text{tan}}=70.632\times\frac{32}{100}\approx\SI{22.602}{\kilo\gram}.
+\]
+Vậy
+\[
+m_{\text{tinh thể}}=125.651-22.602\approx\SI{103.049}{\kilo\gram}.
+\]
+\end{loigiaiBT}
+\end{tuluyen}
+
+\begin{tuluyen}
+Một nhà máy dùng \SI{2.00}{\ton} quặng pyrite chứa \(84\%\) \ce{FeS2}. Toàn bộ sulfur trong \ce{FeS2} được chuyển thành \ce{H2SO4}; xét theo mol, \(1\) mol \ce{FeS2} tạo tối đa \(2\) mol \ce{H2SO4}. Hiệu suất toàn quá trình là \(85\%\). Acid thu được dùng sản xuất dung dịch \ce{H2SO4} \(98\%\), \(D=\SI{1.84}{\gram\per\milli\liter}.
+\begin{enumerate}
+\item Tính thể tích dung dịch \ce{H2SO4} \(98\%\) thu được.
+\item Nếu pha loãng toàn bộ lượng dung dịch trên thành dung dịch \ce{H2SO4} \(20\%\) theo khối lượng, cần thêm bao nhiêu tấn nước?
+\end{enumerate}
+Cho \(M_{\ce{FeS2}}=120\), \(M_{\ce{H2SO4}}=98\) g/mol.
+\dapso{\(\approx\SI{1.293}{\cubic\metre}\) dung dịch \ce{H2SO4} \(98\%\); cần thêm \SI{9.282}{\ton} nước.}
+\begin{loigiaiBT}
+Khối lượng \ce{FeS2}:
+\[
+m=2.00\times0.84=\SI{1.68}{\ton}.
+\]
+Khối lượng \ce{H2SO4} lý thuyết:
+\[
+m_{\mathrm{lt}}=1.68\times\frac{2\cdot98}{120}=\SI{2.744}{\ton}.
+\]
+Thực tế:
+\[
+m_{\ce{H2SO4}}=2.744\times0.85=\SI{2.3324}{\ton}.
+\]
+Khối lượng dung dịch \(98\%\):
+\[
+m_{98}=\frac{2.3324}{0.98}=\SI{2.380}{\ton}.
+\]
+Vì \(D=\SI{1.84}{\kilo\gram\per\liter}\):
+\[
+V=\frac{2380}{1.84}\approx\SI{1293.5}{\liter}
+=\SI{1.293}{\cubic\metre}.
+\]
+Dung dịch \(20\%\) cần có tổng khối lượng:
+\[
+m_{20}=\frac{2.3324}{0.20}=\SI{11.662}{\ton}.
+\]
+Nước cần thêm:
+\[
+m_{\ce{H2O}}=11.662-2.380=\SI{9.282}{\ton}.
+\]
+\end{loigiaiBT}
+\end{tuluyen}
