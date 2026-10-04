@@ -185,6 +185,33 @@
   {\thesubsection.}{.5em}{#1}
 \titlespacing*{\subsection}{0pt}{8pt}{4pt}
 
+% ---------- Tùy chọn ẩn/hiện nội dung ----------
+% Có thể đổi true/false ngay trong main.tex sau dòng \input{preamble}.
+\newif\ifHienLoiGiaiVD
+\newif\ifHienNguon
+\newif\ifHienDapSo
+\newif\ifHienLoiGiaiBT
+
+% Mặc định giữ hành vi hiện tại của bản học sinh:
+\HienLoiGiaiVDtrue
+\HienNguontrue
+\HienDapSotrue
+\HienLoiGiaiBTfalse
+
+% Hai cấu hình nhanh nếu cần:
+\newcommand{\BanHocSinh}{%
+  \HienLoiGiaiVDfalse
+  \HienNguonfalse
+  \HienDapSofalse
+  \HienLoiGiaiBTfalse
+}
+\newcommand{\BanGiaoVien}{%
+  \HienLoiGiaiVDtrue
+  \HienNguontrue
+  \HienDapSotrue
+  \HienLoiGiaiBTtrue
+}
+
 % ---------- Môi trường trình bày nội dung ----------
 % Thiết kế ngược vẫn được dùng ở tầng biên soạn, nhưng tên gọi trong tài liệu
 % giữ theo phong cách sách học: Ví dụ -> Ghi nhớ -> Bài tập tự luyện.
@@ -200,7 +227,7 @@
   coltitle=white,colbacktitle=ChemRed!82!black,#1
 }
 
-\newtcolorbox{loigiai}[1][]{
+\newtcolorbox{loigiaibox}[1][]{
   enhanced,breakable,sharp corners,
   colback=ChemCyan!1.5,
   colframe=ChemCyan!52!black,
@@ -214,6 +241,14 @@
   titlerule=0pt,
   #1
 }
+
+\NewDocumentEnvironment{loigiai}{+b}{%
+  \ifHienLoiGiaiVD
+    \begin{loigiaibox}
+    #1
+    \end{loigiaibox}
+  \fi
+}{}
 
 \newtcolorbox{ghinho}[1][]{
   enhanced,breakable,arc=1.5pt,
@@ -250,11 +285,19 @@
   \par\smallskip
 }
 
-% Lời giải bài tập được lưu trong mã nguồn nhưng không in ra bản học sinh.
-\NewDocumentEnvironment{loigiaiBT}{+b}{}{}
+% Lời giải bài tập được lưu trong mã nguồn và điều khiển bằng toggle.
+\NewDocumentEnvironment{loigiaiBT}{+b}{%
+  \ifHienLoiGiaiBT
+    \begin{loigiaibox}
+    #1
+    \end{loigiaibox}
+  \fi
+}{}
 
 \newcommand{\dapso}[1]{%
-  \par\smallskip{\footnotesize\color{ChemGray}\textbf{Đáp số:} #1}\par
+  \ifHienDapSo
+    \par\smallskip{\footnotesize\color{ChemGray}\textbf{Đáp số:} #1}\par
+  \fi
 }
 
 \newtcolorbox{notechem}[1][]{
@@ -265,7 +308,11 @@
 }
 
 % ---------- Source / skill tags ----------
-\newcommand{\source}[1]{\par\smallskip{\footnotesize\color{ChemGray}\textit{Nguồn/kiểu bài: #1}}}
+\newcommand{\source}[1]{%
+  \ifHienNguon
+    \par\smallskip{\footnotesize\color{ChemGray}\textit{Nguồn/kiểu bài: #1}}
+  \fi
+}
 \newcommand{\skill}[1]{\tcbox[on line,boxsep=.5pt,left=2pt,right=2pt,top=1pt,bottom=1pt,
   colback=ChemCyan!8,colframe=ChemCyan!45!black]{\scriptsize\bfseries #1}}
 
