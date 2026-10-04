@@ -1,42 +1,452 @@
 % =============================================================
-% PREAMBLE - TAI LIEU ON THI VAO 10 CHUYEN HOA
-% LuaLaTeX recommended
-% Visual language adapted from the supplied Mathematics sample,
-% simplified for Chemistry and backward-design teaching materials.
+% GIAO DIỆN THỬ NGHIỆM - SAO CHÉP THIẾT LẬP TỪ TÀI LIỆU TOÁN
+% Chỉ điều chỉnh phần phụ thuộc môn học và tương thích nội dung Hóa.
 % =============================================================
-
-% ---------- Vietnamese + fonts ----------
 \usepackage[vietnamese]{babel}
 \usepackage{fontspec}
 \usepackage{unicode-math}
-\IfFontExistsTF{TeX Gyre Termes}{
-  \setmainfont{TeX Gyre Termes}
-}{
-  \setmainfont{Latin Modern Roman}
-}
-\IfFontExistsTF{TeX Gyre Termes Math}{
-  \setmathfont{TeX Gyre Termes Math}
-}{
-  \setmathfont{Latin Modern Math}
-}
+\IfFontExistsTF{TeX Gyre Termes}{\setmainfont{TeX Gyre Termes}}{\setmainfont{Latin Modern Roman}}
+\IfFontExistsTF{TeX Gyre Pagella Math}{\setmathfont{TeX Gyre Pagella Math}}{\setmathfont{Latin Modern Math}}
 
-% ---------- Page + typography ----------
-\usepackage[a4paper,left=1.65cm,right=1.45cm,top=1.70cm,bottom=1.55cm,
-            headsep=5mm,footskip=8mm]{geometry}
-\setlength{\parindent}{0pt}
-\setlength{\parskip}{2.2pt plus 0.5pt minus 0.3pt}
-\linespread{1.03}
-\usepackage{microtype}
-\usepackage{setspace}
-\usepackage{ragged2e}
-
-% ---------- Mathematics ----------
 \usepackage{amsmath,mathtools}
 \allowdisplaybreaks
-\usepackage{xfrac}
-\usepackage{cancel}
+\usepackage{enumerate}
+\usepackage{tasks}
+\settasks{label=\alph*),label-width=18pt,label-offset=4pt,item-indent=24pt,column-sep=1em,after-item-skip=1pt}
+\usepackage{tikz}
+\usetikzlibrary{math,through,calc,intersections,angles,quotes,shapes,shapes.geometric,arrows,patterns,snakes,matrix,chains,arrows.meta,decorations.shapes,decorations.fractals,decorations.markings,shadows,positioning,decorations.text,decorations.pathmorphing,shadings,fadings}
+\usepackage{pgfplots}
+\usepackage{pgfornament}
+\usepgfplotslibrary{fillbetween}
+\pgfplotsset{compat=1.18}
+\usepackage[hidelinks,unicode]{hyperref}
+\usepackage{currfile}
+\usepackage[outline]{contour}
+\usepackage{fontawesome}
+\usepackage{longtable,multirow,makecell,array,tabularx}
+\usepackage{diagbox}
+\renewcommand{\tabcolsep}{3mm}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\usepackage{marginnote}
+\def\noteleft{5}
+\pgfmathsetmacro{\so}{\noteleft - 0.3}
+\usepackage[top=\tren cm,bottom=\duoi cm,left=\trai cm,right=\phai cm,marginparwidth=\so cm,marginparsep=-\so cm]{geometry}
+\renewcommand*{\marginfont}{\small}
+\usepackage{fullwidth,varwidth}
+\newenvironment{mynote}{\begin{fullwidth}[innermargin=\noteleft cm,width=\linewidth-\noteleft cm]}{\end{fullwidth}}
+\usepackage{changepage}
+\strictpagecheck
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\usepackage[most]{tcolorbox}
+\usepackage[explicit]{titlesec}
+\usepackage{titletoc}
 
-% ---------- Chemistry packages (kept from the user's Chemistry setup) ----------
+% Nội dung header/footer: giữ dữ liệu của tài liệu Hóa, dùng hình thức của bản Toán.
+\providecommand{\ChanTrang}{TRUNG TÂM DẠY HỌC NGOÀI GIỜ NHÂN TRÍ SƠN}
+
+% HEADER AND FOOTER STYLING
+%--------------------------
+\newcommand{\myfancynum}{% trên
+\begin{tikzpicture}[remember picture,overlay]
+	\fill[fill=cyan] ([yshift=-\tren cm+\topset cm]current page.north west) rectangle +(\paperwidth,0.5mm) coordinate (AA);
+	\foreach \ii/\mauphu in {5/white,4.8/magenta,4/white,3.8/green,3/white,2.8/orange,2/white,1.8/cyan}{
+		\fill[fill=\mauphu,draw=white] ([yshift=-2mm-0.5*\topset cm]AA)--++(-\ii,0)--++(0.5*\topset cm+2mm,0.5*\topset cm+ 2mm)--++(\ii cm,0)--cycle;}
+	%----
+	\checkoddpage\ifoddpage %nếu trang lẻ
+	\def\kctrai{\trai} \def\kcphai{\phai} \def\ndtren{\leftmark}
+	\else
+	\def\kctrai{\phai} \def\kcphai{\trai} \def\ndtren{\rightmark}
+	\fi
+	%------
+	\node[anchor=south west,text=magenta,inner sep=0pt] at ([yshift=-\tren cm+\topset cm+1mm,xshift=\kctrai cm]current page.north west) {\fontfamily{qag}\fontsize{9pt}{1pt}\selectfont \nouppercase{\ndtren}};
+	\draw ([yshift=-\tren cm+\topset cm+1mm,xshift=-\kcphai cm]current page.north east) node[anchor=south east,text=magenta,inner sep=0pt] {\fontfamily{qag}\fontsize{8pt}{1pt}\selectfont \TenTruong};
+	%--tròn trái
+	\fill[cyan] (current page.north west) circle (\tren -\topset);
+	\draw[white,line width=1pt] (current page.north west) circle (\tren cm -\topset cm-3pt);
+	\draw (current page.north west)+(-45:0.5*\tren -0.5*\topset) node[white]{\fontfamily{qag}\fontsize{7pt}{1pt}\selectfont\bfseries\thepage};
+\end{tikzpicture}%
+}
+\newcommand{\headdethi}{% trên đề thi
+	\begin{tikzpicture}[remember picture,overlay]
+		\fill[fill=cyan] ([yshift=-\tren cm+\topset cm]current page.north west) rectangle +(\paperwidth,0.5mm) coordinate (AA);
+		\foreach \ii/\mauphu in {5/white,4.8/magenta,4/white,3.8/green,3/white,2.8/orange,2/white,1.8/cyan}{
+			\fill[fill=\mauphu,draw=white] ([yshift=-2mm-0.5*\topset cm]AA)--++(-\ii,0)--++(0.5*\topset cm+2mm,0.5*\topset cm+ 2mm)--++(\ii cm,0)--cycle;}
+		%----
+		\checkoddpage\ifoddpage %nếu trang lẻ
+		\def\kctrai{\trai} \def\kcphai{\phai} \def\ndtren{\TenKyThi}
+		\else
+		\def\kctrai{\phai} \def\kcphai{\trai} \def\ndtren{\LoaiDe~\thesection}
+		\fi
+		%------
+		\node[anchor=south west,text=magenta,inner sep=0pt] at ([yshift=-\tren cm+\topset cm+1mm,xshift=\kctrai cm]current page.north west) {\fontfamily{qag}\fontsize{9pt}{1pt}\selectfont \nouppercase{\ndtren}};
+		\draw ([yshift=-\tren cm+\topset cm+1mm,xshift=-\kcphai cm]current page.north east) node[anchor=south east,text=magenta,inner sep=0pt] {\fontfamily{qag}\fontsize{8pt}{1pt}\selectfont \TenTruong};
+		%--tròn trái
+		\fill[cyan] (current page.north west) circle (\tren -\topset);
+		\draw[white,line width=1pt] (current page.north west) circle (\tren cm -\topset cm-3pt);
+		\draw (current page.north west)+(-45:0.5*\tren -0.5*\topset) node[white]{\fontfamily{qag}\fontsize{7pt}{1pt}\selectfont\bfseries\thepage};
+	\end{tikzpicture}%
+}
+%---------------------
+\newcommand{\myfancyfoot}{% dưới
+\begin{tikzpicture}[remember picture,overlay]
+	\coordinate (AA) at ([yshift=\duoi cm-0.75*\topset cm-1mm]current page.south west);
+	\checkoddpage\ifoddpage %nếu trang lẻ
+		\def\kctrai{\trai} \def\kcphai{\phai}
+	\else
+		\def\kctrai{\phai} \def\kcphai{\trai}
+	\fi
+	%------
+	\pgfmathsetmacro{\daisach}{\kctrai+1} 
+	\fill[cyan] ([xshift=\daisach cm+10mm]AA) rectangle +(\paperwidth,0.5mm) coordinate (BB);
+	%
+	\fill[fill=cyan!20] ([yshift=1mm]AA)--++(\daisach cm,0) to[bend left=8mm] ++(3mm,-1.5mm)coordinate (Tr1)--++(0,-0.75)to[bend right=8mm]++(-3mm,1.5mm)--++(-\daisach,0)--cycle;
+	\fill[fill=cyan] (Tr1) to[bend left=8mm]++(0.6,3mm)--++(0,-0.75)to[bend right=8mm]([yshift=-0.75cm]Tr1)--cycle;
+	\draw[cyan,line width=0.5mm] ([yshift=1mm]AA)--++(\daisach cm,0) to[bend left=8mm] ++(3mm,-1.5mm);
+	%
+	\draw ([yshift=-0.25cm,xshift=-3pt]Tr1) node[anchor=east,text=magenta,inner sep=0pt] {\fontfamily{qag}\fontsize{8pt}{1pt}\selectfont{\bfseries \thepage}{\footnotesize /}{\bfseries\pageref{LastPage}}};
+	%
+	\node[anchor=north east,text=magenta,inner sep=0pt] (thinh) at ($([xshift=-\kcphai cm]AA)+(\paperwidth,-2pt)$) {\fontfamily{qag}\fontsize{10pt}{1pt}\selectfont\faFileText\, \ChanTrang};
+	%--tròn phải
+	\fill[cyan] (current page.south east) circle (\duoi -0.75*\topset);
+	\draw[white,line width=1.5pt] (current page.south east) circle (\duoi cm -0.75*\topset cm-3pt);
+\end{tikzpicture}%
+}
+%----------------------
+\usepackage{changepage}
+\strictpagecheck
+\usepackage{lastpage}
+\usepackage{fancyhdr,lastpage}
+\pagestyle{fancy}
+\fancyhf{}
+\fancypagestyle{plain}{
+	\fancyhead[LO,RE]{}
+	\fancyfoot[LO,RE]{\myfancyfoot}
+}
+\fancyhead[LO,RE]{\myfancynum}
+\fancyfoot[LO,RE]{\myfancyfoot}
+\renewcommand{\footrulewidth}{0pt}
+\renewcommand{\headrulewidth}{0pt}
+%--------------4.2
+\usepackage[most]{tcolorbox}
+\colorlet{tcbcol@back}{tcbcolback}
+\colorlet{tcbcol@frame}{tcbcolframe}
+%-------------- Khung (Trong main này ko sd)
+\newtcolorbox[auto counter]{khung4}[1]{enhanced, breakable,
+	before skip=1mm,after skip=1mm,
+	left=1mm,right=1mm,top=2mm,bottom=1mm,
+	colframe=cyan!70!black,colback=yellow!15,colbacktitle=cyan!10,coltitle=red!70!black,
+	,boxrule=0.4mm,
+	attach boxed title to top center=
+	{yshift=-0.1mm-\tcboxedtitleheight/2,yshifttext=2mm-\tcboxedtitleheight/2},
+	varwidth boxed title*=-3cm,
+	boxed title style={boxrule=0.3mm,
+		frame code={ \path[tcb fill frame] ([xshift=-4mm]frame.west)
+			-- (frame.north west) -- (frame.north east) -- ([xshift=4mm]frame.east)
+			-- (frame.south east) -- (frame.south west) -- cycle; },
+		interior code={ \path[tcb fill interior] ([xshift=-2mm]interior.west)
+			-- (interior.north west) -- (interior.north east)
+			-- ([xshift=2mm]interior.east) -- (interior.south east) -- (interior.south west)
+			-- cycle;} 
+	},
+	fonttitle=\fontfamily{qag}\fontsize{10}{0}
+	\bfseries,
+	fontupper=\sffamily,
+	title={#1}
+}
+%---------------Dạng toán
+\newcounter{dang}\setcounter{dang}{0}
+\renewcommand{\thedang}{\arabic{dang}}
+%---Dạng 1
+\newtcolorbox{dang}[1]{
+	fonttitle=\fontfamily{qag}\bfseries,%fontupper=\itshape,
+	colframe=teal,colback=yellow!10,
+	sharp corners, breakable, halign title=center,%adjusted title=center, %canh giữa DẠNG
+	before skip=2mm,after skip=2mm,
+	left=2mm,right=2mm,top=0mm,bottom=0mm,
+	boxrule=0.6pt,
+	title={
+		\color{white} \faFolderOpen\ Dạng~\thesection.\stepcounter{dang}\thedang.\ #1}
+	\addcontentsline{toc}{subsection}{\it\sffamily \faFolderOpen\ Dạng~\thesection.\thedang: #1}
+}
+%---------------------------------------------------------------
+% ĐỊNH NGHĨA SECTION. SUBSECTION, SUBSUBSECTION ... THEO Ý RIÊNG
+%---------------------------------------------------------------
+\usepackage[explicit]{titlesec} % để gọi #1
+\usepackage{titletoc} % gói lệnh chứa cả titlesec và titletoc
+%=====================================
+\setcounter{secnumdepth}{4} %độ sâu
+\renewcommand{\thechapter}{\arabic{chapter}}
+\renewcommand{\thesection}{\thechapter.\arabic{section}}
+\renewcommand{\thesubsection}{\Alph{subsection}}
+\renewcommand{\thesubsubsection}{\arabic{subsubsection}}
+%--------------Tròn
+\newcommand{\tron}[1]{
+	\begin{tikzpicture}[baseline=(A.base)]%
+		\node[circle,draw=cyan,line width=0.5pt,fill=white,inner sep=2pt,outer sep=1pt] (A) {\color{white} #1};
+		\node[circle,draw=none,fill=cyan,inner sep=1pt,outer sep=1pt] (A) {\color{white} #1};
+	\end{tikzpicture}%
+}
+%============================Mục lục - Chapter*
+%\makeatletter
+\titleformat{name=\chapter,numberless}[display]
+{\color{blue}\fontsize{23pt}{1pt}\fontfamily{qag}\selectfont\bfseries}
+{}
+{-1em}
+{%
+	\begin{tcolorbox}		
+		[
+		enhanced,
+		frame empty,
+		top=0.2cm, 
+		bottom=0.2cm,
+		colback=white,
+		overlay={
+			\fill[cyan] (frame.south west) rectangle ([yshift=-0.5cm]frame.north east);
+			\fill[yellow!40,rounded corners=5pt,draw=black,line width=1pt] (frame.south west)--(frame.south east)--++(0,0.25)--++(-6,0)--([xshift=2cm]frame.north)--++(-4,0)--([xshift=6cm,yshift=0.25cm]frame.south west)--([yshift=0.25cm]frame.south west)--cycle;
+			%---
+			\fill[cyan,opacity=0.25] (frame.south west) rectangle ([yshift=-0.75cm]frame.south east);
+			\fill[yellow!40,rounded corners=5pt,draw=black,line width=1pt,opacity=0.25] (frame.south west)--(frame.south east)--++(0,-0.25)--++(-6,0)--([xshift=2cm,yshift=-1cm]frame.south)--++(-4,0)--([xshift=6cm,yshift=-0.25cm]frame.south west)--([yshift=-0.25cm]frame.south west)--cycle; 
+			%--- 
+			\foreach \i/\mau/\bk in {-2/green/0.15,-1/violet/0.2,0/red/0.25,1/violet/0.2,2/green/0.15}{
+				\fill[draw=violet,ball color=\mau]([yshift=-0.4cm,xshift=0.7*\i cm]frame.south) circle (\bk cm);
+			}
+			\node[xshift=0mm, yshift=0cm,scale=1,right=0cm] (tentron) at ([yshift=-0.4cm,xshift=0.7*2.1 cm]frame.south) {\pgfornament[height=0.5cm,color=red,opacity=1]{14}};
+			\node[xshift=0mm, yshift=0cm,scale=1,left=0cm] (tentron) at ([yshift=-0.4cm,xshift=-0.7*2.1 cm]frame.south) {\pgfornament[height=0.5cm,color=red,opacity=1]{11}};
+		}
+		]
+		\color{blue}\fontsize{23pt}{1pt}\fontfamily{qag}\selectfont\bfseries\centering\MakeUppercase{#1}
+	\end{tcolorbox}%
+	\begin{tikzpicture}[overlay,remember picture]
+		\foreach \i in {0,1,...,22}{\draw[cyan,line width=2pt,opacity=0.2] 
+			([xshift=0.3*\i cm]current page.north west)--++(-135:10cm)
+			;}
+	\end{tikzpicture}
+}
+[\vspace{1cm}]
+%-------Đn section---------------------------
+%--Biến đếm cho các tùy chọn BT
+\newcounter{stt}
+\setcounter{stt}{0}
+%--
+%\titlespacing{\section}{0cm}{0cm}{0cm}[0cm]
+\titleformat{\section}
+{	\setcounter{dang}{0}\setcounter{stt}{0}
+	\fontsize{20pt}{10pt}\fontfamily{put}\selectfont\color{red}\centering\bfseries}
+{
+	M{\large ỤC }{\fontsize{25pt}{1pt}\selectfont\thesection}.
+}
+{0.2em}
+{
+	\MakeUppercase{#1}
+}
+[\vspace{0pt}]
+%-------Đn subsection---------------------------
+\newcommand{\dnsub}[1]{
+	\begin{tikzpicture}[line join=round,line cap=round]%
+		\node[inner sep=3pt,text=white,rounded corners=0pt,fill=blue] (muccon) at (0,0){\hspace*{2mm}#1\hspace*{0.75cm}}; %trái
+		\fill[fill=orange] ([xshift=-3pt]muccon.north east) --([xshift=-3pt]muccon.east) 
+		.. controls +(-90:0.2) and +(10:0.2) ..  ([xshift=-0.35cm]muccon.south east)
+		--(muccon.south east) .. controls +(10:0.2) and +(-90:0.2) .. ([xshift=0.35cm]muccon.east)--([xshift=0.35cm]muccon.north east)--cycle ; %phải
+	\end{tikzpicture}%
+}
+%\titlespacing{\subsection}{0cm}{0cm}{0cm}[0cm]
+\titleformat{\subsection}
+{\normalfont\fontsize{13pt}{13pt}\fontfamily{qag}\selectfont\bfseries}
+{}
+{-2.5mm}
+{	
+	\dnsub{\thesubsection\,--\,\MakeUppercase{#1}}
+}
+[]
+%----------ĐN subsubsection-----------------------
+%\titlespacing{\subsubsection}{0pt}{4mm}{1mm}[0cm]
+\titleformat{\subsubsection}
+{
+	\fontsize{11.5pt}{9pt}\fontfamily{qag}\selectfont\bfseries\color{cyan}}
+{
+	\hspace*{-2mm}
+	\begin{tikzpicture}[baseline=(char.base),line join=round,line cap=round]
+		\node[signal, signal to=east, 
+		text=white, fill=cyan] (char) at (0,0){\thesubsubsection.};
+	\end{tikzpicture}%
+}
+{0.75em}
+{#1}
+[]
+%================= Đn chương
+%--------------------
+\titlespacing{\chapter}{0cm}{1.15cm}{0.3cm}[0cm] %1: , 2: Trên, 3: dưới
+\titleformat{\chapter}
+{\fontsize{22pt}{6pt}\fontfamily{qag}\selectfont\bfseries\color{white}} %định dạng chung
+{} %đánh số
+{0cm} %khoảng cách số và nội dung
+{
+	\parbox{13.5cm}{\raggedright\MakeUppercase{#1}}
+	\begin{tikzpicture}[remember picture,overlay,line join=round,line cap=round] 
+		%=========footer
+		\fill[top color=orange!20,bottom color=white] (current page.north west) rectangle ([yshift=-5.5cm]current page.north east);
+		\begin{scope}
+			\clip (current page.north west) rectangle ([yshift=-6cm]current 	page.north east);
+			\draw[line width=1pt,white,step=1cm,rotate=45] (current page.north west) grid ([yshift=-6cm]current 	page.north east);
+		\end{scope}
+		%------------------------------------
+		\checkoddpage\ifoddpage %nếu trang lẻ
+			\def\sokc{\trai}
+		\else
+			\def\sokc{\phai}
+		\fi
+		%==============
+		%-- tâm đặt--
+		\coordinate (tam) at ([xshift=\sokc cm+2cm,yshift=-\tren cm-1.5cm]current page.north west);
+		%-- nền dưới chương
+		\fill[magenta,draw=black!50,line width=2pt,rounded corners=5mm] ([yshift=-2cm]tam) rectangle 	([xshift=-1cm,yshift=1cm]current page.north west);
+		%--	tròn
+		\node[circular drop shadow = {shadow scale = 1.03},minimum height=1.6cm, circle,fill=green!20, draw=white, line width=3pt,scale=1.75,text=red] 	(sochuong) at (tam){
+			\fontfamily{put}\fontsize{30pt}{1pt}\selectfont %\thechapter %cố định kích thước hình tròn
+		};
+		%-- số
+		\node[scale=1.75,text=red]  at (tam){
+			\fontfamily{put}\fontsize{30pt}{1pt}\selectfont\thechapter
+		};
+		%-- Chương
+		\draw[white,decoration={raise=0pt,text effects along path, text={C}{h}{u}{y}{ê}{n}{ }{đ}{ề},text align={center},text effects/.cd,text along path,every character/.style={font={\fontfamily{put}\fontsize{20pt}{1pt}\selectfont} }},decorate] ($(tam)+(200:1.7cm)$) arc (200:90:1.7);
+		;
+		%============================= nội dung chương
+		\coordinate (tenbaichinh) at ([xshift=0.5cm,yshift=-1.25cm]sochuong.east); % điểm đặt chữ
+		\def\n{0.25} %độ dày của bóng
+		\def\gocnghieng{45} %nghiêng của bóng
+		\def\x{1.2}\def\y{1.2} %co-giãn chữ
+		\def\mauchu{red} %màu chữ
+		\def\maubong{black}
+		\foreach \i in {0,0.01,...,\n}{
+			\pgfmathsetmacro\rr{\n-\i}
+			\pgfmathsetmacro\domo{100*\i/\n}
+			\node[anchor=south west,inner sep=2pt,text=\maubong!\domo!white,xscale=\x,yscale=\y] at ($(tenbaichinh)+(\gocnghieng:\rr)$){\parbox{13.5cm}{\raggedright\MakeUppercase{#1}}};
+		}
+		%------	
+		\node[anchor=south west,inner sep=2pt,text=\mauchu,xscale=\x,yscale=\y] at (tenbaichinh) {\parbox{13.5cm}{\raggedright\MakeUppercase{#1}}};
+	\end{tikzpicture}
+}
+[\vspace{20pt}]
+%================== ĐN Part
+\titlespacing{\part}{0cm}{0cm}{0cm}[0cm]
+\titleformat{\part}[display]
+{\bfseries}
+{}
+{0pt}
+{
+	\begin{tikzpicture}[remember picture, overlay]
+		%----Tên phần
+		\node[inner sep=0pt,scale=2,left] (tenphan) at ([xshift=-7cm]\textwidth,0) {\color{violet}\fontsize{15pt}{1pt}\fontfamily{qag}\selectfont\bfseries\MakeUppercase{\partname}};
+		%-----Nội dung phần
+		\node[inner sep=0pt,below left,scale=2.5] (partname) at ([xshift=0.2cm,yshift=-0.2cm]tenphan.south east) 
+		{
+			\parbox{5.5cm}{
+				\fontsize{20pt}{20pt}\fontfamily{qag}\selectfont\bfseries\color{red}\raggedleft
+				\MakeUppercase{#1}
+			}
+		};
+		%----Nền phải
+		\def\mauphan{cyan}
+		\fill[magenta] ([xshift=0.25cm,yshift=0cm]partname.south east) rectangle ([xshift=7cm,yshift=0cm]tenphan.north east) node[midway,white,scale=2.5]{\fontsize{50pt}{1pt}\fontfamily{put}\selectfont\bfseries\thepart};
+		%----Kẻ dưới
+		\fill[\mauphan] ([xshift=6.8cm,yshift=-0.25cm]partname.south east) rectangle +(-1.2*\textwidth,-0.2);
+		%----Trái và dưới
+		\fill[cyan]
+		(current page.north west)
+		--([xshift=1cm]current page.north west)
+		--([xshift=1cm,yshift=10cm]current page.south west)
+		to[out=-90,in=180]([xshift=8cm,yshift=3cm]current page.south west)
+		--([yshift=3cm]current page.south east)
+		--(current page.south east)
+		--(current page.south west)
+		;
+		%--
+		\fill[cyan,opacity=0.5]
+		([xshift=1.5cm,yshift=11.5cm]current page.south west)
+		to[out=-90,in=180]([xshift=9cm,yshift=4cm]current page.south west)
+		--([yshift=4cm]current page.south east)
+		--([yshift=1.5cm]current page.south east)
+		--([xshift=1.5cm,yshift=1.5cm]current page.south west)
+		;
+		%---trang trí
+		\coordinate (BB) at ([yshift=-10 cm,xshift=3cm]current page.north west);
+		\foreach \x in {1,...,50}{
+			\pgfmathsetmacro{\r}{abs(random()*0.7*2)}
+			\pgfmathsetmacro{\f}{30*\r)}
+			\pgfmathsetmacro{\i}{abs(random()*15)}
+			\pgfmathsetmacro{\j}{abs(random()*15)}
+			\draw[fill=magenta!20,opacity=0.5, draw=blue] ([xshift=\i cm,yshift=-\j cm]BB) node[cyan]{\fontsize{\f}{1pt}\selectfont \x} circle (\r);
+		}
+	\end{tikzpicture}
+}
+[
+\vspace{2cm}
+\thispagestyle{empty}
+]
+%============================ 
+\def\itemKN{\color{blue}\faCheckSquareO}
+\def\itemCI{\color{violet}\faCheckCircleO}
+%%======= Thiết lập labelitem, labelenumerate
+%\renewcommand{\labelitemi}{\color{red}\faCheckSquareO}
+\renewcommand{\labelitemi}{\color{violet}\faCheckCircleO}
+\renewcommand{\labelitemii}{\color{violet}\bf ---}
+\renewcommand{\labelitemiii}{\color{violet}\bf +}
+\renewcommand{\labelenumi}{\alph{enumi})}
+%\renewcommand{\labelenumii}{\color{blue}\bf\arabic{enumi}.\arabic{enumii}}
+%============================
+%============================
+% Canh chỉnh mục lục chính
+\setcounter{secnumdepth}{4} %Độ sâu đánh số
+\setcounter{tocdepth}{2} %Độ sâu mục lục
+\contentsmargin{0cm}
+%~~~~~~~~~~~~~~~~~~~~~
+\titlecontents{part}[0pc]
+{\addvspace{10pt}%
+	\color{red!70!black}\fontsize{18pt}{1pt}\fontfamily{qag}\selectfont\bfseries 
+}%
+{}
+{}
+{\hspace*{6pt}\titlerule\hspace*{6pt}\LARGE\bfseries \thecontentspage
+	\begin{tikzpicture}[remember picture, overlay]
+		\draw[fill=red!70!black, rounded corners=0pt] (2pt,0) rectangle (6,0.1pt);
+	\end{tikzpicture}
+}%
+%~~~~~~~~~~~~~~~~~~~~~
+\titlecontents{chapter}[7.25pc] % nd cách trái
+{\addvspace{10pt}%
+	\color{violet!70!black}\fontsize{14pt}{1pt}\fontfamily{put}\selectfont\bfseries
+}%
+{\contentslabel[\chaptertitlename\,\thecontentslabel.]{7.25pc}} %nhãn
+{}
+{\hspace*{6pt}\titlerule\hspace*{6pt}\bfseries\Large \thecontentspage
+}%
+%~~~~~~~~~~~~~~~~~~~~~
+\titlecontents{section}[3.6pc]
+{\addvspace{8pt}\bfseries\color{blue!70!black}}
+{\fontsize{13pt}{18pt}\selectfont\sffamily\contentslabel[{\S\thecontentslabel}\,\,--]{3.5pc}}
+{}
+{\hfill
+	\thecontentspage
+}
+[]
+%~~~~~~~~~~~~~~~~~~~~~
+\titlecontents{subsection}[5.8pc]
+{\addvspace{1.0pt}\color{blue}}
+{\fontsize{12pt}{15pt}\selectfont\sffamily\contentslabel[\tron{\thecontentslabel}]{2.4pc}}
+{}
+{{\tiny\dotfill}\thecontentspage}
+[]
+%~~~~~~~~~~~~~~~~~~~~~
+%--------------------------
+% ĐỊNH NGHĨA CÁC MÔI TRƯỜNG 
+%--------------------------
+
+% =============================================================
+% BỔ SUNG RIÊNG CHO HÓA HỌC
+% =============================================================
 \usepackage{chemfig}
 \setchemfig{atom sep=18pt}
 \newcommand{\cfig}{\chemfig}
@@ -45,17 +455,8 @@
 \usepackage{chemmacros}
 \RenewChemPhase\gas{k}
 
-% ---------- SI units (adapted from the user's Chemistry setup) ----------
 \usepackage{siunitx}
-\sisetup{
-  retain-explicit-plus,
-  output-decimal-marker={,},
-  exponent-product={\cdot},
-  range-phrase=\text{--},
-  list-units=single,
-  list-final-separator=\text{ và },
-  per-mode=symbol
-}
+\sisetup{retain-explicit-plus,output-decimal-marker={,},exponent-product={\cdot},range-phrase=\text{--},list-units=single,list-final-separator=\text{ và },per-mode=symbol}
 \DeclareSIUnit\mola{\mole\per\liter}
 \DeclareSIUnit\Mola{M}
 \DeclareSIUnit\rates{\mole\per\liter\per\second}
@@ -86,274 +487,50 @@
 \DeclareSIUnit\kpa{\kilo\pascal}
 \DeclareSIUnit\ton{tấn}
 \DeclareSIUnit\hectare{ha}
-
-% Convenience chemistry notation
 \newcommand{\dd}{\text{dd}}
 \newcommand{\kt}{\text{kết tủa}}
 \newcommand{\du}{\text{dư}}
 \newcommand{\HieuSuat}{H}
 \newcommand{\Cpercent}{C\%}
-\newcommand{\CM}{C_{\mathrm{M}}}
+\newcommand{\CM}{C_{\mathrm M}}
 
-% ---------- Tables, lists, graphics ----------
-\usepackage{graphicx}
-\usepackage{booktabs,longtable,multirow,makecell,array,tabularx}
-\renewcommand{\arraystretch}{1.18}
-\setlength{\tabcolsep}{5pt}
-\newcolumntype{Y}{>{\RaggedRight\arraybackslash}X}
-\newcolumntype{C}[1]{>{\Centering\arraybackslash}p{#1}}
-\usepackage[inline]{enumitem}
-\setlist{nosep,leftmargin=*}
-\setlist[enumerate,1]{label=\alph*),ref=\alph*)}
-\usepackage{tasks}
-\settasks{
-  label=\alph*),
-  label-width=18pt,
-  label-offset=4pt,
-  item-indent=24pt,
-  column-sep=1em,
-  after-item-skip=1pt
-}
-
-% ---------- Color + drawing ----------
-\usepackage{xcolor}
-\definecolor{ChemCyan}{HTML}{0097A7}
-\definecolor{ChemBlue}{HTML}{0D47A1}
-\definecolor{ChemRed}{HTML}{B71C1C}
-\definecolor{ChemOrange}{HTML}{EF6C00}
-\definecolor{ChemGreen}{HTML}{2E7D32}
-\definecolor{ChemViolet}{HTML}{6A1B9A}
-\definecolor{ChemGray}{HTML}{455A64}
-\definecolor{ChemLight}{HTML}{F5F8FA}
-\usepackage{tikz}
-\usetikzlibrary{calc,positioning,arrows.meta,shapes.geometric,shadows.blur}
-\usepackage[most]{tcolorbox}
-\usepackage{fontawesome5}
-
-% ---------- Links / TOC ----------
-\usepackage[hidelinks,unicode]{hyperref}
-\usepackage{bookmark}
-\usepackage{etoc}
-
-% ---------- Header / footer, simplified from Mathematics sample ----------
-\usepackage{fancyhdr}
-\usepackage{lastpage}
-\setlength{\headheight}{14pt}
-\pagestyle{fancy}
-%\fancyhfemptyonclearpage %để trang trống không có header và footer
-\usepackage{emptypage}
-\fancyhf{}
-\renewcommand{\headrulewidth}{0.55pt}
-%\renewcommand{\headrule}{\hbox to\headwidth{\color{ChemCyan}\leaders\hrule height \headrulewidth\filbreak}}
-\renewcommand{\footrulewidth}{0pt}
-\fancyhead[LE]{\small\color{ChemViolet}\nouppercase{\leftmark}}
-\fancyhead[RO]{\small\color{ChemViolet}\nouppercase{\rightmark}}
-\fancyhead[LO,RE]{\small\color{ChemGray}Ôn thi vào 10 chuyên Hóa}
-\fancyfoot[C]{\small\color{ChemCyan}\faFlask\, \small\color{ChemGray}\thepage/\pageref{LastPage}}
-\fancyfoot[LE,RO]{\small\color{ChemCyan}Trung tâm dạy học ngoài giờ Nhân Trí Sơn}
-\fancyfoot[LO,RE]{\small\color{ChemGreen}ThS. Lê Hoàn Ngọc}
-\fancyheadoffset{0pt}
-
-% thin decorative rules
-%\AddToHook{shipout/background}{%
-%\begin{tikzpicture}[remember picture,overlay]
-%  \draw[ChemCyan,line width=.55pt]
-%    ([yshift=-1.25cm, xshift=1.62cm]current page.north west) --
-%    ([yshift=-1.25cm, xshift=-1.42cm]current page.north east);
-%  \draw[ChemViolet!60,line width=.45pt]
-%    ([yshift=1.05cm]current page.south west) --
-%    ([yshift=1.05cm]current page.south east);
-%\end{tikzpicture}%
-%}
-
-% ---------- Watermark ----------
-\usepackage[pages=all, color=gray!30, scale=4, angle=45, opacity=0.5]{background}
-
-% Cấu hình nội dung của watermark
-\backgroundsetup{
-  contents={
-  \parbox{10cm}{% 10cm là chiều rộng tối đa của khối chữ, bạn có thể tăng giảm
-      \centering
-      ThS. Lê Hoàn Ngọc \\ 
-      \includegraphics[width=0.5cm]{data/assets/logo_tt.png} Trung tâm dạy học ngoài giờ \\
-      Nhân Trí Sơn} % Nội dung chữ bạn muốn hiển thị
-	}
-}
-
-
-
-% ---------- Chapter / section styling ----------
-\usepackage[explicit]{titlesec}
-\titleformat{\chapter}[display]
-  {\normalfont\bfseries\color{ChemBlue}}
-  {\begin{tikzpicture}[baseline=(n.base)]
-     \node[fill=ChemCyan,text=white,rounded corners=3pt,
-           inner xsep=8pt,inner ysep=4pt,font=\Large\bfseries] (n)
-           {CHUYÊN ĐỀ \thechapter};
-   \end{tikzpicture}}
-  {6pt}
-  {\Huge #1}
-\titlespacing*{\chapter}{0pt}{-8pt}{12pt}
-
-\titleformat{\section}
-  {\Large\bfseries\color{ChemRed}}
-  {\thesection.}{.5em}{#1}
-\titlespacing*{\section}{0pt}{11pt}{5pt}
-
-\titleformat{\subsection}
-  {\large\bfseries\color{ChemBlue}}
-  {\thesubsection.}{.5em}{#1}
-\titlespacing*{\subsection}{0pt}{8pt}{4pt}
-
-% ---------- Tùy chọn ẩn/hiện nội dung ----------
-% Có thể đổi true/false ngay trong main.tex sau dòng \input{preamble}.
+% Toggle
 \newif\ifHienLoiGiaiVD
 \newif\ifHienNguon
 \newif\ifHienDapSo
 \newif\ifHienLoiGiaiBT
-
-% Mặc định giữ hành vi hiện tại của bản học sinh:
 \HienLoiGiaiVDtrue
 \HienNguontrue
 \HienDapSotrue
 \HienLoiGiaiBTfalse
+\newcommand{\BanHocSinh}{\HienLoiGiaiVDfalse\HienNguonfalse\HienDapSofalse\HienLoiGiaiBTfalse}
+\newcommand{\BanGiaoVien}{\HienLoiGiaiVDtrue\HienNguontrue\HienDapSotrue\HienLoiGiaiBTtrue}
 
-% Hai cấu hình nhanh nếu cần:
-\newcommand{\BanHocSinh}{%
-  \HienLoiGiaiVDtrue
-  \HienNguonfalse
-  \HienDapSofalse
-  \HienLoiGiaiBTfalse
-}
-\newcommand{\BanGiaoVien}{%
-  \HienLoiGiaiVDtrue
-  \HienNguontrue
-  \HienDapSotrue
-  \HienLoiGiaiBTtrue
-}
-
-% ---------- Môi trường trình bày nội dung ----------
-% Thiết kế ngược vẫn được dùng ở tầng biên soạn, nhưng tên gọi trong tài liệu
-% giữ theo phong cách sách học: Ví dụ -> Ghi nhớ -> Bài tập tự luyện.
-
+% Môi trường nội dung Hóa, dùng ngôn ngữ trình bày của bản Toán.
 \newcounter{vidu}[section]
 \renewcommand{\thevidu}{\arabic{vidu}}
-\newtcolorbox[use counter=vidu]{vidu}[1][]{
-  enhanced,breakable,sharp corners,
-  colback=ChemRed!2,colframe=ChemRed!72!black,boxrule=.65pt,
-  left=2mm,right=2mm,top=1.5mm,bottom=1.5mm,
-  before skip=5pt,after skip=3pt,
-  title={VÍ DỤ \thevidu},fonttitle=\bfseries,
-  coltitle=white,colbacktitle=ChemRed!82!black,#1
-}
-
-\newtcolorbox{loigiaibox}[1][]{
-  enhanced,breakable,sharp corners,
-  colback=ChemCyan!1.5,
-  colframe=ChemCyan!52!black,
-  boxrule=.32pt,
-  left=2.4mm,right=2.4mm,top=1.2mm,bottom=1.4mm,
-  before skip=1pt,after skip=5pt,
-  title={Lời giải},
-  fonttitle=\bfseries\color{ChemBlue},
-  coltitle=ChemBlue,
-  colbacktitle=ChemCyan!1.5,
-  titlerule=0pt,
-  #1
-}
-
-\NewDocumentEnvironment{loigiai}{+b}{%
-  \ifHienLoiGiaiVD
-    \begin{loigiaibox}
-    #1
-    \end{loigiaibox}
-  \fi
-}{}
-
-%\newtcolorbox{ghinho}[2][]{
-%  enhanced,breakable,arc=1.5pt,
-%  colback=ChemBlue!3,colframe=ChemBlue!65!black,boxrule=.55pt,
-%  left=2mm,right=2mm,top=1.5mm,bottom=1.5mm,
-%  title={#2},fonttitle=\bfseries,
-%  coltitle=white,colbacktitle=ChemBlue!82!black,#1
-%}
-
-\newtcolorbox{casiobox}[1][]{
-  enhanced,breakable,arc=1.5pt,
-  colback=ChemViolet!3,colframe=ChemViolet!72!black,boxrule=.6pt,
-  left=2mm,right=2mm,top=1.5mm,bottom=1.5mm,
-  title={SỬ DỤNG MÁY TÍNH CASIO},fonttitle=\bfseries,
-  coltitle=white,colbacktitle=ChemViolet!82!black,#1
-}
-
-\newtcolorbox{ghinho}[2][]{
-  enhanced,breakable,arc=1.5pt,
-  colback=ChemGreen!3,colframe=ChemGreen!67!black,boxrule=.6pt,
-  left=2mm,right=2mm,top=1.5mm,bottom=1.5mm,
-  title={#2},fonttitle=\bfseries,
-  coltitle=white,colbacktitle=ChemGreen!80!black,#1
-}
-
+\newtcolorbox[use counter=vidu]{vidu}[1][]{enhanced jigsaw,breakable,arc=0mm,colback=pink!3,boxrule=0.6pt,colframe=red!90!black,drop lifted shadow=orange,left=2mm,right=2mm,top=2mm,bottom=2mm,before skip=2mm,after skip=2mm,title={VÍ DỤ \thevidu},fonttitle=\fontfamily{qag}\selectfont\bfseries,coltitle=red!90!black,colbacktitle=pink!3,#1}
+\newtcolorbox{loigiaibox}[1][]{enhanced,breakable,sharp corners,colback=white,colframe=cyan,boxrule=.35pt,left=2mm,right=2mm,top=1.4mm,bottom=1.4mm,before skip=1mm,after skip=2mm,title={Lời giải},fonttitle=\fontfamily{qag}\selectfont\bfseries\color{blue},coltitle=blue,colbacktitle=white,titlerule=0pt,#1}
+\NewDocumentEnvironment{loigiai}{+b}{\ifHienLoiGiaiVD\begin{loigiaibox}#1\end{loigiaibox}\fi}{}
+\newtcolorbox{ghinho}[1][]{enhanced jigsaw,breakable,pad at break*=1mm,colback=green!5,boxrule=0pt,frame hidden,left=2mm,right=0pt,bottom=1.5pt,top=1.5pt,before skip=2mm,after skip=2mm,borderline west={1mm}{0cm}{green!70!black},title={Ghi nhớ},fonttitle=\bfseries,coltitle=green!40!black,#1}
+\newtcolorbox{casiobox}[1][]{enhanced jigsaw,breakable,pad at break*=1mm,colback=yellow!10,boxrule=0pt,frame hidden,left=2mm,right=0pt,bottom=1.5pt,top=1.5pt,before skip=2mm,after skip=2mm,borderline west={1mm}{0cm}{orange},title={Sử dụng máy tính CASIO},fonttitle=\bfseries,coltitle=orange!70!black,#1}
+\newtcolorbox{unitbox}[1][]{enhanced jigsaw,breakable,pad at break*=1mm,colback=green!5,boxrule=0pt,frame hidden,left=2mm,right=0pt,bottom=1.5pt,top=1.5pt,before skip=2mm,after skip=2mm,borderline west={1mm}{0cm}{cyan!70!black},title={Đổi đơn vị},fonttitle=\bfseries,coltitle=cyan!60!black,#1}
 \newcounter{tuluyen}[chapter]
 \renewcommand{\thetuluyen}{\arabic{tuluyen}}
-\newenvironment{tuluyen}{%
-  \refstepcounter{tuluyen}%
-  \par\medskip\noindent
-  \textbf{\color{ChemBlue}Bài \thetuluyen.}\enspace
-  \ignorespaces
-}{%
-  \par\smallskip
-}
-
-% Lời giải bài tập được lưu trong mã nguồn và điều khiển bằng toggle.
-\NewDocumentEnvironment{loigiaiBT}{+b}{%
-  \ifHienLoiGiaiBT
-    \begin{loigiaibox}
-    #1
-    \end{loigiaibox}
-  \fi
-}{}
-
-\newcommand{\dapso}[1]{%
-  \ifHienDapSo
-    \par\smallskip{\footnotesize\color{ChemGray}\textbf{Đáp số:} #1}\par
-  \fi
-}
-
-\newtcolorbox{notechem}[1][]{
-  enhanced,breakable,frame hidden,
-  borderline west={2pt}{0pt}{ChemCyan},
-  colback=ChemCyan!4,left=3mm,right=2mm,top=1mm,bottom=1mm,
-  #1
-}
-
-% ---------- Source / skill tags ----------
-\newcommand{\source}[1]{%
-  \ifHienNguon
-    \par\smallskip{\footnotesize\color{ChemGray}\textit{Nguồn/kiểu bài: #1}}
-  \fi
-}
-\newcommand{\skill}[1]{\tcbox[on line,boxsep=.5pt,left=2pt,right=2pt,top=1pt,bottom=1pt,
-  colback=ChemCyan!8,colframe=ChemCyan!45!black]{\scriptsize\bfseries #1}}
-
-% ---------- CASIO key notation ----------
-\newcommand{\key}[1]{\tcbox[on line,boxsep=.2pt,left=2pt,right=2pt,top=.6pt,bottom=.6pt,
-  colback=black!4,colframe=black!55,arc=1pt]{\sffamily\scriptsize #1}}
+\newenvironment{tuluyen}{\refstepcounter{tuluyen}\par\medskip\noindent\textbf{\color{blue}Bài \thetuluyen.}\enspace\ignorespaces}{\par\smallskip}
+\NewDocumentEnvironment{loigiaiBT}{+b}{\ifHienLoiGiaiBT\begin{loigiaibox}#1\end{loigiaibox}\fi}{}
+\newcommand{\dapsohoa}[1]{\ifHienDapSo\hspace{\fill}\mbox{}\linebreak[0]\hspace*{\fill}\mbox{\fontsize{8pt}{1pt}\selectfont\color{blue!80!black}{\color{red}{\faKey}}~#1}\fi}
+\let\dapso\dapsohoa
+\newcommand{\source}[1]{\ifHienNguon\par\smallskip{\footnotesize\color{gray}\textit{Nguồn/kiểu bài: #1}}\fi}
+\newcommand{\skill}[1]{\tcbox[on line,boxsep=.5pt,left=2pt,right=2pt,top=1pt,bottom=1pt,colback=cyan!8,colframe=cyan!45!black]{\scriptsize\bfseries #1}}
+\newcommand{\key}[1]{\tcbox[on line,boxsep=.2pt,left=2pt,right=2pt,top=.6pt,bottom=.6pt,colback=black!4,colframe=black!55,arc=1pt]{\sffamily\scriptsize #1}}
 \newcommand{\casioseq}[1]{\texttt{#1}}
-
-% ---------- Useful Chemistry display helpers ----------
 \newcommand{\rxn}[1]{\[\ce{#1}\]}
 \newcommand{\given}[1]{\textbf{Dữ kiện:} #1}
 \newcommand{\ask}[1]{\textbf{Yêu cầu:} #1}
 \newcommand{\result}[1]{\hfill\textbf{Kết quả: }#1}
-
-% ---------- A compact chapter-local TOC ----------
-\newcommand{\chaptertoc}{%
-  \begin{tcolorbox}[colback=black!1,colframe=black!18,boxrule=.4pt,
-    title={Nội dung chuyên đề},fonttitle=\bfseries,coltitle=ChemBlue,
-    colbacktitle=black!2]
-  \etocsettocstyle{}{}
-  \etocsetnexttocdepth{section}
-  \localtableofcontents
-  \end{tcolorbox}
-}
+\usepackage{etoc}
+\newcommand{\chaptertoc}{\localtableofcontents\bigskip}
+\newtcolorbox{thuthach}[1][]{enhanced,breakable,colback=white,colframe=violet,boxrule=.5pt,title={Bài toán thử thách},#1}
+\setlength{\headheight}{15pt}
+\setlength{\parindent}{0pt}
