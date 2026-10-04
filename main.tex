@@ -1,46 +1,19 @@
-\documentclass[12pt,a4paper,twoside,openany]{book}
-
-% ================== THÔNG TIN TÀI LIỆU ==================
-\newcommand{\TenTaiLieu}{ÔN THI VÀO 10 CHUYÊN HÓA}
-\newcommand{\TenChuyenDe}{CÔNG CỤ ĐỊNH LƯỢNG TRONG HÓA HỌC}
-\newcommand{\TenTruong}{TRUNG TÂM DẠY HỌC NGOÀI GIỜ NHÂN TRÍ SƠN}
-\newcommand{\ToBoMon}{}
-\newcommand{\NamHoc}{2026--2027}
-
+\documentclass[12pt,a4paper,onecolumn,titlepage,twoside,openany]{book}
+\def\tren{1.65}\def\duoi{1.5}\def\trai{1.5}\def\phai{1.25}
+\def\topset{0.5}\def\botset{0.5}
+\def\TenTruong{TRUNG TÂM DẠY HỌC NGOÀI GIỜ NHÂN TRÍ SƠN}
+\def\ChanTrang{TRUNG TÂM DẠY HỌC NGOÀI GIỜ NHÂN TRÍ SƠN}
+\def\TenTaiLieu{ÔN THI VÀO 10 CHUYÊN HÓA}
+\def\TenChuyenDe{CÔNG CỤ ĐỊNH LƯỢNG TRONG HÓA HỌC}
 \input{preamble}
-\BanHocSinh % cấu hình tài liệu về bản dành cho học sinh = không có đáp số, ẩn nguồn, lời giải
 \begin{document}
-
-\begin{titlepage}
-\thispagestyle{empty}
-\begin{tikzpicture}[remember picture,overlay]
-  \fill[ChemCyan!7] (current page.north west) rectangle (current page.south east);
-  \fill[ChemCyan] (current page.north west) rectangle ([yshift=-10mm]current page.north east);
-  \fill[ChemBlue] (current page.south west) rectangle ([yshift=7mm]current page.south east);
-\end{tikzpicture}
-\centering
-\vspace*{2.2cm}
-{\large\bfseries \TenTruong\par}
-{\large\bfseries \ToBoMon\par}
-\vspace{2.3cm}
-{\Huge\bfseries\color{ChemBlue}\TenTaiLieu\par}
-\vspace{8mm}
-{\LARGE\bfseries\color{ChemRed}\TenChuyenDe\par}
-\vfill
-{\large Năm học \NamHoc\par}
-\end{titlepage}
-
-\frontmatter
 \tableofcontents
-\mainmatter
-
+\newpage
 \chapter{Công cụ định lượng trong hóa học}
 \chaptertoc
-
 \input{data/buoi01}
 \input{data/buoi02}
 \input{data/buoi03}
 \input{data/buoi04}
 \input{data/baitap_chuyende}
-
 \end{document}
