@@ -140,27 +140,47 @@
 \usepackage{lastpage}
 \setlength{\headheight}{14pt}
 \pagestyle{fancy}
+%\fancyhfemptyonclearpage %để trang trống không có header và footer
+\usepackage{emptypage}
 \fancyhf{}
-\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\headrulewidth}{0.55pt}
+%\renewcommand{\headrule}{\hbox to\headwidth{\color{ChemCyan}\leaders\hrule height \headrulewidth\filbreak}}
 \renewcommand{\footrulewidth}{0pt}
 \fancyhead[LE]{\small\color{ChemViolet}\nouppercase{\leftmark}}
 \fancyhead[RO]{\small\color{ChemViolet}\nouppercase{\rightmark}}
 \fancyhead[LO,RE]{\small\color{ChemGray}Ôn thi vào 10 chuyên Hóa}
-\fancyfoot[C]{\small\color{ChemGray}\thepage/\pageref{LastPage}}
-\fancyfoot[LE,RO]{\small\color{ChemCyan}\faFlask\, Trung tâm dạy học ngoài giờ Nhân Trí Sơn - 098 564 37 93}
+\fancyfoot[C]{\small\color{ChemCyan}\faFlask\, \small\color{ChemGray}\thepage/\pageref{LastPage}}
+\fancyfoot[LE,RO]{\small\color{ChemCyan}Trung tâm dạy học ngoài giờ Nhân Trí Sơn}
+\fancyfoot[LO,RE]{\small\color{ChemGreen}ThS. Lê Hoàn Ngọc}
 \fancyheadoffset{0pt}
 
 % thin decorative rules
-\AddToHook{shipout/background}{%
-\begin{tikzpicture}[remember picture,overlay]
-  \draw[ChemCyan,line width=.55pt]
-    ([yshift=-1.15cm]current page.north west) --
-    ([yshift=-1.15cm]current page.north east);
-  \draw[ChemCyan!60,line width=.45pt]
-    ([yshift=1.05cm]current page.south west) --
-    ([yshift=1.05cm]current page.south east);
-\end{tikzpicture}%
+%\AddToHook{shipout/background}{%
+%\begin{tikzpicture}[remember picture,overlay]
+%  \draw[ChemCyan,line width=.55pt]
+%    ([yshift=-1.25cm, xshift=1.62cm]current page.north west) --
+%    ([yshift=-1.25cm, xshift=-1.42cm]current page.north east);
+%  \draw[ChemViolet!60,line width=.45pt]
+%    ([yshift=1.05cm]current page.south west) --
+%    ([yshift=1.05cm]current page.south east);
+%\end{tikzpicture}%
+%}
+
+% ---------- Watermark ----------
+\usepackage[pages=all, color=gray!30, scale=4, angle=45, opacity=0.5]{background}
+
+% Cấu hình nội dung của watermark
+\backgroundsetup{
+  contents={
+  \parbox{10cm}{% 10cm là chiều rộng tối đa của khối chữ, bạn có thể tăng giảm
+      \centering
+      ThS. Lê Hoàn Ngọc \\ 
+      \includegraphics[width=0.5cm]{data/assets/logo_tt.png} Trung tâm dạy học ngoài giờ \\
+      Nhân Trí Sơn} % Nội dung chữ bạn muốn hiển thị
+	}
 }
+
+
 
 % ---------- Chapter / section styling ----------
 \usepackage[explicit]{titlesec}
@@ -200,7 +220,7 @@
 
 % Hai cấu hình nhanh nếu cần:
 \newcommand{\BanHocSinh}{%
-  \HienLoiGiaiVDfalse
+  \HienLoiGiaiVDtrue
   \HienNguonfalse
   \HienDapSofalse
   \HienLoiGiaiBTfalse
@@ -250,13 +270,13 @@
   \fi
 }{}
 
-\newtcolorbox{ghinho}[1][]{
-  enhanced,breakable,arc=1.5pt,
-  colback=ChemBlue!3,colframe=ChemBlue!65!black,boxrule=.55pt,
-  left=2mm,right=2mm,top=1.5mm,bottom=1.5mm,
-  title={GHI NHỚ},fonttitle=\bfseries,
-  coltitle=white,colbacktitle=ChemBlue!82!black,#1
-}
+%\newtcolorbox{ghinho}[2][]{
+%  enhanced,breakable,arc=1.5pt,
+%  colback=ChemBlue!3,colframe=ChemBlue!65!black,boxrule=.55pt,
+%  left=2mm,right=2mm,top=1.5mm,bottom=1.5mm,
+%  title={#2},fonttitle=\bfseries,
+%  coltitle=white,colbacktitle=ChemBlue!82!black,#1
+%}
 
 \newtcolorbox{casiobox}[1][]{
   enhanced,breakable,arc=1.5pt,
@@ -266,11 +286,11 @@
   coltitle=white,colbacktitle=ChemViolet!82!black,#1
 }
 
-\newtcolorbox{unitbox}[1][]{
+\newtcolorbox{ghinho}[2][]{
   enhanced,breakable,arc=1.5pt,
   colback=ChemGreen!3,colframe=ChemGreen!67!black,boxrule=.6pt,
   left=2mm,right=2mm,top=1.5mm,bottom=1.5mm,
-  title={ĐỔI ĐƠN VỊ},fonttitle=\bfseries,
+  title={#2},fonttitle=\bfseries,
   coltitle=white,colbacktitle=ChemGreen!80!black,#1
 }
 

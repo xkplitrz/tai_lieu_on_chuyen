@@ -2,20 +2,37 @@
 
 Trong các bài toán Hóa học, sai đơn vị thường dẫn đến sai toàn bộ phép tính dù phương pháp đúng. Trước khi lập công thức hay thay số, cần tập thói quen đọc kỹ \textbf{đại lượng -- đơn vị -- bậc của số liệu}. Ở cấp THCS và trong các bài toán thực tế, các đơn vị thường gặp nhất là \si{\gram}, \si{\kilo\gram}, \si{\ton}, \si{\milli\liter}, \si{\liter}, \si{\cubic\metre}, cùng các đơn vị nồng độ như \si{\gram\per\liter}, \si{\mole\per\liter}, \si{\kilo\gram\per\cubic\metre}.
 
-\begin{ghinho}
-\textbf{Một số đổi đơn vị cần thuộc:}
-\[
-\SI{1}{\ton}=\SI{1000}{\kilo\gram}=10^6\,\si{\gram},\qquad
-\SI{1}{\cubic\metre}=\SI{1000}{\liter},\qquad
-\SI{1}{\liter}=\SI{1000}{\milli\liter}.
-\]
-\[
-\SI{1}{\kilo\gram\per\cubic\metre}=\SI{1}{\gram\per\liter},\qquad
-\SI{1}{\gram\per\milli\liter}=\SI{1}{\kilo\gram\per\liter}.
-\]
-Khi đổi đơn vị có lũy thừa, phải đổi cả lũy thừa của đơn vị. Ví dụ: \(\SI{1}{\cubic\centi\metre}=\SI{1}{\milli\liter}\) và \(\SI{1}{\cubic\metre}=10^6\,\si{\cubic\centi\metre}\).
+\begin{ghinho}{Một số đổi đơn vị thường dùng}
+\begin{center}
+	\begin{tabular}{ccc}
+		\SI{1}{\ton} = \SI{1000}{\kilo\gram} =  \SI{1e6}{\gram} &
+		\SI{1}{\cubic\metre} = \SI{1000}{\liter} &
+		\SI{1}{\liter} = \SI{1000}{\milli\liter} \\
+		\SI{1}{\gram\per\milli\liter} = \SI{1}{\kilo\gram\per\liter} = \SI{1}{\ton\per\cubic\metre}&
+		\SI{1}{\kilo\gram\per\cubic\metre} = \SI{1}{\gram\per\liter} &
+	\end{tabular}
+\end{center}
 \end{ghinho}
-
+Cùng một phép tính, kết quả của phép tính có thể \emph{khác nhau}, nhưng đều là kết quả đúng nếu \textbf{đúng đơn vị}. Ví dụ phép tính số mol cho \SI{1,0}{\ton} \ce{CaCO3} có thể có các kết quả khác nhau và \emph{đều đúng} như sau:
+\[
+	n_{\ce{CaCO3}} = \dfrac{1,0}{100} = \SI{10000}{\mole} \qquad
+	n_{\ce{CaCO3}} = \dfrac{1,0}{100} = \SI{10}{\kilo\mole} \qquad
+	n_{\ce{CaCO3}} = \dfrac{1,0}{100} = \SI{0,01}{\mega\mole}
+\]
+Trong phép tính trên, xuất hiện các \emph{bội số} với k--kilo, M--mega. Một số bội số khác như bên dưới.
+\begin{ghinho}{Bội số}
+	\begin{center}
+		\begin{tabular}{llcllc}
+			Bội số & Kí hiệu & Ý nghĩa & Bội số & Kí hiệu & Ý nghĩa \\
+			\midrule
+			kilo & k & $\cdot 10^3$ & milli & m & $\cdot 10^{-3}$ \\
+			mega & M & $\cdot 10^6$ & deci & d & $\cdot 10^{-1}$ \\
+				&	&				& centi & c & $\cdot 10^{-2}$ \\
+		\end{tabular}
+	\end{center}
+\end{ghinho}
+Bội số này học sinh đã được làm quen, ví dụ, trong đơn vị độ dài. Với
+\[ \SI{1}{\metre} = \SI{10}{\deci\metre} = \SI{100}{\centi\metre} = \SI{1000}{\milli\metre}\]
 \begin{vidu}
 Một nhà máy cần vận chuyển \SI{2.40}{\ton} nguyên liệu bằng các bao, mỗi bao chứa \SI{25}{\kilo\gram}. Tính số bao cần dùng.
 \end{vidu}
@@ -36,7 +53,7 @@ Một bể chứa \SI{3.5}{\cubic\metre} dung dịch. Người ta rót dung dị
 \]
 \end{loigiai}
 
-\begin{unitbox}
+\begin{ghinho}{Đổi đơn vị tính toán}
 Cách đổi đơn vị ít sai nhất là dùng \textbf{thừa số chuyển đổi}: nhân số liệu với một phân số có giá trị bằng 1 sao cho đơn vị cần khử xuất hiện ở cả tử và mẫu.
 \[
 \SI{1.8}{\ton}\times\frac{\SI{1000}{\kilo\gram}}{\SI{1}{\ton}}=\SI{1800}{\kilo\gram},
@@ -45,7 +62,7 @@ Cách đổi đơn vị ít sai nhất là dùng \textbf{thừa số chuyển đ
 \SI{2.5}{\cubic\metre}\times\frac{\SI{1000}{\liter}}{\SI{1}{\cubic\metre}}=\SI{2500}{\liter}.
 \]
 Trong bài nhiều bước, nên đổi đơn vị trước rồi mới thay số.
-\end{unitbox}
+\end{ghinho}
 
 \begin{vidu}
 Khối lượng riêng của ethanol là \SI{0.789}{\gram\per\milli\liter}. Tính khối lượng của \SI{300}{\milli\liter} ethanol theo gam và kg.
@@ -58,10 +75,9 @@ m=DV=0.789\times300=\SI{236.7}{\gram}=\SI{0.2367}{\kilo\gram}.
 \end{loigiai}
 
 \begin{casiobox}
+\textbf{Bộ nhớ:} dùng làm tham số hoặc ẩn số. Mỗi máy tính có khoảng 9 bộ nhớ, tương ứng với các chữ cái \textsc{A, B, C, D, E, F}, \textit{x, y} và \textsc{M}.\par
 \textbf{CALC:} dùng khi một biểu thức giữ nguyên nhưng cần tính với nhiều bộ giá trị.\par
-\textbf{SOLVE:} dùng để tìm nghiệm gần đúng của phương trình một ẩn sau khi đã thiết lập đúng phương trình từ dữ kiện Hóa học.\par
-\textbf{Số dạng khoa học:} nên dùng phím \key{\(\times10^x\)} để nhập các số có nhiều chữ số 0.\par
-\textbf{CONV:} có thể dùng để kiểm tra một số phép đổi đơn vị vật lí có sẵn trên máy. Các phép đổi mang bản chất hóa học, chẳng hạn \si{\mole\per\liter} sang \si{\gram\per\liter}, vẫn phải dựa vào khối lượng mol.
+\textbf{SOLVE:} dùng để tìm nghiệm của phương trình một ẩn sau khi đã thiết lập đúng phương trình từ dữ kiện Hóa học.\par
 \end{casiobox}
 
 \begin{vidu}
