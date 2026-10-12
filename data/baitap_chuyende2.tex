@@ -1,8 +1,8 @@
 \section{Bài tập chuyên đề}
 
-Hệ thống bài tập được sắp xếp theo mức độ tăng dần. Phần năng lượng chiếm trọng tâm của chuyên đề; phần tốc độ phản ứng chỉ giữ các dạng phù hợp với yêu cầu lớp 8 và một số bài đọc dữ liệu cơ bản.
+Hệ thống bài tập được sắp xếp theo độ dài của ``con đường năng lượng''. Bài đầu chỉ cần một bước; các bài sau phải đi qua thêm các bước về hiệu suất, hỗn hợp nhiên liệu, quãng đường, chi phí hoặc phát thải. Phần cuối gồm một số bài thực tế được trích nguyên văn từ đề tuyển sinh trong kho đề.
 
-\subsection{Củng cố}
+\subsection{Củng cố con đường năng lượng}
 
 \begin{tuluyen}
 Phân loại các quá trình sau thành tỏa nhiệt hoặc thu nhiệt: (a) đốt than; (b) nung \ce{CaCO3}; (c) đốt ethanol; (d) cho \ce{CaO} vào nước.
@@ -25,7 +25,7 @@ Q=12\times30=\SI{360}{\mega\joule}.
 \end{tuluyen}
 
 \begin{tuluyen}
-Khi đốt hoàn toàn \(1\) mol \ce{H2}, phản ứng tỏa \SI{286}{\kilo\joule}. Tính nhiệt lượng tỏa ra khi đốt \SI{2.0}{\kilo\gram} \ce{H2}.
+Khi đốt hoàn toàn $1$ mol \ce{H2}, phản ứng tỏa \SI{286}{\kilo\joule}. Tính nhiệt lượng tỏa ra khi đốt \SI{2.0}{\kilo\gram} \ce{H2}.
 \dapso{\SI{286}{\mega\joule}.}
 \begin{loigiaiBT}
 \[
@@ -39,7 +39,7 @@ Q=1000\times286=\SI{286000}{\kilo\joule}=\SI{286}{\mega\joule}.
 \end{tuluyen}
 
 \begin{tuluyen}
-Một thiết bị cần \SI{72}{\mega\joule} năng lượng có ích. Hiệu suất sử dụng nhiệt là \(60\%\). Tính nhiệt lượng nhiên liệu phải tỏa ra.
+Một thiết bị cần \SI{72}{\mega\joule} năng lượng có ích. Hiệu suất sử dụng nhiệt là $60\%$. Tính nhiệt lượng nhiên liệu phải tỏa ra.
 \dapso{\SI{120}{\mega\joule}.}
 \begin{loigiaiBT}
 \[
@@ -50,10 +50,10 @@ Q_{\text{tỏa}}=\frac{72}{0.60}=\SI{120}{\mega\joule}.
 \end{tuluyen}
 
 \begin{tuluyen}
-Một nhiên liệu có nhiệt trị \SI{40}{\mega\joule\per\kilo\gram}. Bếp có hiệu suất \(50\%\). Tính khối lượng nhiên liệu cần dùng để cung cấp \SI{100}{\mega\joule} nhiệt có ích.
+Một nhiên liệu có nhiệt trị \SI{40}{\mega\joule\per\kilo\gram}. Bếp có hiệu suất $50\%$. Tính khối lượng nhiên liệu cần dùng để cung cấp \SI{100}{\mega\joule} nhiệt có ích.
 \dapso{\SI{5.0}{\kilo\gram}.}
 \begin{loigiaiBT}
-Mỗi kilogram nhiên liệu cho năng lượng có ích:
+Mỗi kilogram nhiên liệu cung cấp năng lượng có ích:
 \[
 40\times0.50=\SI{20}{\mega\joule}.
 \]
@@ -65,77 +65,119 @@ m=\frac{100}{20}=\SI{5.0}{\kilo\gram}.
 \end{loigiaiBT}
 \end{tuluyen}
 
-\subsection{Vận dụng}
+\begin{tuluyen}
+Đun \SI{10}{\kilo\gram} nước từ \SI{20}{\degreeCelsius} đến \SI{80}{\degreeCelsius}. Biết nhiệt dung riêng của nước là \SI{4.2}{\joule\per\gram\per\degreeCelsius}. Tính nhiệt lượng nước cần nhận.
+\dapso{\SI{2.52}{\mega\joule}.}
+\begin{loigiaiBT}
+\[
+\Delta T=80-20=\SI{60}{\degreeCelsius},
+\]
+\[
+Q=10000\times4.2\times60=\SI{2520000}{\joule}=\SI{2.52}{\mega\joule}.
+\]
+\textbf{Vậy,} nước cần nhận \SI{2.52}{\mega\joule} nhiệt.
+\end{loigiaiBT}
+\end{tuluyen}
+
+\subsection{Vận dụng nhiều bước}
 
 \begin{tuluyen}
-LPG gồm \(50\%\) propane và \(50\%\) butane theo số mol. Khi đốt hoàn toàn, \(1\) mol propane và \(1\) mol butane lần lượt tỏa \SI{2220}{\kilo\joule} và \SI{2850}{\kilo\joule}. Tính nhiệt lượng tỏa ra khi đốt \(80\) mol hỗn hợp.
-\source{Phỏng theo dạng bài LPG trong đề tuyển sinh chuyên Hóa Điện Biên 2026.}
+Một bếp dùng nhiên liệu có nhiệt trị \SI{35}{\mega\joule\per\kilo\gram}, hiệu suất $40\%$. Cần đun \SI{25}{\kilo\gram} nước từ \SI{25}{\degreeCelsius} đến \SI{100}{\degreeCelsius}. Biết $c_{\text{nước}}=\SI{4.2}{\joule\per\gram\per\degreeCelsius}$. Tính khối lượng nhiên liệu cần dùng.
+\dapso{\(\approx\SI{0.563}{\kilo\gram}\).}
+\begin{loigiaiBT}
+\[
+Q_{\text{cần}}=25000\times4.2\times75=\SI{7.875}{\mega\joule}.
+\]
+Nhiệt lượng nhiên liệu phải tỏa:
+\[
+Q_{\text{tỏa}}=\frac{7.875}{0.40}=\SI{19.6875}{\mega\joule}.
+\]
+Khối lượng nhiên liệu:
+\[
+m=\frac{19.6875}{35}\approx\SI{0.563}{\kilo\gram}.
+\]
+\textbf{Vậy,} cần khoảng \SI{0.563}{\kilo\gram} nhiên liệu.
+\end{loigiaiBT}
+\end{tuluyen}
+
+\begin{tuluyen}
+Để nung \SI{1.00}{\ton} \ce{CaCO3} cần cung cấp \SI{178}{\kilo\joule} cho mỗi mol \ce{CaCO3}. Lò dùng than có nhiệt trị \SI{25}{\mega\joule\per\kilo\gram}, hiệu suất truyền nhiệt $40\%$. Tính khối lượng than tối thiểu. Cho $M_{\ce{CaCO3}}=100$ g/mol.
+\dapso{\SI{178}{\kilo\gram}.}
+\begin{loigiaiBT}
+\[
+n_{\ce{CaCO3}}=\frac{1000000}{100}=\SI{10000}{\mole}.
+\]
+\[
+Q_{\text{cần}}=10000\times178=\SI{1780}{\mega\joule}.
+\]
+\[
+Q_{\text{than}}=\frac{1780}{0.40}=\SI{4450}{\mega\joule}.
+\]
+\[
+m_{\text{than}}=\frac{4450}{25}=\SI{178}{\kilo\gram}.
+\]
+\textbf{Vậy,} cần tối thiểu \SI{178}{\kilo\gram} than.
+\end{loigiaiBT}
+\end{tuluyen}
+
+\begin{tuluyen}
+LPG gồm $50\%$ propane và $50\%$ butane theo số mol. Khi đốt hoàn toàn, $1$ mol propane và $1$ mol butane lần lượt tỏa \SI{2220}{\kilo\joule} và \SI{2850}{\kilo\joule}. Tính nhiệt lượng tỏa ra khi đốt $80$ mol hỗn hợp.
 \dapso{\SI{202.8}{\mega\joule}.}
 \begin{loigiaiBT}
-Có \(40\) mol mỗi khí:
+Có $40$ mol mỗi khí:
 \[
-Q=40\times2220+40\times2850=\SI{202800}{\kilo\joule}
-=\SI{202.8}{\mega\joule}.
+Q=40\times2220+40\times2850=\SI{202800}{\kilo\joule}=\SI{202.8}{\mega\joule}.
 \]
 \textbf{Vậy,} nhiệt lượng tỏa ra là \SI{202.8}{\mega\joule}.
 \end{loigiaiBT}
 \end{tuluyen}
 
 \begin{tuluyen}
-Một bình LPG chứa \SI{12}{\kilo\gram} nhiên liệu có nhiệt trị trung bình \SI{46}{\mega\joule\per\kilo\gram}. Bếp sử dụng có hiệu suất \(65\%\). Gia đình cần trung bình \SI{15}{\mega\joule} nhiệt có ích mỗi ngày. Ước tính số ngày dùng hết bình gas.
-\source{Phỏng theo dạng bài LPG và chi phí sinh hoạt trong đề tuyển sinh chuyên Hóa Lâm Đồng 2026.}
+Một bình LPG chứa \SI{12}{\kilo\gram} nhiên liệu có nhiệt trị trung bình \SI{46}{\mega\joule\per\kilo\gram}. Bếp sử dụng có hiệu suất $65\%$. Gia đình cần trung bình \SI{15}{\mega\joule} nhiệt có ích mỗi ngày. Ước tính số ngày dùng hết bình gas.
 \dapso{\(\approx23.9\) ngày.}
 \begin{loigiaiBT}
-Tổng nhiệt lượng tỏa ra:
 \[
-Q=12\times46=\SI{552}{\mega\joule}.
+Q_{\text{tỏa}}=12\times46=\SI{552}{\mega\joule},
 \]
-Nhiệt có ích:
 \[
 Q_{\text{ích}}=552\times0.65=\SI{358.8}{\mega\joule}.
 \]
-Số ngày:
 \[
-t=\frac{358.8}{15}\approx23.9.
+N=\frac{358.8}{15}\approx23.9\text{ ngày}.
 \]
-\textbf{Vậy,} một bình gas dùng được khoảng \(23.9\) ngày.
+\textbf{Vậy,} một bình gas dùng được khoảng $23.9$ ngày.
 \end{loigiaiBT}
 \end{tuluyen}
 
 \begin{tuluyen}
-Một xe dùng \SI{5.0}{\liter} nhiên liệu có khối lượng riêng \SI{0.72}{\kilo\gram\per\liter}, nhiệt trị \SI{44}{\mega\joule\per\kilo\gram}. Hiệu suất động cơ là \(28\%\), xe cần \SI{550}{\kilo\joule} công cơ học cho mỗi kilomet. Tính quãng đường tối đa xe đi được.
-\source{Phỏng theo dạng bài E5/E10 trong đề tuyển sinh chuyên Hóa Hà Nội 2025 và Lâm Đồng 2026.}
-\dapso{\(\approx80.6\) km.}
+Một xe dùng \SI{5.0}{\liter} nhiên liệu có khối lượng riêng \SI{0.72}{\kilo\gram\per\liter}, nhiệt trị \SI{44}{\mega\joule\per\kilo\gram}. Hiệu suất động cơ là $28\%$, xe cần \SI{550}{\kilo\joule} công cơ học cho mỗi kilomet. Tính quãng đường tối đa xe đi được.
+\dapso{\(\approx\SI{80.6}{\kilo\metre}\).}
 \begin{loigiaiBT}
-Khối lượng nhiên liệu:
 \[
 m=5.0\times0.72=\SI{3.6}{\kilo\gram}.
 \]
-Nhiệt lượng tỏa ra:
 \[
-Q=3.6\times44=\SI{158.4}{\mega\joule}=\SI{158400}{\kilo\joule}.
+Q_{\text{tỏa}}=3.6\times44=\SI{158.4}{\mega\joule}=\SI{158400}{\kilo\joule}.
 \]
-Công có ích:
 \[
 Q_{\text{ích}}=158400\times0.28=\SI{44352}{\kilo\joule}.
 \]
-Quãng đường:
 \[
-s=\frac{44352}{550}\approx80.6\text{ km}.
+s=\frac{44352}{550}\approx\SI{80.6}{\kilo\metre}.
 \]
-\textbf{Vậy,} xe đi được tối đa khoảng \(80.6\) km.
+\textbf{Vậy,} xe đi được tối đa khoảng \SI{80.6}{\kilo\metre}.
 \end{loigiaiBT}
 \end{tuluyen}
 
 \begin{tuluyen}
-Một loại gas giá \(32\,000\) đồng/kg, nhiệt trị \SI{46}{\mega\joule\per\kilo\gram}. Bếp có hiệu suất \(60\%\). Tính chi phí để cung cấp \SI{414}{\mega\joule} nhiệt có ích.
-\dapso{\(480\,000\) đồng.}
+Một loại gas giá $32\,000$ đồng/kg, nhiệt trị \SI{46}{\mega\joule\per\kilo\gram}. Bếp có hiệu suất $60\%$. Tính chi phí để cung cấp \SI{414}{\mega\joule} nhiệt có ích.
+\dapso{$480\,000$ đồng.}
 \begin{loigiaiBT}
-Mỗi kilogram gas cung cấp:
+Năng lượng có ích từ $1$ kg gas:
 \[
-46\times0.60=\SI{27.6}{\mega\joule}
+46\times0.60=\SI{27.6}{\mega\joule}.
 \]
-nhiệt có ích. Khối lượng gas:
+Khối lượng gas:
 \[
 m=\frac{414}{27.6}=\SI{15}{\kilo\gram}.
 \]
@@ -143,137 +185,12 @@ Chi phí:
 \[
 C=15\times32000=480000\text{ đồng}.
 \]
-\textbf{Vậy,} chi phí là \(480\,000\) đồng.
+\textbf{Vậy,} chi phí là $480\,000$ đồng.
 \end{loigiaiBT}
 \end{tuluyen}
 
 \begin{tuluyen}
-Để nung \SI{1.00}{\ton} \ce{CaCO3} cần cung cấp \SI{178}{\kilo\joule} cho mỗi mol \ce{CaCO3}. Lò dùng than có nhiệt trị \SI{25}{\mega\joule\per\kilo\gram}, hiệu suất truyền nhiệt \(40\%\). Tính khối lượng than tối thiểu. Cho \(M_{\ce{CaCO3}}=100\) g/mol.
-\dapso{\SI{178}{\kilo\gram}.}
-\begin{loigiaiBT}
-\[
-n_{\ce{CaCO3}}=\frac{1000000}{100}=\SI{10000}{\mole}.
-\]
-Năng lượng cần cho phản ứng:
-\[
-Q_{\text{ích}}=10000\times178=\SI{1780}{\mega\joule}.
-\]
-Than phải tỏa:
-\[
-Q=\frac{1780}{0.40}=\SI{4450}{\mega\joule}.
-\]
-Khối lượng than:
-\[
-m=\frac{4450}{25}=\SI{178}{\kilo\gram}.
-\]
-\textbf{Vậy,} cần tối thiểu \SI{178}{\kilo\gram} than.
-\end{loigiaiBT}
-\end{tuluyen}
-
-\begin{tuluyen}
-Methane cháy theo phương trình:
-\[
-\ce{CH4 + 2O2 -> CO2 + 2H2O}.
-\]
-Biết \(1\) mol methane tỏa \SI{890}{\kilo\joule}. Tính khối lượng \ce{CO2} tạo thành khi methane cung cấp \SI{8900}{\kilo\joule}, giả sử cháy hoàn toàn.
-\dapso{\SI{440}{\gram}.}
-\begin{loigiaiBT}
-Số mol methane:
-\[
-n_{\ce{CH4}}=\frac{8900}{890}=\SI{10}{\mole}.
-\]
-Theo phương trình:
-\[
-n_{\ce{CO2}}=\SI{10}{\mole},
-\]
-nên:
-\[
-m_{\ce{CO2}}=10\times44=\SI{440}{\gram}.
-\]
-\textbf{Vậy,} khối lượng \ce{CO2} tạo thành là \SI{440}{\gram}.
-\end{loigiaiBT}
-\end{tuluyen}
-
-\subsection{Tổng hợp}
-
-\begin{tuluyen}
-Một nhiên liệu lỏng gồm \(10\%\) ethanol theo thể tích, phần còn lại được xem như hydrocarbon X. Cho \SI{4.0}{\liter} nhiên liệu. Ethanol có \(D=\SI{0.789}{\kilo\gram\per\liter}\), X có \(D=\SI{0.72}{\kilo\gram\per\liter}\). Nhiệt trị theo khối lượng của ethanol và X lần lượt là \SI{27}{\mega\joule\per\kilo\gram} và \SI{44}{\mega\joule\per\kilo\gram}. Hiệu suất động cơ là \(30\%\); xe cần \SI{600}{\kilo\joule} công cơ học để đi \SI{1}{\kilo\metre}. Tính quãng đường tối đa.
-\source{Phỏng theo cấu trúc bài nhiên liệu E10 trong đề tuyển sinh chuyên Hóa Lâm Đồng 2026.}
-\dapso{\(\approx\SI{61.3}{\kilo\metre}\).}
-\begin{loigiaiBT}
-Thể tích ethanol là \SI{0.4}{\liter}, nên:
-\[
-m_{\text{ethanol}}=0.4\times0.789=\SI{0.3156}{\kilo\gram}.
-\]
-Thể tích X là \SI{3.6}{\liter}, nên:
-\[
-m_X=3.6\times0.72=\SI{2.592}{\kilo\gram}.
-\]
-Tổng nhiệt lượng:
-\[
-Q=0.3156\times27+2.592\times44
-\approx\SI{122.57}{\mega\joule}.
-\]
-Công có ích:
-\[
-Q_{\text{ích}}=122.57\times0.30\approx\SI{36.77}{\mega\joule}
-=\SI{36770}{\kilo\joule}.
-\]
-Quãng đường:
-\[
-s=\frac{36770}{600}\approx\SI{61.3}{\kilo\metre}.
-\]
-\textbf{Vậy,} xe đi được khoảng \SI{61.3}{\kilo\metre}.
-\end{loigiaiBT}
-\end{tuluyen}
-
-\begin{tuluyen}
-Hai nhiên liệu A và B có dữ kiện:
-\begin{center}
-\begin{tabular}{c|ccc}
-\toprule
-Nhiên liệu & Nhiệt trị (MJ/kg) & Hiệu suất & Giá (đồng/kg) \\
-\midrule
-A & 45 & 60\% & 30000 \\
-B & 32 & 75\% & 21000 \\
-\bottomrule
-\end{tabular}
-\end{center}
-Tính chi phí để mỗi nhiên liệu cung cấp \SI{270}{\mega\joule} năng lượng có ích và cho biết phương án rẻ hơn.
-\source{Phỏng theo các bài so sánh nhiên liệu và kinh tế trong đề chuyên Hóa Đắk Lắk 2026 và Lâm Đồng 2026.}
-\dapso{A: \(300\,000\) đồng; B: \(236\,250\) đồng; B rẻ hơn.}
-\begin{loigiaiBT}
-A cho năng lượng có ích trên mỗi kilogram:
-\[
-45\times0.60=\SI{27}{\mega\joule\per\kilo\gram}.
-\]
-Cần:
-\[
-m_A=\frac{270}{27}=\SI{10}{\kilo\gram},
-\]
-chi phí:
-\[
-C_A=10\times30000=300000\text{ đồng}.
-\]
-B cho:
-\[
-32\times0.75=\SI{24}{\mega\joule\per\kilo\gram}.
-\]
-Cần:
-\[
-m_B=\frac{270}{24}=\SI{11.25}{\kilo\gram},
-\]
-chi phí:
-\[
-C_B=11.25\times21000=236250\text{ đồng}.
-\]
-\textbf{Vậy,} nhiên liệu B có chi phí thấp hơn.
-\end{loigiaiBT}
-\end{tuluyen}
-
-\begin{tuluyen}
-Một hỗn hợp khí gồm \(30\%\) methane và \(70\%\) propane theo số mol. \(1\) mol methane và propane khi cháy lần lượt tỏa \SI{890}{\kilo\joule} và \SI{2220}{\kilo\joule}. Một hệ thống cần \SI{500}{\mega\joule} năng lượng có ích, hiệu suất \(50\%\). Tính số mol hỗn hợp khí tối thiểu cần đốt.
-\source{Phỏng theo kiểu bài nhiên liệu hỗn hợp trong đề chuyên Hóa Điện Biên 2026.}
+Một hỗn hợp khí gồm $30\%$ methane và $70\%$ propane theo số mol. $1$ mol methane và propane khi cháy lần lượt tỏa \SI{890}{\kilo\joule} và \SI{2220}{\kilo\joule}. Một hệ thống cần \SI{500}{\mega\joule} năng lượng có ích, hiệu suất $50\%$. Tính số mol hỗn hợp khí tối thiểu cần đốt.
 \dapso{\(\approx\SI{549.1}{\mole}\).}
 \begin{loigiaiBT}
 Nhiệt lượng hỗn hợp phải tỏa:
@@ -293,65 +210,63 @@ n=\frac{1000000}{1821}\approx\SI{549.1}{\mole}.
 \end{tuluyen}
 
 \begin{tuluyen}
-Hydrogen và methane đều được dùng làm nhiên liệu. Biết:
+Hai nhiên liệu A và B có dữ kiện:
+\begin{center}
+\begin{tabular}{c|ccc}
+\toprule
+Nhiên liệu & Nhiệt trị (MJ/kg) & Hiệu suất & Giá (đồng/kg) \\
+\midrule
+A & 45 & 60\% & 30000 \\
+B & 32 & 75\% & 21000 \\
+\bottomrule
+\end{tabular}
+\end{center}
+Tính chi phí để mỗi nhiên liệu cung cấp \SI{270}{\mega\joule} năng lượng có ích và cho biết phương án rẻ hơn.
+\dapso{A: $300\,000$ đồng; B: $236\,250$ đồng; B rẻ hơn.}
+\begin{loigiaiBT}
+Với A:
+\[
+q_{\text{ích},A}=45\times0.60=\SI{27}{\mega\joule\per\kilo\gram},
+\]
+\[
+m_A=\frac{270}{27}=\SI{10}{\kilo\gram},\qquad C_A=300000\text{ đồng}.
+\]
+Với B:
+\[
+q_{\text{ích},B}=32\times0.75=\SI{24}{\mega\joule\per\kilo\gram},
+\]
+\[
+m_B=\frac{270}{24}=\SI{11.25}{\kilo\gram},\qquad C_B=236250\text{ đồng}.
+\]
+\textbf{Vậy,} nhiên liệu B có chi phí thấp hơn để cung cấp cùng lượng năng lượng có ích.
+\end{loigiaiBT}
+\end{tuluyen}
+
+\begin{tuluyen}
+Hydrogen và methane đều được dùng làm nhiên liệu. Biết $1$ mol \ce{H2} tỏa \SI{286}{\kilo\joule}, $1$ mol \ce{CH4} tỏa \SI{890}{\kilo\joule}. Một thiết bị cần \SI{89}{\mega\joule} năng lượng hóa học. Tính khối lượng mỗi nhiên liệu cần dùng và lượng \ce{CO2} tạo ra, biết:
 \[
 \ce{2H2 + O2 -> 2H2O},\qquad
 \ce{CH4 + 2O2 -> CO2 + 2H2O}.
 \]
-\(1\) mol \ce{H2} tỏa \SI{286}{\kilo\joule}, \(1\) mol \ce{CH4} tỏa \SI{890}{\kilo\joule}. Một xe cần \SI{89}{\mega\joule} năng lượng hóa học. Tính khối lượng mỗi nhiên liệu cần dùng và lượng \ce{CO2} tạo ra.
-\source{Phỏng theo dạng bài so sánh gasoline/LPG/\ce{H2} trong đề chuyên Hóa Đắk Lắk 2026.}
-\dapso{\(\approx\SI{0.622}{\kilo\gram}\) \ce{H2}, không tạo \ce{CO2}; \(\SI{1.60}{\kilo\gram}\) \ce{CH4}, tạo \(\SI{4.40}{\kilo\gram}\) \ce{CO2}.}
+\dapso{\(\approx\SI{0.622}{\kilo\gram}\) \ce{H2}, không tạo \ce{CO2}; \SI{1.60}{\kilo\gram} \ce{CH4}, tạo \SI{4.40}{\kilo\gram} \ce{CO2}.}
 \begin{loigiaiBT}
 Với hydrogen:
 \[
-n_{\ce{H2}}=\frac{89000}{286}\approx\SI{311.2}{\mole},
-\]
-\[
-m_{\ce{H2}}\approx311.2\times2=\SI{622.4}{\gram}.
+n_{\ce{H2}}=\frac{89000}{286}\approx\SI{311.2}{\mole},\qquad
+m_{\ce{H2}}\approx\SI{0.622}{\kilo\gram}.
 \]
 Phản ứng không tạo \ce{CO2}.
 
 Với methane:
 \[
-n_{\ce{CH4}}=\frac{89000}{890}=\SI{100}{\mole},
+n_{\ce{CH4}}=\frac{89000}{890}=\SI{100}{\mole},\qquad
+m_{\ce{CH4}}=\SI{1.60}{\kilo\gram}.
 \]
-\[
-m_{\ce{CH4}}=100\times16=\SI{1.60}{\kilo\gram}.
-\]
-Theo phương trình, tạo \(100\) mol \ce{CO2}:
+Theo phương trình, tạo $100$ mol \ce{CO2}:
 \[
 m_{\ce{CO2}}=100\times44=\SI{4.40}{\kilo\gram}.
 \]
-\textbf{Vậy,} để cung cấp cùng \SI{89}{\mega\joule}, cần khoảng \SI{0.622}{\kilo\gram} \ce{H2} hoặc \SI{1.60}{\kilo\gram} \ce{CH4}; methane tạo \SI{4.40}{\kilo\gram} \ce{CO2}.
-\end{loigiaiBT}
-\end{tuluyen}
-
-\begin{tuluyen}
-Trong một quy trình, để sản xuất một mẻ sản phẩm cần \SI{300}{\mega\joule} nhiệt có ích. Lò có hiệu suất \(60\%\). Có hai lựa chọn:
-\begin{itemize}
-\item nhiên liệu A: nhiệt trị \SI{50}{\mega\joule\per\kilo\gram}, giá \(35\,000\) đồng/kg;
-\item nhiên liệu B: nhiệt trị \SI{36}{\mega\joule\per\kilo\gram}, giá \(22\,000\) đồng/kg.
-\end{itemize}
-Tính khối lượng và chi phí cho mỗi phương án, từ đó lựa chọn theo tiêu chí chi phí.
-\dapso{A: \SI{10}{\kilo\gram}, \(350\,000\) đồng; B: \(\approx\SI{13.89}{\kilo\gram}\), \(\approx305\,600\) đồng; chọn B nếu chỉ xét chi phí.}
-\begin{loigiaiBT}
-Nhiệt lượng nhiên liệu phải tỏa:
-\[
-Q=\frac{300}{0.60}=\SI{500}{\mega\joule}.
-\]
-Với A:
-\[
-m_A=\frac{500}{50}=\SI{10}{\kilo\gram},
-\qquad C_A=10\times35000=350000\text{ đồng}.
-\]
-Với B:
-\[
-m_B=\frac{500}{36}\approx\SI{13.89}{\kilo\gram},
-\]
-\[
-C_B\approx13.89\times22000\approx305600\text{ đồng}.
-\]
-\textbf{Vậy,} nếu chỉ xét chi phí nhiên liệu, phương án B kinh tế hơn.
+\textbf{Vậy,} để cung cấp cùng \SI{89}{\mega\joule}, hydrogen không tạo \ce{CO2} trong phản ứng cháy, còn methane tạo \SI{4.40}{\kilo\gram} \ce{CO2}.
 \end{loigiaiBT}
 \end{tuluyen}
 
@@ -376,32 +291,163 @@ Nồng độ acid lớn hơn làm phản ứng nhanh hơn. Do lượng Zn ban đ
 \end{tuluyen}
 
 \begin{tuluyen}
-Một phản ứng tạo khí cho bảng:
-\[
-\begin{array}{c|cccc}
-t\text{ (s)} & 0 & 20 & 40 & 60\\ \hline
-V\text{ (mL)} & 0 & 38 & 64 & 76
-\end{array}
-\]
-Trong hai khoảng 0--20 s và 40--60 s, khoảng nào phản ứng nhanh hơn? Giải thích bằng mức tăng thể tích khí trung bình.
-\source{Phỏng theo dạng đọc dữ liệu tốc độ trong đề chuyên Hóa Điện Biên và Đà Nẵng.}
-\dapso{0--20 s nhanh hơn; lần lượt \SI{1.9}{\milli\liter\per\second} và \SI{0.6}{\milli\liter\per\second}.}
-\begin{loigiaiBT}
-\[
-\overline v_{0-20}=\frac{38}{20}=\SI{1.9}{\milli\liter\per\second},
-\]
-\[
-\overline v_{40-60}=\frac{76-64}{20}=\SI{0.6}{\milli\liter\per\second}.
-\]
-\textbf{Vậy,} phản ứng nhanh hơn trong khoảng 0--20 s.
-\end{loigiaiBT}
-\end{tuluyen}
-
-\begin{tuluyen}
 Trong phản ứng phân hủy \ce{H2O2}, thêm \ce{MnO2} làm oxygen thoát ra nhanh hơn. Nêu vai trò của \ce{MnO2} và cho biết chất này có làm tăng lượng oxygen lí thuyết thu được từ cùng lượng \ce{H2O2} hay không.
 \dapso{\ce{MnO2} là chất xúc tác; không làm tăng lượng \ce{O2} lí thuyết từ cùng lượng \ce{H2O2}.}
 \begin{loigiaiBT}
 \ce{MnO2} làm phản ứng diễn ra nhanh hơn nhưng không bị tiêu hao theo phương trình tổng quát. Lượng \ce{O2} lí thuyết vẫn do lượng \ce{H2O2} quyết định.
 \textbf{Vậy,} \ce{MnO2} là chất xúc tác và không làm tăng lượng \ce{O2} lí thuyết.
+\end{loigiaiBT}
+\end{tuluyen}
+
+\subsection{Bài thực tế từ đề tuyển sinh}
+
+\begin{tuluyen}
+Để đun sôi hai nồi nước giống nhau, cùng chứa 40 L nước từ nhiệt độ ban đầu 25$^\circ$C, người ta dùng hai bếp: bếp (1) dùng củi, hiệu suất nhiệt 20\%; bếp (2) dùng khí methane, hiệu suất nhiệt 30\%. Biết nhiệt lượng tỏa ra khi đốt cháy 1 gam củi là 20 kJ/g, khi đốt cháy 1 gam methane là 55 kJ/g, nhiệt lượng cần thiết để 1 gam nước lỏng tăng lên 1$^\circ$C là 4,2 J. Tính khối lượng củi và methane cần dùng.
+\source{Trích nguyên văn Câu 6.1, đề tuyển sinh chuyên Hóa Vĩnh Long 2026, trang 2/3.}
+\dapso{\SI{3.15}{\kilo\gram} củi; \(\approx\SI{0.764}{\kilo\gram}\) methane.}
+\begin{loigiaiBT}
+Coi khối lượng riêng của nước là \SI{1}{\kilo\gram\per\liter}, khối lượng nước trong mỗi nồi là \SI{40}{\kilo\gram}=\SI{40000}{\gram}. Độ tăng nhiệt độ:
+\[
+\Delta T=100-25=75^\circ\mathrm{C}.
+\]
+Nhiệt lượng mỗi nồi nước cần nhận:
+\[
+Q_{\text{cần}}=40000\times4.2\times75=\SI{12600000}{\joule}=\SI{12600}{\kilo\joule}.
+\]
+Với bếp củi:
+\[
+Q_{\text{củi}}=\frac{12600}{0.20}=\SI{63000}{\kilo\joule},
+\qquad
+m_{\text{củi}}=\frac{63000}{20}=\SI{3150}{\gram}=\SI{3.15}{\kilo\gram}.
+\]
+Với bếp methane:
+\[
+Q_{\ce{CH4}}=\frac{12600}{0.30}=\SI{42000}{\kilo\joule},
+\qquad
+m_{\ce{CH4}}=\frac{42000}{55}\approx\SI{763.6}{\gram}.
+\]
+\textbf{Vậy,} cần \SI{3.15}{\kilo\gram} củi hoặc khoảng \SI{0.764}{\kilo\gram} methane.
+\end{loigiaiBT}
+\end{tuluyen}
+
+\begin{tuluyen}
+Trong nỗ lực giảm phụ thuộc vào nhiên liệu hóa thạch và bảo vệ khí quyển, Việt Nam đã thay thế xăng truyền thống bằng xăng sinh học E10. Xăng E10 là loại xăng sinh học chứa 10\% ethanol về thể tích ($D = 0,789$ g/mL), còn lại là xăng truyền thống (giả thiết chỉ chứa hai alkane là \ce{C8H18} và \ce{C9H20} có tỉ lệ mol tương ứng là 3:4 và $D = 0,7$ g/mL).
+
+Một người đi xe máy di chuyển từ phường Xuân Hương -- Đà Lạt đến phường Phan Thiết với quãng đường 180 km. Trong bình xăng của xe có 3,0 L xăng E10. Nhiệt lượng tỏa ra khi đốt cháy hoàn toàn 1 mol các chất như bảng sau:
+\begin{center}
+\begin{tabular}{c|ccc}
+\toprule
+Chất & \ce{C2H5OH} & \ce{C8H18} & \ce{C9H20} \\
+\midrule
+Nhiệt lượng tỏa ra (kJ/mol) & 1 375 & 5 095 & 6 115 \\
+\bottomrule
+\end{tabular}
+\end{center}
+Biết rằng để di chuyển được 1 km, động cơ xe máy cần một nhiệt lượng để chuyển thành công cơ học có độ lớn là 210 kJ và hiệu suất sử dụng nhiên liệu của động cơ là 32\%.
+
+Hãy tính và cho biết để đi hết quãng đường trên thì người đó có cần đổ thêm xăng không?
+\source{Trích nguyên văn Câu 2.2, đề tuyển sinh chuyên Hóa Lâm Đồng 2026, trang 5/6.}
+\dapso{Với 3,0 L E10 xe đi được khoảng \SI{144.8}{\kilo\metre}; cần đổ thêm khoảng \SI{0.73}{\liter} E10 để đi đủ \SI{180}{\kilo\metre}.}
+\begin{loigiaiBT}
+Thể tích ethanol:
+\[
+V_{\ce{C2H5OH}}=3.0\times10\%=\SI{0.30}{\liter}=\SI{300}{\milli\liter}.
+\]
+\[
+m_{\ce{C2H5OH}}=300\times0.789=\SI{236.7}{\gram},\qquad
+n_{\ce{C2H5OH}}=\frac{236.7}{46}\approx\SI{5.146}{\mole}.
+\]
+Phần xăng truyền thống có thể tích \SI{2.70}{\liter}, khối lượng:
+\[
+m=2700\times0.7=\SI{1890}{\gram}.
+\]
+Đặt $n_{\ce{C8H18}}=3x$, $n_{\ce{C9H20}}=4x$:
+\[
+3x\times114+4x\times128=1890\Rightarrow x\approx2.213.
+\]
+Suy ra:
+\[
+n_{\ce{C8H18}}\approx\SI{6.639}{\mole},\qquad
+n_{\ce{C9H20}}\approx\SI{8.852}{\mole}.
+\]
+Tổng nhiệt lượng tỏa ra:
+\[
+Q\approx5.146\times1375+6.639\times5095+8.852\times6115
+\approx\SI{95036}{\kilo\joule}.
+\]
+Công cơ học có ích:
+\[
+Q_{\text{ích}}=95036\times0.32\approx\SI{30411}{\kilo\joule}.
+\]
+Quãng đường đi được:
+\[
+s=\frac{30411}{210}\approx\SI{144.8}{\kilo\metre}.
+\]
+Do $144.8<180$, người đó phải đổ thêm xăng. Vì cùng loại E10, thể tích cần thêm tỉ lệ với quãng đường:
+\[
+V_{\text{thêm}}=3.0\left(\frac{180}{144.8}-1\right)\approx\SI{0.73}{\liter}.
+\]
+\textbf{Vậy,} người đó cần đổ thêm xăng; lượng E10 tối thiểu cần thêm khoảng \SI{0.73}{\liter}.
+\end{loigiaiBT}
+\end{tuluyen}
+
+\begin{tuluyen}
+Khí biogas (giả thiết chỉ chứa \ce{CH4}) và khí gas hóa lỏng (chứa 40\% \ce{C3H8} và 60\% \ce{C4H10} về thể tích) được sử dụng phổ biến làm nhiên liệu. Nhiệt lượng tỏa ra khi đốt cháy hoàn toàn 1 mol các chất như bảng sau:
+\begin{center}
+\begin{tabular}{c|ccc}
+\toprule
+Chất & \ce{CH4} & \ce{C3H8} & \ce{C4H10} \\
+\midrule
+Nhiệt lượng tỏa ra (kJ/mol) & 890 & 2 220 & 2 850 \\
+\bottomrule
+\end{tabular}
+\end{center}
+\begin{enumerate}
+\item Nếu nhu cầu về năng lượng không đổi và hiệu suất sử dụng các loại nhiên liệu như nhau, khi dùng khí biogas và khí gas hóa lỏng thì chất nào thải \ce{CO2} ra môi trường ít hơn? Giải thích.
+\item Bình gas loại 12 kg sử dụng trong một hộ gia đình A có chứa 12 kg khí hóa lỏng có thành phần như trên. Trung bình lượng nhiệt tiêu thụ khi đốt khí gas của một hộ gia đình A là 1 500 kJ/ngày, hiệu suất sử dụng nhiệt là 70\%, giá của mỗi bình gas trên là 650 000 đồng. Tính số tiền hộ gia đình A cần chi trả cho việc mua gas sử dụng trong một tháng (30 ngày).
+\item Khi đi học về, mở cửa nhà ra ngửi thấy mùi gas, em hãy nêu cách xử lý tình huống trên?
+\end{enumerate}
+\source{Trích nguyên văn Câu 6.2, đề tuyển sinh chuyên Hóa Lâm Đồng 2026, trang 6/6.}
+\dapso{(a) Biogas thải ít \ce{CO2} hơn nếu cung cấp cùng năng lượng; (b) khoảng $70\,200$ đồng/tháng; (c) không bật/tắt thiết bị điện, khóa van gas nếu an toàn, mở cửa thông thoáng và rời khỏi khu vực nếu mùi gas mạnh.}
+\begin{loigiaiBT}
+Với biogas, $1$ mol \ce{CH4} tỏa \SI{890}{\kilo\joule} và tạo $1$ mol \ce{CO2}. Số mol \ce{CO2} trên mỗi kJ là $1/890$.
+
+Với $1$ mol hỗn hợp LPG:
+\[
+Q=0.40\times2220+0.60\times2850=\SI{2598}{\kilo\joule},
+\]
+\[
+n_{\ce{CO2}}=0.40\times3+0.60\times4=\SI{3.6}{\mole}.
+\]
+Do $3.6/2598>1/890$, LPG tạo nhiều \ce{CO2} hơn trên cùng năng lượng.
+
+Khối lượng mol trung bình của LPG:
+\[
+\overline M=0.40\times44+0.60\times58=\SI{52.4}{\gram\per\mole}.
+\]
+Số mol LPG trong bình:
+\[
+n=\frac{12000}{52.4}\approx\SI{229.01}{\mole}.
+\]
+Tổng nhiệt lượng tỏa ra:
+\[
+Q=229.01\times2598\approx\SI{594962}{\kilo\joule}.
+\]
+Nhiệt có ích:
+\[
+Q_{\text{ích}}=594962\times0.70\approx\SI{416473}{\kilo\joule}.
+\]
+Số ngày dùng một bình:
+\[
+N=\frac{416473}{1500}\approx277.65\text{ ngày}.
+\]
+Chi phí trung bình trong 30 ngày:
+\[
+C=650000\times\frac{30}{277.65}\approx70200\text{ đồng}.
+\]
+
+Khi phát hiện mùi gas, không bật hoặc tắt công tắc điện và không tạo tia lửa; khóa van bình gas nếu có thể thực hiện an toàn, mở cửa để thông thoáng và rời khỏi khu vực nếu mùi gas mạnh.
+
+\textbf{Vậy,} biogas phát thải ít \ce{CO2} hơn trên cùng nhu cầu năng lượng; chi phí gas trung bình khoảng $70\,200$ đồng/tháng; khi rò rỉ gas phải ưu tiên loại bỏ nguồn rò, thông gió và tránh mọi nguồn gây tia lửa.
 \end{loigiaiBT}
 \end{tuluyen}
