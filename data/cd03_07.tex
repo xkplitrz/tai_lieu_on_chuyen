@@ -1,28 +1,30 @@
-\section{Bài toán định lượng acid--base--muối}
+\section{Bài toán định lượng acid--base--oxide--muối}
 
-\subsection{Một con đường giải chung}
+\subsection{Nhắc lại cách giải chung}
 
-Các bài định lượng của phần này thường chỉ khác nhau ở số bước trung gian. Hãy đi theo một con đường thống nhất:
+Các bài định lượng ở đây vẫn dùng cách giải đã học trong Chuyên đề 1. Bài khó không có một ``công thức riêng''; độ khó chủ yếu tăng ở bước tính toán và ở việc xác định đúng đại lượng cuối cùng.
 
 \begin{ghinho}{Sơ đồ giải}
 \[
-\boxed{\text{Dữ kiện ban đầu}}
-\to
-\boxed{n_{\text{chất}}}
-\to
-\boxed{\text{PTHH}}
-\to
-\boxed{\text{chất hết/chất dư}}
-\to
-\boxed{\text{sản phẩm hoặc dung dịch sau phản ứng}}
-\to
-\boxed{\text{đại lượng cần tìm}}.
+\begin{array}{c}
+\boxed{\text{1. Viết và cân bằng PTHH}}\\[2mm]
+\downarrow\\[2mm]
+\boxed{\text{2. Đổi dữ kiện về số mol}}\\[2mm]
+\downarrow\\[2mm]
+\boxed{\text{3. Tính toán theo PTHH và các dữ kiện độc lập}}\\[2mm]
+\downarrow\\[2mm]
+\boxed{\text{4. Tìm đại lượng đề hỏi}}\\[2mm]
+\downarrow\\[2mm]
+\boxed{\text{5. Kiểm tra đơn vị và kết quả}}
+\end{array}
 \]
 \end{ghinho}
 
-\subsection{Acid tác dụng với carbonate}
+Ở bài đơn giản, bước 3 chỉ là một tỉ lệ theo phương trình. Ở bài khó, bước 3 có thể phải xác định chất hết, ghép nhiều phản ứng, lập hệ phương trình hoặc xét nhiều trường hợp. Bước 4 cũng có thể kéo dài nếu đề hỏi nồng độ sau phản ứng, độ tinh khiết, khối lượng dung dịch, lượng kết tủa hoặc khí thoát ra.
 
-Với carbonate, cần nhớ rằng một mol \ce{CO3^2-} cần hai mol \ce{H+} để chuyển hoàn toàn thành \ce{CO2} và \ce{H2O}. Khi bài chỉ có một phản ứng như \ce{CaCO3 + HCl}, có thể dùng trực tiếp phương trình phân tử.
+\subsection{Kĩ năng 1: tính trực tiếp theo một hoặc nhiều phản ứng}
+
+Nếu dữ kiện đủ để xác định ngay lượng một chất, hãy đi lần lượt qua từng phản ứng. Không cần đặt ẩn khi các đại lượng trung gian đều tính trực tiếp được.
 
 \begin{vidu}
 Cho \SI{10.0}{\gram} \ce{CaCO3} tinh khiết phản ứng hoàn toàn với dung dịch \ce{HCl} dư. Tính thể tích \ce{CO2} ở điều kiện có $V_m=\SI{24.8}{\liter\per\mole}$.
@@ -32,7 +34,7 @@ Cho \SI{10.0}{\gram} \ce{CaCO3} tinh khiết phản ứng hoàn toàn với dung
 n_{\ce{CaCO3}}=\frac{10.0}{100}=\SI{0.100}{\mole}.
 \]
 \[
-\ce{CaCO3 + 2HCl -> CaCl2 + CO2 + H2O}.
+\ce{CaCO3 + 2HCl -> CaCl2 + CO2 ^ + H2O}.
 \]
 Theo phương trình:
 \[
@@ -41,70 +43,111 @@ n_{\ce{CO2}}=\SI{0.100}{\mole}.
 \[
 V_{\ce{CO2}}=0.100\times24.8=\SI{2.48}{\liter}.
 \]
-
 \textbf{Vậy,} thể tích \ce{CO2} thu được là \SI{2.48}{\liter}.
 \end{loigiai}
 
-\subsection{Tính lượng kết tủa}
+\subsection{Kĩ năng 2: xác định chất hết, chất dư và trạng thái sau phản ứng}
 
-Khi tạo kết tủa, nên xác định chất giới hạn trước rồi mới tính lượng kết tủa. Không được lấy toàn bộ lượng của cả hai chất cùng đưa vào sản phẩm.
+Khi có từ hai chất phản ứng trở lên, bước 3 phải xác định chất nào quyết định lượng sản phẩm. Sau đó mới tính chất dư, kết tủa, khí hoặc thành phần dung dịch cuối.
 
 \begin{vidu}
 Trộn \SI{200}{\milli\liter} dung dịch \ce{CuSO4} \SI{0.20}{\mole\per\liter} với \SI{100}{\milli\liter} dung dịch \ce{NaOH} \SI{0.50}{\mole\per\liter}. Tính khối lượng kết tủa. Cho $M_{\ce{Cu(OH)2}}=98$ g/mol.
 \end{vidu}
 \begin{loigiai}
 \[
-n_{\ce{CuSO4}}=0.200\times0.20=\SI{0.040}{\mole},
-\]
-\[
-n_{\ce{NaOH}}=0.100\times0.50=\SI{0.050}{\mole}.
+n_{\ce{CuSO4}}=\SI{0.040}{\mole},\qquad
+n_{\ce{NaOH}}=\SI{0.050}{\mole}.
 \]
 \[
 \ce{CuSO4 + 2NaOH -> Cu(OH)2 v + Na2SO4}.
 \]
-\SI{0.040}{\mole} \ce{CuSO4} cần \SI{0.080}{\mole} \ce{NaOH}, trong khi chỉ có \SI{0.050}{\mole}; vì vậy \ce{NaOH} hết trước.
+\ce{NaOH} hết trước nên:
 \[
 n_{\ce{Cu(OH)2}}=\frac{0.050}{2}=\SI{0.025}{\mole}.
 \]
 \[
-m=0.025\times98=\SI{2.45}{\gram}.
+m_{\ce{Cu(OH)2}}=0.025\times98=\SI{2.45}{\gram}.
 \]
-
 \textbf{Vậy,} khối lượng kết tủa \ce{Cu(OH)2} là \SI{2.45}{\gram}.
 \end{loigiai}
 
-\subsection{Bài toán sau phản ứng}
+\subsection{Kĩ năng 3: lập hệ phương trình khi có nhiều ẩn}
 
-Nếu đề hỏi nồng độ dung dịch sau phản ứng, cần thực hiện thêm hai việc:
+Khi một hỗn hợp chứa nhiều chất chưa biết lượng, hãy đặt số mol từng chất làm ẩn. Mỗi dữ kiện độc lập tạo một phương trình. Nếu số phương trình độc lập bằng số ẩn, có thể giải hệ để tìm các ẩn.
+
+\begin{ghinho}{Cách lập hệ}
 \begin{enumerate}
-\item xác định các chất còn lại trong dung dịch sau phản ứng;
-\item xác định thể tích hoặc khối lượng dung dịch sau phản ứng theo giả thiết của đề.
+\item Chọn ẩn là số mol hoặc khối lượng của các chất chưa biết.
+\item Dùng dữ kiện khối lượng, thể tích khí, kết tủa, lượng acid/base đã dùng,\ldots để lập các phương trình độc lập.
+\item Giải hệ.
+\item Thay kết quả trở lại bài toán và kiểm tra điều kiện hóa học.
 \end{enumerate}
+\end{ghinho}
+
+\begin{vidu}
+Hòa tan hoàn toàn \SI{10.0}{\gram} hỗn hợp \ce{MgO} và \ce{CuO} bằng dung dịch \ce{HCl} vừa đủ. Sau phản ứng thu được \SI{19.625}{\gram} hỗn hợp muối chloride khan. Tính khối lượng mỗi oxide. Cho $M_{\ce{MgO}}=40$, $M_{\ce{MgCl2}}=95$, $M_{\ce{CuO}}=80$, $M_{\ce{CuCl2}}=135$ g/mol.
+\end{vidu}
+\begin{loigiai}
+Gọi số mol \ce{MgO}, \ce{CuO} lần lượt là $x$, $y$.
+
+Từ khối lượng hỗn hợp oxide:
+\[
+40x+80y=10.0.
+\]
+Mỗi mol oxide tạo một mol muối chloride tương ứng, nên:
+\[
+95x+135y=19.625.
+\]
+Giải hệ:
+\[
+x=0.100,\qquad y=0.075.
+\]
+Do đó:
+\[
+m_{\ce{MgO}}=\SI{4.0}{\gram},\qquad
+m_{\ce{CuO}}=\SI{6.0}{\gram}.
+\]
+\textbf{Vậy,} hỗn hợp chứa \SI{4.0}{\gram} \ce{MgO} và \SI{6.0}{\gram} \ce{CuO}.
+\end{loigiai}
+
+Nếu có ba chất chưa biết và ba dữ kiện độc lập, nguyên tắc không thay đổi: đặt ba ẩn và lập ba phương trình. Phần này tập trung luyện chắc hệ hai ẩn; hệ ba ẩn sẽ được gặp lại ở các chuyên đề hỗn hợp nhiều cấu tử.
+
+\subsection{Kĩ năng 4: biện luận khi chưa đủ phương trình độc lập}
+
+Có bài không cho đủ dữ kiện để giải ngay tất cả các ẩn. Khi đó phải dùng thêm điều kiện hóa học: hóa trị, công thức chất, tính tan, hiện tượng, giới hạn khối lượng mol hoặc số nguyên của chỉ số trong công thức.
+
+\begin{vidu}
+Một acid C có khối lượng mol nhỏ hơn \SI{100}{\gram\per\mole}. Để trung hòa \SI{2.94}{\gram} C cần đúng \SI{0.060}{\mole} \ce{NaOH}. Biết C là một acid vô cơ quen thuộc. Xác định C.
+\source{Phỏng theo cách biện luận ở Câu II, đề tuyển sinh chuyên Hóa KHTN Hà Nội 2026.}
+\end{vidu}
+\begin{loigiai}
+Gọi một mol C cần $k$ mol \ce{NaOH}, với $k$ là số nguyên dương. Khi đó:
+\[
+n_C=\frac{0.060}{k},\qquad
+M_C=\frac{2.94}{0.060/k}=49k.
+\]
+Vì $M_C<100$ nên $k$ chỉ có thể là 1 hoặc 2.
+
+Nếu $k=1$ thì $M_C=49$ g/mol, không phù hợp với acid vô cơ quen thuộc trong bài.
+
+Nếu $k=2$ thì $M_C=98$ g/mol, phù hợp với \ce{H2SO4}.
+
+\textbf{Vậy,} C là \ce{H2SO4}.
+\end{loigiai}
+
+\subsection{Kĩ năng 5: biến số liệu thí nghiệm thành dữ kiện tính toán}
+
+Ở bài chuẩn độ, thay đổi khối lượng, kết tủa hoặc khí thoát ra, số liệu đo không phải là kết quả cuối cùng. Trước hết phải đổi số liệu quan sát thành số mol của một chất; từ đó mới quay về các bước tính toán thông thường.
+
+Ví dụ:
+\[
+V_{\text{chuẩn độ}}
+\to n_{\text{chất chuẩn}}
+\to \text{PTHH}
+\to n_{\text{chất cần tìm}}
+\to C,\ m,\ \%.
+\]
 
 \begin{notechem}
-Khi có khí thoát ra hoặc kết tủa tách khỏi dung dịch, không được tự động dùng khối lượng ban đầu làm khối lượng dung dịch cuối. Hãy đọc đúng đại lượng đề yêu cầu và giả thiết được cho.
+Không cần học nhiều ``dạng bài'' rời nhau. Hãy xác định bài đang làm khó ở kĩ năng nào: tính trực tiếp, xác định chất hết--dư, lập hệ, biện luận hay chuyển số liệu thí nghiệm thành số mol. Sau bước đó, bài toán lại quay về quy trình chung của Chuyên đề 1.
 \end{notechem}
-
-\begin{tuluyen}
-Cho \SI{250}{\milli\liter} dung dịch \ce{HCl} \SI{0.40}{\mole\per\liter} phản ứng vừa đủ với \ce{CaCO3}. Tính khối lượng \ce{CaCO3} đã phản ứng và thể tích \ce{CO2} ở $V_m=\SI{24.8}{\liter\per\mole}$.
-\dapso{\SI{5.00}{\gram} \ce{CaCO3}; \SI{1.24}{\liter} \ce{CO2}.}
-\begin{loigiaiBT}
-\[
-n_{\ce{HCl}}=0.250\times0.40=\SI{0.100}{\mole}.
-\]
-\[
-\ce{CaCO3 + 2HCl -> CaCl2 + CO2 + H2O}.
-\]
-\[
-n_{\ce{CaCO3}}=n_{\ce{CO2}}=\frac{0.100}{2}=\SI{0.050}{\mole}.
-\]
-\[
-m_{\ce{CaCO3}}=0.050\times100=\SI{5.00}{\gram},
-\]
-\[
-V_{\ce{CO2}}=0.050\times24.8=\SI{1.24}{\liter}.
-\]
-
-\textbf{Vậy,} đã phản ứng \SI{5.00}{\gram} \ce{CaCO3} và tạo \SI{1.24}{\liter} \ce{CO2}.
-\end{loigiaiBT}
-\end{tuluyen}
