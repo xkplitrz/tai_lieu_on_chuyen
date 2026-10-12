@@ -1,0 +1,136 @@
+\section{Tính toán với kim loại và dung dịch}
+
+\subsection{Nhắc lại bốn bước giải}
+
+Bài toán kim loại vẫn dùng đúng cách giải chung đã học:
+\begin{ghinho}{Các bước giải}
+\begin{enumerate}
+\item Tính số mol.
+\item Viết phương trình hoặc sơ đồ phản ứng.
+\item Tính các giá trị trung gian cần thiết: số mol, khối lượng, chất hết -- dư, ẩn số,...
+\item Tính đại lượng đề hỏi và kết luận.
+\end{enumerate}
+\end{ghinho}
+
+\subsection{Một kim loại -- một phản ứng}
+
+\begin{vidu}
+Cho \SI{6.50}{\gram} Zn tác dụng hoàn toàn với dung dịch \ce{HCl} dư. Tính thể tích \ce{H2} thu được ở điều kiện có $V_m=\SI{24.8}{\liter\per\mole}$.
+\end{vidu}
+\begin{loigiai}
+\textbf{Bước 1. Tính số mol}
+\[
+n_{\ce{Zn}}=\frac{6.50}{65}=\SI{0.100}{\mole}.
+\]
+
+\textbf{Bước 2. Viết phương trình hóa học}
+\[
+\begin{array}{c@{\;}c@{\;}c@{\;}c@{\;}c}
+\ce{Zn} & + & \ce{2HCl} & \ce{->} & \ce{ZnCl2 + H2}\\
+0.100 & & & & 0.100
+\end{array}
+\]
+
+\textbf{Bước 3. Tính giá trị trung gian}
+\[
+n_{\ce{H2}}=\SI{0.100}{\mole}.
+\]
+
+\textbf{Bước 4. Tính đại lượng đề hỏi}
+\[
+V_{\ce{H2}}=0.100\times24.8=\SI{2.48}{\liter}.
+\]
+
+\textbf{Vậy,} thể tích \ce{H2} thu được là \SI{2.48}{\liter}.
+\end{loigiai}
+
+\subsection{Chất hết và chất dư}
+
+Khi cả hai chất phản ứng đều có lượng xác định, phải so sánh theo tỉ lệ hệ số trong phương trình trước khi tính sản phẩm.
+
+\begin{vidu}
+Cho \SI{6.50}{\gram} Zn vào \SI{100}{\milli\liter} dung dịch \ce{HCl} \SI{1.00}{\mole\per\liter}. Xác định chất hết, chất dư và thể tích \ce{H2} thu được.
+\end{vidu}
+\begin{loigiai}
+\textbf{Bước 1. Tính số mol}
+\[
+n_{\ce{Zn}}=\SI{0.100}{\mole},\qquad n_{\ce{HCl}}=0.100\times1.00=\SI{0.100}{\mole}.
+\]
+
+\textbf{Bước 2. Viết phương trình hóa học}
+\[
+\begin{array}{c@{\;}c@{\;}c@{\;}c@{\;}c}
+\ce{Zn} & + & \ce{2HCl} & \ce{->} & \ce{ZnCl2 + H2}\\
+x & & 2x & & x
+\end{array}
+\]
+
+\textbf{Bước 3. Tính các giá trị trung gian}
+Theo phương trình, \SI{0.100}{\mole} HCl chỉ phản ứng với \SI{0.050}{\mole} Zn. Vì vậy HCl hết, Zn dư:
+\[
+n_{\ce{Zn},\text{dư}}=0.100-0.050=\SI{0.050}{\mole}.
+\]
+\[
+n_{\ce{H2}}=\SI{0.050}{\mole}.
+\]
+
+\textbf{Bước 4. Tính đại lượng đề hỏi}
+\[
+V_{\ce{H2}}=0.050\times24.8=\SI{1.24}{\liter}.
+\]
+
+\textbf{Vậy,} HCl hết, Zn dư \SI{0.050}{\mole} và thu được \SI{1.24}{\liter} \ce{H2}.
+\end{loigiai}
+
+\subsection{Hỗn hợp hai kim loại -- lập hệ hai ẩn}
+
+Khi hỗn hợp có hai thành phần chưa biết, thường đặt số mol là $x,y$. Một phương trình thường đến từ khối lượng hỗn hợp; phương trình còn lại đến từ khí, chất rắn, lượng acid hoặc một dữ kiện độc lập khác.
+
+\begin{vidu}
+Hòa tan hoàn toàn \SI{9.00}{\gram} hỗn hợp Mg và Al bằng \ce{HCl} dư, thu được \SI{11.16}{\liter} \ce{H2} ở điều kiện có $V_m=\SI{24.8}{\liter\per\mole}$. Tính khối lượng mỗi kim loại.
+\end{vidu}
+\begin{loigiai}
+Gọi số mol Mg và Al lần lượt là $x,y$.
+
+\textbf{Bước 1. Tính số mol}
+\[
+n_{\ce{H2}}=\frac{11.16}{24.8}=\SI{0.450}{\mole}.
+\]
+
+\textbf{Bước 2. Viết phương trình hóa học}
+\[
+\begin{array}{c@{\;}c@{\;}c@{\;}c@{\;}c}
+\ce{Mg} & + & \ce{2HCl} & \ce{->} & \ce{MgCl2 + H2}\\
+x & & & & x
+\end{array}
+\]
+\[
+\begin{array}{c@{\;}c@{\;}c@{\;}c@{\;}c}
+\ce{2Al} & + & \ce{6HCl} & \ce{->} & \ce{2AlCl3 + 3H2}\\
+y & & & & \frac{3y}{2}
+\end{array}
+\]
+
+\textbf{Bước 3. Lập hệ và tìm ẩn}
+\[
+\begin{cases}
+24x+27y=9.00,\\
+x+\dfrac{3y}{2}=0.450.
+\end{cases}
+\Rightarrow
+\begin{cases}
+x=0.150,\\
+y=0.200.
+\end{cases}
+\]
+
+\textbf{Bước 4. Tính đại lượng đề hỏi}
+\[
+m_{\ce{Mg}}=0.150\times24=\SI{3.60}{\gram},
+\]
+\[
+m_{\ce{Al}}=0.200\times27=\SI{5.40}{\gram}.
+\]
+
+\textbf{Vậy,} hỗn hợp chứa \SI{3.60}{\gram} Mg và \SI{5.40}{\gram} Al.
+\end{loigiai}

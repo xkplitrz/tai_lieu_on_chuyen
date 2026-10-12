@@ -1,0 +1,108 @@
+\section{Dữ kiện gián tiếp và biện luận}
+
+\subsection{Đọc dữ kiện ngược từ sản phẩm}
+
+Trong bài khó, đề thường không cho trực tiếp số mol chất cần tìm mà cho một đại lượng ở công đoạn sau: khối lượng chất rắn tăng hoặc giảm, thể tích khí dùng tiếp, lượng kết tủa hoặc thành phần phần trăm. Khi đó cần đi ngược từ dữ kiện cuối về phản ứng trước.
+
+\begin{ghinho}{Cách xử lí}
+\begin{enumerate}
+\item Xác định đại lượng nào có thể suy ra trực tiếp từ dữ kiện cuối.
+\item Tính ngược số mol chất tham gia công đoạn cuối.
+\item Dùng PTHH để đưa số mol đó trở về công đoạn trước.
+\item Kết hợp với các dữ kiện độc lập còn lại để lập phương trình hoặc hệ phương trình.
+\end{enumerate}
+\end{ghinho}
+
+\subsection{Khối lượng chất rắn tăng hoặc giảm}
+
+Khi một kim loại đẩy kim loại khác khỏi dung dịch muối, khối lượng chất rắn có thể tăng hoặc giảm vì đồng thời có kim loại ban đầu tan ra và kim loại mới bám vào.
+
+\begin{vidu}
+Nhúng một thanh Fe vào dung dịch \ce{CuSO4} dư. Sau một thời gian, khối lượng thanh tăng \SI{1.60}{\gram}. Giả sử chỉ xảy ra phản ứng \ce{Fe + CuSO4 -> FeSO4 + Cu}. Tính số mol Fe đã phản ứng và khối lượng Cu bám trên thanh.
+\end{vidu}
+\begin{loigiai}
+Gọi số mol Fe phản ứng là $x$.
+
+\textbf{Bước 1. Tính số mol}
+Chưa có số mol trực tiếp, đặt $n_{\ce{Fe}}=x$.
+
+\textbf{Bước 2. Viết phương trình hóa học}
+\[
+\begin{array}{c@{\;}c@{\;}c@{\;}c@{\;}c}
+\ce{Fe} & + & \ce{CuSO4} & \ce{->} & \ce{FeSO4 + Cu}\\
+x & & & & x
+\end{array}
+\]
+
+\textbf{Bước 3. Tính giá trị trung gian}
+Mỗi mol Fe tan làm khối lượng thanh giảm \SI{56}{\gram}, đồng thời một mol Cu bám làm tăng \SI{64}{\gram}. Do đó:
+\[
+64x-56x=1.60
+\Rightarrow x=\SI{0.200}{\mole}.
+\]
+
+\textbf{Bước 4. Tính đại lượng đề hỏi}
+\[
+m_{\ce{Cu}}=0.200\times64=\SI{12.8}{\gram}.
+\]
+
+\textbf{Vậy,} có \SI{0.200}{\mole} Fe phản ứng và \SI{12.8}{\gram} Cu bám trên thanh.
+\end{loigiai}
+
+\subsection{Dữ kiện qua nhiều công đoạn}
+
+Nếu khí hoặc chất tạo ra ở công đoạn đầu được dùng ở công đoạn sau, hãy giữ số mol của chất trung gian làm cầu nối. Ví dụ:
+\[
+\boxed{\text{kim loại}}
+\rightarrow
+\boxed{\ce{H2}}
+\rightarrow
+\boxed{\text{oxide kim loại bị khử}}
+\rightarrow
+\boxed{\Delta m}.
+\]
+Khối lượng giảm của oxide thường cho biết lượng oxygen đã bị lấy đi, từ đó suy ra số mol \ce{H2} đã phản ứng.
+
+\subsection{Biện luận khi chưa đủ phương trình}
+
+Nếu số ẩn lớn hơn số phương trình độc lập, chưa thể kết luận ngay. Cần dùng thêm điều kiện hóa học:
+\begin{itemize}
+\item kim loại phải phù hợp với dãy hoạt động;
+\item hóa trị phải phù hợp với công thức muối hoặc oxide;
+\item khối lượng mol phải nằm trong giới hạn hợp lí;
+\item nghiệm phải dương và phù hợp hiện tượng;
+\item chỉ nhận nghiệm thỏa tất cả điều kiện của đề.
+\end{itemize}
+
+\begin{notechem}
+Hệ hai ẩn, ba ẩn chỉ là công cụ toán học. Kĩ năng hóa học quan trọng hơn là tìm đúng các dữ kiện độc lập để lập phương trình. Nếu có ba ẩn và đủ ba dữ kiện độc lập thì cách làm không thay đổi.
+\end{notechem}
+
+\begin{tuluyen}
+Một kim loại M hóa trị II phản ứng vừa đủ với \ce{HCl}. Hòa tan \SI{6.50}{\gram} M thu được \SI{2.48}{\liter} \ce{H2} ở điều kiện có $V_m=\SI{24.8}{\liter\per\mole}$. Xác định M.
+\dapso{Zn.}
+\begin{loigiaiBT}
+\textbf{Bước 1. Tính số mol}
+\[
+n_{\ce{H2}}=\frac{2.48}{24.8}=\SI{0.100}{\mole}.
+\]
+
+\textbf{Bước 2. Viết phương trình tổng quát}
+\[
+\begin{array}{c@{\;}c@{\;}c@{\;}c@{\;}c}
+\ce{M} & + & \ce{2HCl} & \ce{->} & \ce{MCl2 + H2}\\
+0.100 & & & & 0.100
+\end{array}
+\]
+
+\textbf{Bước 3. Tính giá trị trung gian}
+\[
+M=\frac{6.50}{0.100}=65\ \text{g/mol}.
+\]
+
+\textbf{Bước 4. Kết luận}
+Kim loại hóa trị II có khối lượng mol gần \SI{65}{\gram\per\mole} là Zn.
+
+\textbf{Vậy,} kim loại M là Zn.
+\end{loigiaiBT}
+\end{tuluyen}

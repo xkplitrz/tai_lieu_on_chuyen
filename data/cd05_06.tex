@@ -1,0 +1,86 @@
+\section{Quặng và quy trình luyện kim}
+
+\subsection{Độ tinh khiết và hiệu suất}
+
+Bài toán luyện kim thường có hai lớp dữ kiện trước khi tính theo PTHH:
+\[
+\boxed{m_{\text{quặng}}}
+\rightarrow
+\boxed{m_{\text{hợp chất có ích}}}
+\rightarrow
+\boxed{n}
+\rightarrow
+\boxed{\text{các PTHH}}
+\rightarrow
+\boxed{H}
+\rightarrow
+\boxed{m_{\text{kim loại}}}.
+\]
+Nếu mỗi công đoạn có hiệu suất riêng, phải áp dụng đúng hiệu suất tại công đoạn đó; không gộp tùy ý nếu đề không cho phép.
+
+\subsection{Quặng sulfide và sản phẩm phụ}
+
+Quặng sulfide thường được nung trong không khí để chuyển sulfide thành oxide, đồng thời tạo \ce{SO2}. Khí \ce{SO2} có thể được thu hồi để sản xuất sulfuric acid:
+\[
+\ce{2SO2 + O2 ->[V2O5,t^\circ] 2SO3},
+\]
+\[
+\ce{SO3 + H2O -> H2SO4}.
+\]
+Như vậy một bài luyện kim có thể đồng thời hỏi kim loại chính và sản phẩm phụ.
+
+\begin{vidu}
+Một quặng chứa $80\%$ \ce{ZnS} theo khối lượng. Dùng \SI{1.50}{\ton} quặng, các phản ứng tạo Zn xảy ra hoàn toàn. Tính khối lượng Zn thu được. Cho $M_{\ce{ZnS}}=97$, $M_{\ce{Zn}}=65$ g/mol.
+\end{vidu}
+\begin{loigiai}
+\textbf{Bước 1. Tính lượng chất có ích}
+\[
+m_{\ce{ZnS}}=1.50\times0.80=\SI{1.20}{\ton}.
+\]
+
+\textbf{Bước 2. Viết sơ đồ phản ứng}
+\[
+\ce{ZnS -> ZnO -> Zn}.
+\]
+Tỉ lệ mol tổng quát là $n_{\ce{ZnS}}:n_{\ce{Zn}}=1:1$.
+
+\textbf{Bước 3. Tính giá trị trung gian}
+\[
+m_{\ce{Zn},\text{lt}}=1.20\times\frac{65}{97}\approx\SI{0.804}{\ton}.
+\]
+
+\textbf{Bước 4. Kết luận}
+\textbf{Vậy,} khối lượng Zn thu được khoảng \SI{0.804}{\ton}.
+\end{loigiai}
+
+\subsection{Hai nguồn nguyên liệu -- lập hệ phương trình}
+
+Nếu hai loại quặng cùng cung cấp một kim loại nhưng có thành phần khác nhau, có thể đặt khối lượng hai loại quặng là $x,y$. Một phương trình đến từ tổng khối lượng nguyên liệu; phương trình còn lại từ lượng kim loại hoặc sản phẩm thu được.
+
+\begin{ghinho}{Nguyên tắc}
+\[
+\text{số ẩn} \leftrightarrow \text{số dữ kiện độc lập}.
+\]
+Nếu có hai ẩn, cần hai phương trình độc lập. Nếu có ba ẩn và đủ ba dữ kiện, cách làm vẫn tương tự; không xuất hiện phương pháp hóa học mới.
+\end{ghinho}
+
+\begin{tuluyen}
+Hai loại quặng A, B chứa lần lượt $70\%$ và $50\%$ \ce{Fe2O3}. Cần phối trộn tổng cộng \SI{100}{\ton} quặng để lượng \ce{Fe2O3} là \SI{62}{\ton}. Tính khối lượng mỗi loại quặng.
+\dapso{A: \SI{60}{\ton}; B: \SI{40}{\ton}.}
+\begin{loigiaiBT}
+Gọi khối lượng quặng A, B lần lượt là $x,y$ (tấn).
+\[
+\begin{cases}
+x+y=100,\\
+0.70x+0.50y=62.
+\end{cases}
+\Rightarrow
+\begin{cases}
+x=60,\\
+y=40.
+\end{cases}
+\]
+
+\textbf{Vậy,} cần \SI{60}{\ton} quặng A và \SI{40}{\ton} quặng B.
+\end{loigiaiBT}
+\end{tuluyen}
