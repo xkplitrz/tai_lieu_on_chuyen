@@ -1,55 +1,67 @@
-\section{Bài toán năng lượng của phản ứng}
+\section{Từ nhu cầu năng lượng đến lượng nhiên liệu}
 
-\subsection{Hiệu suất sử dụng năng lượng}
+\subsection{Năng lượng có ích và hiệu suất sử dụng năng lượng}
 
-Trong thực tế, không phải toàn bộ nhiệt lượng do phản ứng tỏa ra đều được chuyển thành phần năng lượng có ích. Một phần bị thất thoát ra môi trường. Nếu hiệu suất sử dụng năng lượng là \(H\%\), ta có:
+Trong thực tế, không phải toàn bộ năng lượng do nhiên liệu giải phóng đều được sử dụng cho mục đích mong muốn. Một phần năng lượng bị thất thoát ra môi trường.
+
+\begin{ghinho}{Hiệu suất sử dụng năng lượng}
+Nếu hiệu suất sử dụng năng lượng là $H\%$ thì:
 \[
-Q_{\text{ích}}=Q_{\text{tỏa}}\frac{H}{100}.
-\]
-Do đó:
-\[
+Q_{\text{ích}}=Q_{\text{tỏa}}\frac{H}{100},
+\qquad
 Q_{\text{tỏa}}=\frac{Q_{\text{ích}}}{H/100}.
 \]
-
-\begin{ghinho}{Phân biệt hai loại hiệu suất}
+Cần phân biệt:
 \begin{itemize}
-\item \textbf{Hiệu suất phản ứng} cho biết mức độ chuyển hóa chất đầu thành sản phẩm.
-\item \textbf{Hiệu suất sử dụng năng lượng} cho biết phần năng lượng tỏa ra thực sự được dùng cho mục đích mong muốn.
+\item \textbf{hiệu suất phản ứng}: mức độ chuyển hóa chất đầu thành sản phẩm;
+\item \textbf{hiệu suất sử dụng năng lượng}: phần năng lượng tỏa ra thực sự được dùng cho mục đích cần thiết.
 \end{itemize}
-Hai đại lượng này có thể cùng xuất hiện trong một bài toán nhưng không được dùng thay cho nhau.
+Hai loại hiệu suất có thể cùng xuất hiện trong một bài toán nhưng không được dùng thay cho nhau.
 \end{ghinho}
 
 \begin{vidu}
-Một bếp gas cần cung cấp \SI{18}{\mega\joule} nhiệt có ích để đun nấu. Hiệu suất sử dụng nhiệt của bếp là \(60\%\). Tính nhiệt lượng mà nhiên liệu phải tỏa ra.
+Một bếp cần cung cấp \SI{18}{\mega\joule} nhiệt có ích. Hiệu suất sử dụng nhiệt của bếp là $60\%$. Tính nhiệt lượng nhiên liệu phải tỏa ra.
 \end{vidu}
 \begin{loigiai}
+Điểm đầu là năng lượng có ích, điểm đích là năng lượng nhiên liệu phải tỏa. Ta đi ngược qua bước hiệu suất:
 \[
 Q_{\text{tỏa}}=\frac{18}{0.60}=\SI{30}{\mega\joule}.
 \]
-
 \textbf{Vậy,} nhiên liệu phải tỏa ra \SI{30}{\mega\joule}.
 \end{loigiai}
 
-\subsection{Từ năng lượng cần thiết đến lượng nhiên liệu}
+\subsection{Từ năng lượng có ích đến lượng nhiên liệu}
 
-Các bài tuyển sinh thường yêu cầu đi theo chuỗi:
+Đây là một trong những chuỗi tính phổ biến nhất:
 \[
-\text{năng lượng có ích}
+\boxed{Q_{\text{ích}}}
 \longrightarrow
-\text{năng lượng nhiên liệu phải tỏa}
+\boxed{Q_{\text{tỏa}}}
 \longrightarrow
-\text{số mol hoặc khối lượng nhiên liệu}.
+\boxed{n\text{ hoặc }m\text{ nhiên liệu}}.
 \]
 
+\begin{ghinho}{Hướng giải dạng tính lượng nhiên liệu}
+\begin{enumerate}
+\item Xác định năng lượng có ích mà hệ cần.
+\item Dùng hiệu suất để tính năng lượng nhiên liệu phải tỏa.
+\item Dùng dữ kiện kJ/mol, kJ/g hoặc MJ/kg để tính lượng nhiên liệu.
+\item Đổi sang đơn vị đề hỏi và kết luận.
+\end{enumerate}
+\end{ghinho}
+
 \begin{vidu}
-Một lò cần \SI{504}{\mega\joule} nhiệt có ích. Lò đốt methane, biết \(1\) mol \ce{CH4} cháy hoàn toàn tỏa \SI{890}{\kilo\joule}; hiệu suất sử dụng nhiệt của lò là \(70\%\). Tính khối lượng methane cần dùng. Cho \(M_{\ce{CH4}}=16\) g/mol.
+Một lò cần \SI{504}{\mega\joule} nhiệt có ích. Lò đốt methane, biết $1$ mol \ce{CH4} cháy hoàn toàn tỏa \SI{890}{\kilo\joule}; hiệu suất sử dụng nhiệt của lò là $70\%$. Tính khối lượng methane cần dùng. Cho $M_{\ce{CH4}}=16$ g/mol.
 \end{vidu}
 \begin{loigiai}
-Nhiệt lượng methane phải tỏa:
+\textbf{Bước 1.} Năng lượng có ích cần dùng là \SI{504}{\mega\joule}.
+
+\textbf{Bước 2.} Nhiệt lượng methane phải tỏa:
 \[
 Q_{\text{tỏa}}=\frac{504}{0.70}=\SI{720}{\mega\joule}=\SI{720000}{\kilo\joule}.
 \]
-Số mol methane:
+
+\textbf{Bước 3.} Số mol methane:
 \[
 n_{\ce{CH4}}=\frac{720000}{890}\approx\SI{808.99}{\mole}.
 \]
@@ -61,23 +73,77 @@ m=808.99\times16\approx\SI{12944}{\gram}\approx\SI{12.94}{\kilo\gram}.
 \textbf{Vậy,} cần khoảng \SI{12.94}{\kilo\gram} methane.
 \end{loigiai}
 
-\subsection{Năng lượng trong bài toán nhiệt phân}
+\subsection{Năng lượng để đun nóng một vật}
 
-Một quá trình thu nhiệt có thể được cung cấp năng lượng bằng cách đốt nhiên liệu. Khi đó, cần tính tổng năng lượng mà quá trình thu nhiệt cần rồi tính ngược lượng nhiên liệu.
+Một số đề không cho trực tiếp năng lượng cần thiết mà yêu cầu học sinh tự tính từ sự tăng nhiệt độ. Nếu một vật có khối lượng $m$, nhiệt dung riêng $c$ và tăng nhiệt độ từ $T_1$ lên $T_2$ thì:
+\[
+Q_{\text{cần}}=mc\Delta T,
+\qquad
+\Delta T=T_2-T_1.
+\]
+
+\begin{ghinho}{Hướng giải bài đun nóng}
+\begin{enumerate}
+\item Tính $\Delta T=T_2-T_1$.
+\item Tính nhiệt lượng vật cần nhận: $Q_{\text{cần}}=mc\Delta T$.
+\item Nếu có hiệu suất, tính $Q_{\text{nhiên liệu}}=Q_{\text{cần}}/(H/100)$.
+\item Từ nhiệt trị suy ra lượng nhiên liệu cần dùng.
+\end{enumerate}
+\end{ghinho}
 
 \begin{vidu}
-Để phân hủy hoàn toàn \(1\) mol \ce{CaCO3} cần cung cấp \SI{178}{\kilo\joule}. Một lò nung xử lí \SI{500}{\kilo\gram} \ce{CaCO3} tinh khiết. Nhiệt được cung cấp bằng một loại nhiên liệu có nhiệt trị \SI{40}{\mega\joule\per\kilo\gram}; hiệu suất truyền nhiệt vào lò là \(50\%\). Tính khối lượng nhiên liệu tối thiểu cần dùng. Cho \(M_{\ce{CaCO3}}=100\) g/mol.
+Cần đun \SI{20}{\kilo\gram} nước từ \SI{25}{\degreeCelsius} đến \SI{100}{\degreeCelsius}. Biết nhiệt dung riêng của nước là \SI{4.2}{\joule\per\gram\per\degreeCelsius}. Bếp dùng nhiên liệu có nhiệt trị \SI{40}{\kilo\joule\per\gram}, hiệu suất $50\%$. Tính khối lượng nhiên liệu cần dùng.
+\end{vidu}
+\begin{loigiai}
+\textbf{Bước 1.} Độ tăng nhiệt độ:
+\[
+\Delta T=100-25=\SI{75}{\degreeCelsius}.
+\]
+
+\textbf{Bước 2.} Đổi \SI{20}{\kilo\gram}=\SI{20000}{\gram}. Nhiệt lượng nước cần nhận:
+\[
+Q_{\text{cần}}=20000\times4.2\times75=\SI{6300000}{\joule}=\SI{6300}{\kilo\joule}.
+\]
+
+\textbf{Bước 3.} Do hiệu suất là $50\%$:
+\[
+Q_{\text{nhiên liệu}}=\frac{6300}{0.50}=\SI{12600}{\kilo\joule}.
+\]
+
+\textbf{Bước 4.} Khối lượng nhiên liệu:
+\[
+m=\frac{12600}{40}=\SI{315}{\gram}.
+\]
+
+\textbf{Vậy,} cần \SI{315}{\gram} nhiên liệu.
+\end{loigiai}
+
+\subsection{Năng lượng cho một quá trình thu nhiệt}
+
+Một phản ứng thu nhiệt cũng có thể được xem như một ``mục tiêu cần năng lượng''. Khi đó con đường giải hoàn toàn giống bài đun nóng:
+\[
+\boxed{\text{lượng chất cần xử lí}}
+\to
+\boxed{Q_{\text{phản ứng cần}}}
+\to
+\boxed{Q_{\text{nhiên liệu}}}
+\to
+\boxed{\text{lượng nhiên liệu}}.
+\]
+
+\begin{vidu}
+Để phân hủy hoàn toàn $1$ mol \ce{CaCO3} cần cung cấp \SI{178}{\kilo\joule}. Một lò nung xử lí \SI{500}{\kilo\gram} \ce{CaCO3} tinh khiết. Lò dùng nhiên liệu có nhiệt trị \SI{40}{\mega\joule\per\kilo\gram}; hiệu suất truyền nhiệt là $50\%$. Tính khối lượng nhiên liệu tối thiểu cần dùng. Cho $M_{\ce{CaCO3}}=100$ g/mol.
 \end{vidu}
 \begin{loigiai}
 Số mol \ce{CaCO3}:
 \[
 n=\frac{500000}{100}=\SI{5000}{\mole}.
 \]
-Năng lượng mà phản ứng phân hủy cần:
+Năng lượng phản ứng cần:
 \[
-Q_{\text{ích}}=5000\times178=\SI{890000}{\kilo\joule}=\SI{890}{\mega\joule}.
+Q_{\text{cần}}=5000\times178=\SI{890000}{\kilo\joule}=\SI{890}{\mega\joule}.
 \]
-Do hiệu suất truyền nhiệt là \(50\%\):
+Nhiệt lượng nhiên liệu phải tỏa:
 \[
 Q_{\text{nhiên liệu}}=\frac{890}{0.50}=\SI{1780}{\mega\joule}.
 \]
@@ -85,60 +151,5 @@ Khối lượng nhiên liệu:
 \[
 m=\frac{1780}{40}=\SI{44.5}{\kilo\gram}.
 \]
-
 \textbf{Vậy,} cần tối thiểu \SI{44.5}{\kilo\gram} nhiên liệu.
 \end{loigiai}
-
-\subsection{Bài toán hỗn hợp nhiên liệu}
-
-Nếu nhiên liệu gồm nhiều chất, năng lượng toàn phần bằng tổng năng lượng do từng thành phần cung cấp:
-\[
-Q_{\text{tổng}}=Q_1+Q_2+\cdots.
-\]
-Cần đặc biệt chú ý xem thành phần hỗn hợp được cho theo \textbf{mol, thể tích hay khối lượng}.
-
-\begin{vidu}
-Một hỗn hợp khí gồm \(40\%\) propane và \(60\%\) butane theo số mol. Khi đốt hoàn toàn, \(1\) mol propane và \(1\) mol butane lần lượt tỏa \SI{2220}{\kilo\joule} và \SI{2850}{\kilo\joule}. Tính nhiệt lượng tỏa ra khi đốt cháy \(100\) mol hỗn hợp.
-\source{Phỏng theo dạng bài LPG trong đề tuyển sinh chuyên Hóa Điện Biên 2026 và Lâm Đồng 2026.}
-\end{vidu}
-\begin{loigiai}
-Trong \(100\) mol hỗn hợp có \(40\) mol propane và \(60\) mol butane. Do đó:
-\[
-Q=40\times2220+60\times2850=\SI{259800}{\kilo\joule}
-=\SI{259.8}{\mega\joule}.
-\]
-
-\textbf{Vậy,} \(100\) mol hỗn hợp LPG tỏa ra \SI{259.8}{\mega\joule}.
-\end{loigiai}
-
-\begin{tuluyen}
-Một thiết bị cần \SI{96}{\mega\joule} năng lượng có ích. Thiết bị sử dụng nhiên liệu có nhiệt trị \SI{32}{\mega\joule\per\kilo\gram} và hiệu suất \(75\%\). Tính khối lượng nhiên liệu cần dùng.
-\dapso{\SI{4.0}{\kilo\gram}.}
-\begin{loigiaiBT}
-\[
-Q_{\text{tỏa}}=\frac{96}{0.75}=\SI{128}{\mega\joule},
-\qquad
-m=\frac{128}{32}=\SI{4.0}{\kilo\gram}.
-\]
-\textbf{Vậy,} cần \SI{4.0}{\kilo\gram} nhiên liệu.
-\end{loigiaiBT}
-\end{tuluyen}
-
-\begin{tuluyen}
-Đốt cháy hoàn toàn \SI{11.5}{\kilo\gram} ethanol, biết \(1\) mol ethanol tỏa \SI{1370}{\kilo\joule}. Nếu chỉ \(35\%\) năng lượng được chuyển thành công có ích, tính năng lượng có ích thu được. Cho \(M_{\ce{C2H5OH}}=46\) g/mol.
-\dapso{\(\approx\SI{119.9}{\mega\joule}\).}
-\begin{loigiaiBT}
-\[
-n=\frac{11500}{46}=\SI{250}{\mole}.
-\]
-Nhiệt lượng tỏa ra:
-\[
-Q=250\times1370=\SI{342.5}{\mega\joule}.
-\]
-Năng lượng có ích:
-\[
-Q_{\text{ích}}=342.5\times0.35\approx\SI{119.9}{\mega\joule}.
-\]
-\textbf{Vậy,} năng lượng có ích thu được khoảng \SI{119.9}{\mega\joule}.
-\end{loigiaiBT}
-\end{tuluyen}
