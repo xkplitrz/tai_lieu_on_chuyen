@@ -232,6 +232,36 @@
   \HienLoiGiaiBTtrue
 }
 
+% ---------- Tùy chọn biên dịch từng chuyên đề ----------
+% Mặc định in tất cả. Có thể dùng \ChiChuyenDe{3} trong main.tex để chỉ
+% biên dịch một chuyên đề; hoặc \TatTatCaChuyenDe rồi \BatChuyenDe{2},
+% \BatChuyenDe{3} để biên dịch nhiều chuyên đề được chọn.
+\newtoggle{InChuyenDeMot}
+\newtoggle{InChuyenDeHai}
+\newtoggle{InChuyenDeBa}
+
+\newcommand{\TatCaChuyenDe}{%
+  \toggletrue{InChuyenDeMot}%
+  \toggletrue{InChuyenDeHai}%
+  \toggletrue{InChuyenDeBa}%
+}
+\newcommand{\TatTatCaChuyenDe}{%
+  \togglefalse{InChuyenDeMot}%
+  \togglefalse{InChuyenDeHai}%
+  \togglefalse{InChuyenDeBa}%
+}
+\newcommand{\BatChuyenDe}[1]{%
+  \ifcase#1\relax
+  \or\toggletrue{InChuyenDeMot}%
+  \or\toggletrue{InChuyenDeHai}%
+  \or\toggletrue{InChuyenDeBa}%
+  \else\PackageWarning{tai-lieu-on-chuyen}{Chuyen de #1 chua duoc khai bao}%
+  \fi
+}
+\newcommand{\ChiChuyenDe}[1]{\TatTatCaChuyenDe\BatChuyenDe{#1}}
+
+\TatCaChuyenDe
+
 % ---------- Môi trường trình bày nội dung ----------
 % Thiết kế ngược vẫn được dùng ở tầng biên soạn, nhưng tên gọi trong tài liệu
 % giữ theo phong cách sách học: Ví dụ -> Ghi nhớ -> Bài tập tự luyện.

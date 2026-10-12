@@ -9,6 +9,14 @@
 
 \input{preamble}
 \BanHocSinh % cấu hình tài liệu về bản dành cho học sinh = không có đáp số, ẩn nguồn, lời giải
+
+% Biên dịch nhanh theo chuyên đề:
+% \TatCaChuyenDe        % in toàn bộ tài liệu (mặc định)
+% \ChiChuyenDe{3}       % chỉ in Chuyên đề 3
+% Hoặc chọn nhiều chuyên đề:
+% \TatTatCaChuyenDe
+% \BatChuyenDe{2}
+% \BatChuyenDe{3}
 \begin{document}
 
 \begin{titlepage}
@@ -34,6 +42,7 @@
 \tableofcontents
 \mainmatter
 
+\iftoggle{InChuyenDeMot}{%
 \chapter{Công cụ định lượng trong hóa học}
 \chaptertoc
 
@@ -42,7 +51,9 @@
 \input{data/buoi03}
 \input{data/buoi04}
 \input{data/baitap_chuyende}
+}{}
 
+\iftoggle{InChuyenDeHai}{%
 \chapter{Năng lượng và tốc độ phản ứng}
 \chaptertoc
 
@@ -51,7 +62,9 @@
 \input{data/cd02_03}
 \input{data/cd02_04}
 \input{data/baitap_chuyende2}
+}{}
 
+\iftoggle{InChuyenDeBa}{%
 \chapter{Acid -- Base -- pH -- Oxide -- Muối}
 \chaptertoc
 
@@ -63,5 +76,6 @@
 \input{data/cd03_06}
 \input{data/cd03_07}
 \input{data/baitap_chuyende3}
+}{}
 
 \end{document}

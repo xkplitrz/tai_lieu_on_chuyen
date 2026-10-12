@@ -1,86 +1,114 @@
 \section{Bài toán định lượng acid--base--oxide--muối}
 
-\subsection{Nhắc lại cách giải chung}
+\subsection{Các bước giải bài toán}
 
-Các bài định lượng ở đây vẫn dùng cách giải đã học trong Chuyên đề 1. Bài khó không có một ``công thức riêng''; độ khó chủ yếu tăng ở bước tính toán và ở việc xác định đúng đại lượng cuối cùng.
+Các bài định lượng ở đây vẫn dùng một cách giải chung. Bài toán trở nên khó hơn chủ yếu vì bước tính toán trung gian dài hơn: phải xác định chất hết--dư, ghép nhiều phản ứng, đặt ẩn, lập hệ phương trình hoặc biện luận. Khi đã xử lí được các giá trị trung gian, bước cuối vẫn là tính đúng đại lượng đề hỏi và kết luận.
 
 \begin{ghinho}{Sơ đồ giải}
-\[
-\begin{array}{c}
-\boxed{\text{1. Viết và cân bằng PTHH}}\\[2mm]
-\downarrow\\[2mm]
-\boxed{\text{2. Đổi dữ kiện về số mol}}\\[2mm]
-\downarrow\\[2mm]
-\boxed{\text{3. Tính toán theo PTHH và các dữ kiện độc lập}}\\[2mm]
-\downarrow\\[2mm]
-\boxed{\text{4. Tìm đại lượng đề hỏi}}\\[2mm]
-\downarrow\\[2mm]
-\boxed{\text{5. Kiểm tra đơn vị và kết quả}}
-\end{array}
-\]
+\begin{center}\small
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{c}
+\fbox{\parbox{0.72\linewidth}{\centering \textbf{1. Tính số mol}}}\\[2mm]
+$\downarrow$\\[2mm]
+\fbox{\parbox{0.72\linewidth}{\centering \textbf{2. Viết phương trình hoặc sơ đồ phản ứng}}}\\[2mm]
+$\downarrow$\\[2mm]
+\fbox{\parbox{0.72\linewidth}{\centering \textbf{3. Tính các giá trị trung gian cần thiết}\\(số mol, khối lượng, chất hết--dư, ẩn số,\ldots)}}\\[2mm]
+$\downarrow$\\[2mm]
+\fbox{\parbox{0.72\linewidth}{\centering \textbf{4. Tính đại lượng đề hỏi và kết luận}}}
+\end{tabular}
+\end{center}
 \end{ghinho}
 
-Ở bài đơn giản, bước 3 chỉ là một tỉ lệ theo phương trình. Ở bài khó, bước 3 có thể phải xác định chất hết, ghép nhiều phản ứng, lập hệ phương trình hoặc xét nhiều trường hợp. Bước 4 cũng có thể kéo dài nếu đề hỏi nồng độ sau phản ứng, độ tinh khiết, khối lượng dung dịch, lượng kết tủa hoặc khí thoát ra.
+\begin{notechem}
+Không cần học nhiều ``dạng bài'' rời nhau. Hãy giữ nguyên bốn bước trên. Khi bài khó, phần cần suy nghĩ nhiều nhất thường nằm ở bước 3; đôi khi bước 4 cũng kéo dài nếu đề hỏi nồng độ sau phản ứng, độ tinh khiết, khối lượng dung dịch, lượng kết tủa, lượng khí hoặc phần trăm thành phần.
+\end{notechem}
 
-\subsection{Kĩ năng 1: tính trực tiếp theo một hoặc nhiều phản ứng}
+\subsection{Kĩ năng tính toán trực tiếp theo phương trình hóa học}
 
-Nếu dữ kiện đủ để xác định ngay lượng một chất, hãy đi lần lượt qua từng phản ứng. Không cần đặt ẩn khi các đại lượng trung gian đều tính trực tiếp được.
+Khi số liệu đủ để xác định ngay lượng chất, ta chỉ cần đi lần lượt qua bốn bước. Nếu có nhiều phản ứng nối tiếp, kết quả của phản ứng trước trở thành dữ kiện cho phản ứng sau.
 
 \begin{vidu}
 Cho \SI{10.0}{\gram} \ce{CaCO3} tinh khiết phản ứng hoàn toàn với dung dịch \ce{HCl} dư. Tính thể tích \ce{CO2} ở điều kiện có $V_m=\SI{24.8}{\liter\per\mole}$.
 \end{vidu}
 \begin{loigiai}
+\textbf{Bước 1. Tính số mol.}
 \[
 n_{\ce{CaCO3}}=\frac{10.0}{100}=\SI{0.100}{\mole}.
 \]
-\[
-\ce{CaCO3 + 2HCl -> CaCl2 + CO2 ^ + H2O}.
-\]
-Theo phương trình:
+
+\textbf{Bước 2. Viết phương trình hóa học và đặt số mol vào phương trình.}
+\begin{center}\small
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{c c c c c c c c c}
+\ce{CaCO3} & + & \ce{2HCl} & \ce{->} & \ce{CaCl2} & + & \ce{CO2} & + & \ce{H2O}\\
+$0{,}100$ & & & & $0{,}100$ & & $0{,}100$ & & $0{,}100$
+\end{tabular}
+\end{center}
+
+\textbf{Bước 3. Tính các giá trị trung gian.}
 \[
 n_{\ce{CO2}}=\SI{0.100}{\mole}.
 \]
+
+\textbf{Bước 4. Tính đại lượng đề hỏi và kết luận.}
 \[
 V_{\ce{CO2}}=0.100\times24.8=\SI{2.48}{\liter}.
 \]
+
 \textbf{Vậy,} thể tích \ce{CO2} thu được là \SI{2.48}{\liter}.
 \end{loigiai}
 
-\subsection{Kĩ năng 2: xác định chất hết, chất dư và trạng thái sau phản ứng}
+\subsection{Kĩ năng xác định chất hết, chất dư và lượng sản phẩm}
 
-Khi có từ hai chất phản ứng trở lên, bước 3 phải xác định chất nào quyết định lượng sản phẩm. Sau đó mới tính chất dư, kết tủa, khí hoặc thành phần dung dịch cuối.
+Khi đề cho lượng của từ hai chất phản ứng trở lên, ở bước 3 phải xác định chất nào phản ứng hết trước. Lượng sản phẩm được tính theo chất hết; sau đó mới tính lượng chất còn dư nếu đề yêu cầu.
 
 \begin{vidu}
 Trộn \SI{200}{\milli\liter} dung dịch \ce{CuSO4} \SI{0.20}{\mole\per\liter} với \SI{100}{\milli\liter} dung dịch \ce{NaOH} \SI{0.50}{\mole\per\liter}. Tính khối lượng kết tủa. Cho $M_{\ce{Cu(OH)2}}=98$ g/mol.
 \end{vidu}
 \begin{loigiai}
+\textbf{Bước 1. Tính số mol.}
 \[
-n_{\ce{CuSO4}}=\SI{0.040}{\mole},\qquad
-n_{\ce{NaOH}}=\SI{0.050}{\mole}.
+n_{\ce{CuSO4}}=0.200\times0.20=\SI{0.040}{\mole},
 \]
 \[
-\ce{CuSO4 + 2NaOH -> Cu(OH)2 v + Na2SO4}.
+n_{\ce{NaOH}}=0.100\times0.50=\SI{0.050}{\mole}.
 \]
-\ce{NaOH} hết trước nên:
+
+\textbf{Bước 2. Viết phương trình hóa học và đặt số mol vào phương trình.}
+\begin{center}\small
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{c c c c c c c}
+\ce{CuSO4} & + & \ce{2NaOH} & \ce{->} & \ce{Cu(OH)2} & + & \ce{Na2SO4}\\
+$0{,}040$ & & $0{,}050$ & & & & \\
+$0{,}025$ & & $0{,}050$ & & $0{,}025$ & & $0{,}025$
+\end{tabular}
+\end{center}
+
+\textbf{Bước 3. Tính các giá trị trung gian.}
+
+\ce{NaOH} phản ứng hết trước, do đó:
 \[
 n_{\ce{Cu(OH)2}}=\frac{0.050}{2}=\SI{0.025}{\mole}.
 \]
+
+\textbf{Bước 4. Tính đại lượng đề hỏi và kết luận.}
 \[
 m_{\ce{Cu(OH)2}}=0.025\times98=\SI{2.45}{\gram}.
 \]
+
 \textbf{Vậy,} khối lượng kết tủa \ce{Cu(OH)2} là \SI{2.45}{\gram}.
 \end{loigiai}
 
-\subsection{Kĩ năng 3: lập hệ phương trình khi có nhiều ẩn}
+\subsection{Kĩ năng lập hệ phương trình}
 
-Khi một hỗn hợp chứa nhiều chất chưa biết lượng, hãy đặt số mol từng chất làm ẩn. Mỗi dữ kiện độc lập tạo một phương trình. Nếu số phương trình độc lập bằng số ẩn, có thể giải hệ để tìm các ẩn.
+Khi hỗn hợp có nhiều chất chưa biết lượng, có thể đặt số mol mỗi chất làm ẩn. Mỗi dữ kiện độc lập tạo một phương trình. Nếu số phương trình độc lập bằng số ẩn, ta giải được hệ.
 
-\begin{ghinho}{Cách lập hệ}
+\begin{ghinho}{Cách thực hiện}
 \begin{enumerate}
-\item Chọn ẩn là số mol hoặc khối lượng của các chất chưa biết.
-\item Dùng dữ kiện khối lượng, thể tích khí, kết tủa, lượng acid/base đã dùng,\ldots để lập các phương trình độc lập.
-\item Giải hệ.
-\item Thay kết quả trở lại bài toán và kiểm tra điều kiện hóa học.
+\item Ở bước 1, đặt số mol các chất chưa biết làm ẩn.
+\item Ở bước 2, viết đầy đủ các phương trình hóa học và đặt số mol theo ẩn ngay dưới phương trình.
+\item Ở bước 3, dùng các dữ kiện độc lập để lập hệ phương trình rồi giải hệ.
+\item Ở bước 4, từ các ẩn đã tìm được tính đúng đại lượng đề hỏi và kết luận.
 \end{enumerate}
 \end{ghinho}
 
@@ -88,66 +116,107 @@ Khi một hỗn hợp chứa nhiều chất chưa biết lượng, hãy đặt s
 Hòa tan hoàn toàn \SI{10.0}{\gram} hỗn hợp \ce{MgO} và \ce{CuO} bằng dung dịch \ce{HCl} vừa đủ. Sau phản ứng thu được \SI{19.625}{\gram} hỗn hợp muối chloride khan. Tính khối lượng mỗi oxide. Cho $M_{\ce{MgO}}=40$, $M_{\ce{MgCl2}}=95$, $M_{\ce{CuO}}=80$, $M_{\ce{CuCl2}}=135$ g/mol.
 \end{vidu}
 \begin{loigiai}
-Gọi số mol \ce{MgO}, \ce{CuO} lần lượt là $x$, $y$.
+\textbf{Bước 1. Tính số mol.}
 
-Từ khối lượng hỗn hợp oxide:
+Gọi số mol \ce{MgO} và \ce{CuO} lần lượt là $x$ và $y$ mol.
+
+\textbf{Bước 2. Viết phương trình hóa học và đặt số mol vào phương trình.}
+\begin{center}\small
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{c c c c c c c}
+\ce{MgO} & + & \ce{2HCl} & \ce{->} & \ce{MgCl2} & + & \ce{H2O}\\
+$x$ & & $2x$ & & $x$ & & $x$\\[1mm]
+\ce{CuO} & + & \ce{2HCl} & \ce{->} & \ce{CuCl2} & + & \ce{H2O}\\
+$y$ & & $2y$ & & $y$ & & $y$
+\end{tabular}
+\end{center}
+
+\textbf{Bước 3. Tính các giá trị trung gian.}
 \[
-40x+80y=10.0.
+\begin{cases}
+40x+80y=10.0,\\
+95x+135y=19.625
+\end{cases}
+\Rightarrow
+\begin{cases}
+x=0.100,\\
+y=0.075.
+\end{cases}
 \]
-Mỗi mol oxide tạo một mol muối chloride tương ứng, nên:
+
+\textbf{Bước 4. Tính đại lượng đề hỏi và kết luận.}
 \[
-95x+135y=19.625.
+m_{\ce{MgO}}=0.100\times40=\SI{4.0}{\gram},
 \]
-Giải hệ:
 \[
-x=0.100,\qquad y=0.075.
+m_{\ce{CuO}}=0.075\times80=\SI{6.0}{\gram}.
 \]
-Do đó:
-\[
-m_{\ce{MgO}}=\SI{4.0}{\gram},\qquad
-m_{\ce{CuO}}=\SI{6.0}{\gram}.
-\]
-\textbf{Vậy,} hỗn hợp chứa \SI{4.0}{\gram} \ce{MgO} và \SI{6.0}{\gram} \ce{CuO}.
+
+\textbf{Vậy,} hỗn hợp ban đầu chứa \SI{4.0}{\gram} \ce{MgO} và \SI{6.0}{\gram} \ce{CuO}.
 \end{loigiai}
 
-Nếu có ba chất chưa biết và ba dữ kiện độc lập, nguyên tắc không thay đổi: đặt ba ẩn và lập ba phương trình. Phần này tập trung luyện chắc hệ hai ẩn; hệ ba ẩn sẽ được gặp lại ở các chuyên đề hỗn hợp nhiều cấu tử.
+Nếu có ba chất chưa biết và ba dữ kiện độc lập, nguyên tắc không thay đổi: đặt ba ẩn và lập ba phương trình. Phần này tập trung luyện chắc cách lập hệ; các bài có ba ẩn sẽ tiếp tục xuất hiện ở những chuyên đề hỗn hợp nhiều cấu tử.
 
-\subsection{Kĩ năng 4: biện luận khi chưa đủ phương trình độc lập}
+\subsection{Kĩ năng biện luận từ điều kiện hóa học}
 
-Có bài không cho đủ dữ kiện để giải ngay tất cả các ẩn. Khi đó phải dùng thêm điều kiện hóa học: hóa trị, công thức chất, tính tan, hiện tượng, giới hạn khối lượng mol hoặc số nguyên của chỉ số trong công thức.
+Có bài số ẩn nhiều hơn số phương trình độc lập. Khi đó chưa thể giải bằng đại số ngay mà phải dùng thêm điều kiện hóa học: hóa trị, công thức chất, tính tan, hiện tượng, giới hạn khối lượng mol hoặc tính nguyên của chỉ số trong công thức.
 
 \begin{vidu}
 Một acid C có khối lượng mol nhỏ hơn \SI{100}{\gram\per\mole}. Để trung hòa \SI{2.94}{\gram} C cần đúng \SI{0.060}{\mole} \ce{NaOH}. Biết C là một acid vô cơ quen thuộc. Xác định C.
 \source{Phỏng theo cách biện luận ở Câu II, đề tuyển sinh chuyên Hóa KHTN Hà Nội 2026.}
 \end{vidu}
 \begin{loigiai}
-Gọi một mol C cần $k$ mol \ce{NaOH}, với $k$ là số nguyên dương. Khi đó:
+\textbf{Bước 1. Tính số mol.}
+
+Gọi $k$ là số mol \ce{NaOH} cần để trung hòa hoàn toàn $1$ mol acid C. Khi đó:
 \[
-n_C=\frac{0.060}{k},\qquad
+n_C=\frac{0.060}{k}\ \text{mol}.
+\]
+
+\textbf{Bước 2. Viết sơ đồ phản ứng và đặt số mol vào sơ đồ.}
+\begin{center}\small
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{c c c c c}
+C & + & $k$\ce{NaOH} & $\longrightarrow$ & muối $+$ nước\\
+$\dfrac{0{,}060}{k}$ & & $0{,}060$ & &
+\end{tabular}
+\end{center}
+
+\textbf{Bước 3. Tính các giá trị trung gian và biện luận.}
+\[
 M_C=\frac{2.94}{0.060/k}=49k.
 \]
-Vì $M_C<100$ nên $k$ chỉ có thể là 1 hoặc 2.
-
-Nếu $k=1$ thì $M_C=49$ g/mol, không phù hợp với acid vô cơ quen thuộc trong bài.
-
-Nếu $k=2$ thì $M_C=98$ g/mol, phù hợp với \ce{H2SO4}.
-
-\textbf{Vậy,} C là \ce{H2SO4}.
-\end{loigiai}
-
-\subsection{Kĩ năng 5: biến số liệu thí nghiệm thành dữ kiện tính toán}
-
-Ở bài chuẩn độ, thay đổi khối lượng, kết tủa hoặc khí thoát ra, số liệu đo không phải là kết quả cuối cùng. Trước hết phải đổi số liệu quan sát thành số mol của một chất; từ đó mới quay về các bước tính toán thông thường.
-
-Ví dụ:
+Vì $M_C<100$ nên $k=1$ hoặc $k=2$.
 \[
-V_{\text{chuẩn độ}}
-\to n_{\text{chất chuẩn}}
-\to \text{PTHH}
-\to n_{\text{chất cần tìm}}
-\to C,\ m,\ \%.
+\begin{array}{c|c|c}
+ k & M_C\,(\text{g/mol}) & \text{Kết luận}\\
+\hline
+1 & 49 & \text{không phù hợp}\\
+2 & 98 & \ce{H2SO4}
+\end{array}
 \]
 
-\begin{notechem}
-Không cần học nhiều ``dạng bài'' rời nhau. Hãy xác định bài đang làm khó ở kĩ năng nào: tính trực tiếp, xác định chất hết--dư, lập hệ, biện luận hay chuyển số liệu thí nghiệm thành số mol. Sau bước đó, bài toán lại quay về quy trình chung của Chuyên đề 1.
-\end{notechem}
+\textbf{Bước 4. Tính đại lượng đề hỏi và kết luận.}
+
+\textbf{Vậy,} acid C là \ce{H2SO4}.
+\end{loigiai}
+
+\subsection{Kĩ năng chuyển số liệu thực nghiệm thành dữ kiện tính toán}
+
+Ở các bài chuẩn độ, thay đổi khối lượng, lượng kết tủa hoặc lượng khí thoát ra, số liệu đo chưa phải là kết quả cuối cùng. Trước hết phải chuyển số liệu thực nghiệm thành số mol của một chất; sau đó tiếp tục theo đúng bốn bước giải chung.
+
+\begin{ghinho}{Ví dụ với chuẩn độ}
+\[
+\begin{array}{c}
+V_{\text{dung dịch chuẩn}}\\
+\downarrow\\
+n_{\text{dung dịch chuẩn}}\\
+\downarrow\\
+\text{PTHH và tỉ lệ mol}\\
+\downarrow\\
+n_{\text{chất cần tìm}}\\
+\downarrow\\
+C,\ m,\ \%\ldots
+\end{array}
+\]
+\end{ghinho}

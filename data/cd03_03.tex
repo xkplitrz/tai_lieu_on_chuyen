@@ -1,6 +1,6 @@
 \section{Chuẩn độ acid--base}
 
-\subsection{Chuẩn độ dùng để làm gì?}
+\subsection{Mục đích của phép chuẩn độ}
 
 Chuẩn độ là phương pháp xác định lượng hoặc nồng độ của một chất bằng cách cho chất đó phản ứng với một dung dịch đã biết nồng độ.
 
@@ -14,7 +14,7 @@ Trong chuẩn độ acid--base, một dung dịch được thêm từ từ vào 
 \end{enumerate}
 \end{ghinho}
 
-\subsection{Dụng cụ và cách đọc burette}
+\subsection{Dụng cụ và cách đọc thể tích trên burette}
 
 Burette cho phép thêm dung dịch từng lượng nhỏ và đo chính xác thể tích đã dùng. Thể tích dung dịch chảy ra được tính bằng:
 \[
@@ -27,19 +27,19 @@ Khi gần điểm kết thúc, cần thêm dung dịch từng giọt và lắc �
 Không được xem ``đổi màu'' là nguyên nhân của phản ứng. Chất chỉ thị chỉ giúp quan sát thời điểm phản ứng đã đạt gần tỉ lệ vừa đủ.
 \end{notechem}
 
-\subsection{Con đường giải bài chuẩn độ}
+\subsection{Các bước tính toán trong bài chuẩn độ}
 
 \begin{ghinho}{Hướng giải}
 \[
-\boxed{C_{\text{chuẩn}},V_{\text{chuẩn}}}
-\to
-\boxed{n_{\text{chuẩn}}}
-\to
-\boxed{\text{tỉ lệ PTHH}}
-\to
-\boxed{n_{\text{chất cần tìm}}}
-\to
-\boxed{C,\ m,\ \%\ldots}
+\begin{array}{c}
+\boxed{\text{1. Tính số mol dung dịch chuẩn đã dùng}}\\[2mm]
+\downarrow\\[2mm]
+\boxed{\text{2. Viết và cân bằng phương trình hóa học}}\\[2mm]
+\downarrow\\[2mm]
+\boxed{\text{3. Tính số mol chất cần xác định}}\\[2mm]
+\downarrow\\[2mm]
+\boxed{\text{4. Tính nồng độ hoặc đại lượng đề hỏi và kết luận}}
+\end{array}
 \]
 \end{ghinho}
 
@@ -47,18 +47,26 @@ Không được xem ``đổi màu'' là nguyên nhân của phản ứng. Chất
 Lấy \SI{20.0}{\milli\liter} dung dịch \ce{HCl} chưa biết nồng độ, chuẩn độ vừa đủ bằng \SI{16.0}{\milli\liter} dung dịch \ce{NaOH} \SI{0.100}{\mole\per\liter}. Tính nồng độ mol của \ce{HCl}.
 \end{vidu}
 \begin{loigiai}
-Số mol \ce{NaOH} đã dùng:
+\textbf{Bước 1. Tính số mol.}
 \[
 n_{\ce{NaOH}}=0.0160\times0.100=\SI{0.00160}{\mole}.
 \]
-\[
-\ce{HCl + NaOH -> NaCl + H2O}.
-\]
-Tỉ lệ mol là $1:1$ nên:
+
+\textbf{Bước 2. Viết phương trình hóa học và đặt số mol vào phương trình.}
+\begin{center}\small
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{c c c c c c c}
+\ce{HCl} & + & \ce{NaOH} & \ce{->} & \ce{NaCl} & + & \ce{H2O}\\
+$0{,}00160$ & & $0{,}00160$ & & $0{,}00160$ & & $0{,}00160$
+\end{tabular}
+\end{center}
+
+\textbf{Bước 3. Tính các giá trị trung gian.}
 \[
 n_{\ce{HCl}}=\SI{0.00160}{\mole}.
 \]
-Do đó:
+
+\textbf{Bước 4. Tính đại lượng đề hỏi và kết luận.}
 \[
 C_{\ce{HCl}}=\frac{0.00160}{0.0200}=\SI{0.0800}{\mole\per\liter}.
 \]
@@ -66,11 +74,12 @@ C_{\ce{HCl}}=\frac{0.00160}{0.0200}=\SI{0.0800}{\mole\per\liter}.
 \textbf{Vậy,} nồng độ mol của dung dịch \ce{HCl} là \SI{0.0800}{\mole\per\liter}.
 \end{loigiai}
 
-\subsection{Thực hành mô phỏng}
+\subsection{Thực hành chuẩn độ trên mô phỏng}
 
 Hãy thực hiện ít nhất ba lần chuẩn độ và ghi kết quả vào bảng:
 
-\begin{center}
+\begin{center}\small
+\setlength{\tabcolsep}{3pt}
 \begin{tabular}{c|ccc}
 \toprule
 Lần & $V_{\text{đầu}}$ (mL) & $V_{\text{cuối}}$ (mL) & $V_{\text{đã dùng}}$ (mL)\\
@@ -94,10 +103,26 @@ Sau khi thao tác, trả lời bốn câu hỏi: dung dịch nào đã biết n�
 Chuẩn độ \SI{10.0}{\milli\liter} dung dịch \ce{NaOH} bằng dung dịch \ce{HCl} \SI{0.0500}{\mole\per\liter}. Thể tích \ce{HCl} trung bình cần dùng là \SI{12.0}{\milli\liter}. Tính nồng độ mol của \ce{NaOH}.
 \dapso{\SI{0.0600}{\mole\per\liter}.}
 \begin{loigiaiBT}
+\textbf{Bước 1. Tính số mol.}
 \[
 n_{\ce{HCl}}=0.0120\times0.0500=\SI{6.00e-4}{\mole}.
 \]
-Theo phản ứng \ce{HCl + NaOH -> NaCl + H2O}, số mol \ce{NaOH} bằng số mol \ce{HCl}:
+
+\textbf{Bước 2. Viết phương trình hóa học và đặt số mol vào phương trình.}
+\begin{center}\small
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{c c c c c c c}
+\ce{HCl} & + & \ce{NaOH} & \ce{->} & \ce{NaCl} & + & \ce{H2O}\\
+$6{,}00\times10^{-4}$ & & $6{,}00\times10^{-4}$ & & $6{,}00\times10^{-4}$ & & $6{,}00\times10^{-4}$
+\end{tabular}
+\end{center}
+
+\textbf{Bước 3. Tính các giá trị trung gian.}
+\[
+n_{\ce{NaOH}}=\SI{6.00e-4}{\mole}.
+\]
+
+\textbf{Bước 4. Tính đại lượng đề hỏi và kết luận.}
 \[
 C_{\ce{NaOH}}=\frac{6.00\times10^{-4}}{0.0100}=\SI{0.0600}{\mole\per\liter}.
 \]

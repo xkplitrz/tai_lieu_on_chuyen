@@ -15,13 +15,12 @@ Ví dụ:
 \ce{H2SO4 + 2KOH -> K2SO4 + 2H2O}.
 \]
 
-\begin{ghinho}{Cách giải bài trung hòa}
+\begin{ghinho}{Các bước giải bài trung hòa}
 \begin{enumerate}
-\item Viết phương trình hóa học.
-\item Đổi dữ kiện về số mol acid và base.
-\item So sánh theo tỉ lệ hệ số để xác định chất hết, chất dư.
-\item Tính đại lượng đề hỏi từ chất hết hoặc chất dư.
-\item Kết luận bằng câu đầy đủ.
+\item Tính số mol các chất từ dữ kiện đề bài.
+\item Viết và cân bằng phương trình hóa học.
+\item Tính các giá trị trung gian cần thiết: chất hết, chất dư, số mol sản phẩm,\ldots
+\item Tính đại lượng đề hỏi và kết luận bằng câu đầy đủ.
 \end{enumerate}
 \end{ghinho}
 
@@ -29,20 +28,32 @@ Ví dụ:
 Trộn \SI{100}{\milli\liter} dung dịch \ce{HCl} \SI{0.50}{\mole\per\liter} với \SI{150}{\milli\liter} dung dịch \ce{NaOH} \SI{0.20}{\mole\per\liter}. Xác định chất còn dư sau phản ứng.
 \end{vidu}
 \begin{loigiai}
+\textbf{Bước 1. Tính số mol.}
 \[
 n_{\ce{HCl}}=0.100\times0.50=\SI{0.050}{\mole},
 \]
 \[
 n_{\ce{NaOH}}=0.150\times0.20=\SI{0.030}{\mole}.
 \]
-Phương trình:
+
+\textbf{Bước 2. Viết phương trình hóa học và đặt số mol vào phương trình.}
+\begin{center}\small
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{c c c c c c c}
+\ce{HCl} & + & \ce{NaOH} & \ce{->} & \ce{NaCl} & + & \ce{H2O}\\
+$0{,}050$ & & $0{,}030$ & & & & \\
+$0{,}030$ & & $0{,}030$ & & $0{,}030$ & & $0{,}030$
+\end{tabular}
+\end{center}
+
+\textbf{Bước 3. Tính các giá trị trung gian.}
+
+Theo phương trình, \ce{NaOH} phản ứng hết; số mol \ce{HCl} đã phản ứng là \SI{0.030}{\mole}.
 \[
-\ce{HCl + NaOH -> NaCl + H2O}.
+n_{\ce{HCl}\,\text{dư}}=0.050-0.030=\SI{0.020}{\mole}.
 \]
-Tỉ lệ mol là $1:1$, nên \ce{NaOH} hết trước. Số mol \ce{HCl} dư:
-\[
-0.050-0.030=\SI{0.020}{\mole}.
-\]
+
+\textbf{Bước 4. Tính đại lượng đề hỏi và kết luận.}
 
 \textbf{Vậy,} sau phản ứng còn dư \SI{0.020}{\mole} \ce{HCl}.
 \end{loigiai}
@@ -55,16 +66,26 @@ Nhiều bài toán không nói trực tiếp ``acid phản ứng với base'' m�
 Một loại thuốc dạ dày chứa \ce{Mg(OH)2}. Một liều thuốc có \SI{0.58}{\gram} \ce{Mg(OH)2}. Tính số mol \ce{HCl} tối đa có thể trung hòa. Cho $M_{\ce{Mg(OH)2}}=58$ g/mol.
 \end{vidu}
 \begin{loigiai}
+\textbf{Bước 1. Tính số mol.}
 \[
 n_{\ce{Mg(OH)2}}=\frac{0.58}{58}=\SI{0.010}{\mole}.
 \]
-\[
-\ce{Mg(OH)2 + 2HCl -> MgCl2 + 2H2O}.
-\]
-Theo phương trình:
+
+\textbf{Bước 2. Viết phương trình hóa học và đặt số mol vào phương trình.}
+\begin{center}\small
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{c c c c c c c}
+\ce{Mg(OH)2} & + & \ce{2HCl} & \ce{->} & \ce{MgCl2} & + & \ce{2H2O}\\
+$0{,}010$ & & $0{,}020$ & & $0{,}010$ & & $0{,}020$
+\end{tabular}
+\end{center}
+
+\textbf{Bước 3. Tính các giá trị trung gian.}
 \[
 n_{\ce{HCl}}=2\times0.010=\SI{0.020}{\mole}.
 \]
+
+\textbf{Bước 4. Tính đại lượng đề hỏi và kết luận.}
 
 \textbf{Vậy,} một liều thuốc có thể trung hòa tối đa \SI{0.020}{\mole} \ce{HCl}.
 \end{loigiai}
@@ -73,17 +94,30 @@ n_{\ce{HCl}}=2\times0.010=\SI{0.020}{\mole}.
 Trộn \SI{200}{\milli\liter} dung dịch \ce{H2SO4} \SI{0.10}{\mole\per\liter} với \SI{150}{\milli\liter} dung dịch \ce{NaOH} \SI{0.30}{\mole\per\liter}. Xác định chất dư và số mol chất dư.
 \dapso{\ce{NaOH} dư \SI{0.005}{\mole}.}
 \begin{loigiaiBT}
+\textbf{Bước 1. Tính số mol.}
 \[
-n_{\ce{H2SO4}}=0.200\times0.10=\SI{0.020}{\mole},\qquad
+n_{\ce{H2SO4}}=0.200\times0.10=\SI{0.020}{\mole},
+\]
+\[
 n_{\ce{NaOH}}=0.150\times0.30=\SI{0.045}{\mole}.
 \]
+
+\textbf{Bước 2. Viết phương trình hóa học và đặt số mol vào phương trình.}
+\begin{center}\small
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{c c c c c c c}
+\ce{H2SO4} & + & \ce{2NaOH} & \ce{->} & \ce{Na2SO4} & + & \ce{2H2O}\\
+$0{,}020$ & & $0{,}045$ & & & & \\
+$0{,}020$ & & $0{,}040$ & & $0{,}020$ & & $0{,}040$
+\end{tabular}
+\end{center}
+
+\textbf{Bước 3. Tính các giá trị trung gian.}
 \[
-\ce{H2SO4 + 2NaOH -> Na2SO4 + 2H2O}.
+n_{\ce{NaOH}\,\text{dư}}=0.045-0.040=\SI{0.005}{\mole}.
 \]
-\SI{0.020}{\mole} \ce{H2SO4} cần \SI{0.040}{\mole} \ce{NaOH}; do đó \ce{NaOH} dư:
-\[
-0.045-0.040=\SI{0.005}{\mole}.
-\]
+
+\textbf{Bước 4. Tính đại lượng đề hỏi và kết luận.}
 
 \textbf{Vậy,} sau phản ứng còn dư \SI{0.005}{\mole} \ce{NaOH}.
 \end{loigiaiBT}
