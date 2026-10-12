@@ -1,0 +1,142 @@
+\section{Khai thác bảng số liệu và đồ thị tốc độ phản ứng}
+
+Phần cốt lõi của chương trình lớp 8 yêu cầu học sinh nhận biết phản ứng nhanh hay chậm và các yếu tố làm thay đổi tốc độ. Trong đề tuyển sinh chuyên, dữ kiện này thường được trình bày dưới dạng bảng số liệu hoặc đồ thị. Vì vậy cần biết chuyển dữ liệu thực nghiệm thành nhận xét định lượng.
+
+\subsection{Đại lượng theo dõi phản ứng}
+
+Giả sử phản ứng tạo khí. Nếu đo thể tích khí sau mỗi khoảng thời gian, thể tích khí tăng càng nhanh thì phản ứng càng nhanh. Với phản ứng làm mất dần chất tan, có thể theo dõi nồng độ chất đó; nồng độ giảm càng nhanh thì phản ứng càng nhanh.
+
+\begin{ghinho}{Tốc độ trung bình trên một khoảng thời gian}
+Khi đề bài yêu cầu định lượng, có thể dùng độ biến thiên của một đại lượng chia cho thời gian:
+\[
+\text{mức độ biến thiên trung bình}=\frac{|X_2-X_1|}{t_2-t_1}.
+\]
+Trong đó $X$ có thể là thể tích khí, khối lượng hoặc nồng độ tùy cách theo dõi phản ứng.
+
+Nếu dùng nồng độ một chất phản ứng, thường lấy giá trị tuyệt đối vì nồng độ giảm theo thời gian. Đơn vị phải phù hợp với đại lượng đang xét, ví dụ \si{\milli\liter\per\second} hoặc \si{\mole\per\liter\per\second}.
+\end{ghinho}
+
+\begin{vidu}
+Cho Zn phản ứng với dung dịch \ce{HCl} dư. Thể tích khí \ce{H2} thu được được ghi lại như sau:
+\begin{center}
+\begin{tabular}{c|ccccc}
+$t$ (s) & 0 & 20 & 40 & 60 & 80 \\
+\hline
+$V_{\ce{H2}}$ (mL) & 0 & 36 & 62 & 78 & 86
+\end{tabular}
+\end{center}
+Tính tốc độ tăng thể tích khí trung bình trong các khoảng $0$--$20$ s và $60$--$80$ s. Nhận xét sự thay đổi tốc độ phản ứng.
+\source{Phỏng theo dạng bảng số liệu Zn--HCl trong đề tuyển sinh chuyên Hóa Điện Biên 2026.}
+\end{vidu}
+\begin{loigiai}
+Trong khoảng $0$--$20$ s:
+\[
+\overline v_1=\frac{36-0}{20-0}=\SI{1.8}{\milli\liter\per\second}.
+\]
+Trong khoảng $60$--$80$ s:
+\[
+\overline v_2=\frac{86-78}{80-60}=\SI{0.4}{\milli\liter\per\second}.
+\]
+Vì $\overline v_1>\overline v_2$, phản ứng nhanh hơn ở giai đoạn đầu và chậm dần về sau.
+
+\textbf{Vậy,} tốc độ tăng thể tích khí trung bình lần lượt là \SI{1.8}{\milli\liter\per\second} và \SI{0.4}{\milli\liter\per\second}; phản ứng chậm dần theo thời gian.
+\end{loigiai}
+
+\subsection{Đọc xu hướng từ bảng hoặc đồ thị}
+
+Khi đọc một bảng hoặc đồ thị, nên trả lời theo thứ tự:
+\begin{enumerate}
+\item Đại lượng nào đang tăng hoặc giảm theo thời gian?
+\item Trong khoảng nào đại lượng thay đổi nhanh nhất?
+\item Độ dốc của đường biểu diễn lớn hay nhỏ ở từng giai đoạn?
+\item Có thời điểm nào đại lượng gần như không đổi nữa không? Nếu có, phản ứng có thể đã kết thúc hoặc chất đang theo dõi đã hết.
+\end{enumerate}
+
+Đối với đồ thị thể tích khí theo thời gian, đường cong càng dốc thì khí được tạo ra càng nhanh. Khi đường cong gần nằm ngang, tốc độ tạo khí rất nhỏ.
+
+\begin{vidu}
+Trong một phản ứng, nồng độ chất A thay đổi theo thời gian như bảng sau:
+\begin{center}
+\begin{tabular}{c|ccccc}
+$t$ (s) & 0 & 10 & 20 & 30 & 40 \\
+\hline
+$C_A$ (mol/L) & 0.80 & 0.58 & 0.43 & 0.34 & 0.30
+\end{tabular}
+\end{center}
+Tính độ giảm nồng độ trung bình của A trong hai khoảng $0$--$10$ s và $30$--$40$ s. Khoảng nào phản ứng diễn ra nhanh hơn?
+\source{Phỏng theo dạng đồ thị nồng độ--thời gian trong đề chuyên Hóa Đà Nẵng 2026 và Đắk Lắk 2026.}
+\end{vidu}
+\begin{loigiai}
+Trong $0$--$10$ s:
+\[
+\overline v_1=\frac{0.80-0.58}{10}=\SI{0.022}{\mole\per\liter\per\second}.
+\]
+Trong $30$--$40$ s:
+\[
+\overline v_2=\frac{0.34-0.30}{10}=\SI{0.004}{\mole\per\liter\per\second}.
+\]
+Do $\overline v_1>\overline v_2$, giai đoạn đầu phản ứng diễn ra nhanh hơn.
+
+\textbf{Vậy,} độ giảm nồng độ trung bình của A là \SI{0.022}{\mole\per\liter\per\second} và \SI{0.004}{\mole\per\liter\per\second}; phản ứng nhanh hơn trong $0$--$10$ s.
+\end{loigiai}
+
+\subsection{Thiết kế và đánh giá thí nghiệm so sánh tốc độ}
+
+Muốn xác định ảnh hưởng của một yếu tố, phải xây dựng hai thí nghiệm sao cho chỉ yếu tố đó khác nhau. Ví dụ, để khảo sát ảnh hưởng của nồng độ \ce{HCl} lên phản ứng với Zn, khối lượng Zn, dạng Zn, thể tích acid và nhiệt độ cần được giữ như nhau; chỉ thay đổi nồng độ acid.
+
+Nếu đồng thời thay đổi cả nồng độ và nhiệt độ, không thể kết luận riêng yếu tố nào gây ra sự thay đổi tốc độ.
+
+\begin{vidu}
+Một học sinh muốn khảo sát ảnh hưởng của diện tích bề mặt lên phản ứng giữa \ce{CaCO3} và \ce{HCl}. Bạn đề xuất:
+\begin{itemize}
+\item thí nghiệm 1: \SI{2.0}{\gram} \ce{CaCO3} dạng cục, \SI{50}{\milli\liter} \ce{HCl} \SI{1.0}{\mole\per\liter}, \SI{25}{\degreeCelsius};
+\item thí nghiệm 2: \SI{2.0}{\gram} \ce{CaCO3} dạng bột, \SI{50}{\milli\liter} \ce{HCl} \SI{2.0}{\mole\per\liter}, \SI{25}{\degreeCelsius}.
+\end{itemize}
+Thiết kế trên có cho phép kết luận riêng ảnh hưởng của diện tích bề mặt không? Nếu không, hãy sửa.
+\end{vidu}
+\begin{loigiai}
+Hai thí nghiệm đồng thời thay đổi dạng \ce{CaCO3} và nồng độ \ce{HCl}, nên nếu tốc độ khác nhau thì không biết do yếu tố nào gây ra.
+
+Cần giữ cùng nồng độ \ce{HCl}, chẳng hạn đều dùng \SI{1.0}{\mole\per\liter}; chỉ thay đổi \ce{CaCO3} dạng cục thành dạng bột.
+
+\textbf{Vậy,} thiết kế ban đầu chưa hợp lí; phải giữ nồng độ acid như nhau để khảo sát riêng ảnh hưởng của diện tích bề mặt.
+\end{loigiai}
+
+\subsection{Mở rộng: quy tắc hệ số nhiệt độ}
+
+Một số đề tuyển sinh cung cấp hệ số nhiệt độ $\gamma$ để mô tả gần đúng mức tăng tốc độ khi tăng nhiệt độ mỗi \SI{10}{\degreeCelsius}. Nếu đề cho quy tắc này, có thể dùng:
+\[
+\frac{v_2}{v_1}=\gamma^{\frac{T_2-T_1}{10}}.
+\]
+Đây là công cụ \textbf{mở rộng theo dữ kiện đề bài}, không phải nội dung trọng tâm cần ghi nhớ của chương trình lớp 8.
+
+\begin{vidu}
+Một phản ứng có hệ số nhiệt độ $\gamma=2$. Nếu ở \SI{20}{\degreeCelsius} phản ứng cần 16 phút để đạt cùng mức chuyển hóa, ước tính thời gian cần thiết ở \SI{40}{\degreeCelsius}, giả sử các điều kiện khác không đổi.
+\source{Phỏng theo dạng bài hệ số nhiệt độ trong đề tuyển sinh chuyên Hóa Hà Nội 2025.}
+\end{vidu}
+\begin{loigiai}
+Tăng từ \SI{20}{\degreeCelsius} lên \SI{40}{\degreeCelsius} là hai khoảng \SI{10}{\degreeCelsius}, nên tốc độ tăng:
+\[
+\frac{v_{40}}{v_{20}}=2^2=4.
+\]
+Để đạt cùng mức chuyển hóa, thời gian tỉ lệ nghịch với tốc độ:
+\[
+t_{40}=\frac{16}{4}=4\ \text{phút}.
+\]
+
+\textbf{Vậy,} ở \SI{40}{\degreeCelsius}, phản ứng cần khoảng 4 phút.
+\end{loigiai}
+
+\begin{tuluyen}
+Một phản ứng tạo khí có thể tích khí lần lượt là 0, 25, 43, 54 và 60 mL tại các thời điểm 0, 10, 20, 30 và 40 s. Tính tốc độ tăng thể tích khí trung bình trong từng khoảng 10 s và cho biết khoảng nào phản ứng nhanh nhất.
+\dapso{\SI{2.5}{\milli\liter\per\second}; \SI{1.8}{\milli\liter\per\second}; \SI{1.1}{\milli\liter\per\second}; \SI{0.6}{\milli\liter\per\second}; nhanh nhất ở 0--10 s.}
+\begin{loigiaiBT}
+Các tốc độ trung bình lần lượt là:
+\[
+\frac{25}{10}=2.5;\quad \frac{43-25}{10}=1.8;\quad \frac{54-43}{10}=1.1;\quad \frac{60-54}{10}=0.6\ \text{mL/s}.
+\]
+Giá trị lớn nhất thuộc khoảng 0--10 s.
+
+\textbf{Vậy,} phản ứng nhanh nhất trong 10 giây đầu và chậm dần về sau.
+\end{loigiaiBT}
+\end{tuluyen}
