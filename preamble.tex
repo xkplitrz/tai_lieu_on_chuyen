@@ -233,28 +233,32 @@
 }
 
 % ---------- Tùy chọn biên dịch từng chuyên đề ----------
-% Mặc định in tất cả. Có thể dùng \ChiChuyenDe{3} trong main.tex để chỉ
-% biên dịch một chuyên đề; hoặc \TatTatCaChuyenDe rồi \BatChuyenDe{2},
-% \BatChuyenDe{3} để biên dịch nhiều chuyên đề được chọn.
+% Mặc định in tất cả. Có thể dùng \ChiChuyenDe{4} trong main.tex để chỉ
+% biên dịch một chuyên đề; hoặc \TatTatCaChuyenDe rồi dùng các lệnh
+% \BatChuyenDe{...} để biên dịch nhiều chuyên đề được chọn.
 \newtoggle{InChuyenDeMot}
 \newtoggle{InChuyenDeHai}
 \newtoggle{InChuyenDeBa}
+\newtoggle{InChuyenDeBon}
 
 \newcommand{\TatCaChuyenDe}{%
   \toggletrue{InChuyenDeMot}%
   \toggletrue{InChuyenDeHai}%
   \toggletrue{InChuyenDeBa}%
+  \toggletrue{InChuyenDeBon}%
 }
 \newcommand{\TatTatCaChuyenDe}{%
   \togglefalse{InChuyenDeMot}%
   \togglefalse{InChuyenDeHai}%
   \togglefalse{InChuyenDeBa}%
+  \togglefalse{InChuyenDeBon}%
 }
 \newcommand{\BatChuyenDe}[1]{%
   \ifcase#1\relax
   \or\toggletrue{InChuyenDeMot}%
   \or\toggletrue{InChuyenDeHai}%
   \or\toggletrue{InChuyenDeBa}%
+  \or\toggletrue{InChuyenDeBon}%
   \else\PackageWarning{tai-lieu-on-chuyen}{Chuyen de #1 chua duoc khai bao}%
   \fi
 }
