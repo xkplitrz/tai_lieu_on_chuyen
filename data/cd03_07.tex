@@ -1,0 +1,110 @@
+\section{Bài toán định lượng acid--base--muối}
+
+\subsection{Một con đường giải chung}
+
+Các bài định lượng của phần này thường chỉ khác nhau ở số bước trung gian. Hãy đi theo một con đường thống nhất:
+
+\begin{ghinho}{Sơ đồ giải}
+\[
+\boxed{\text{Dữ kiện ban đầu}}
+\to
+\boxed{n_{\text{chất}}}
+\to
+\boxed{\text{PTHH}}
+\to
+\boxed{\text{chất hết/chất dư}}
+\to
+\boxed{\text{sản phẩm hoặc dung dịch sau phản ứng}}
+\to
+\boxed{\text{đại lượng cần tìm}}.
+\]
+\end{ghinho}
+
+\subsection{Acid tác dụng với carbonate}
+
+Với carbonate, cần nhớ rằng một mol \ce{CO3^2-} cần hai mol \ce{H+} để chuyển hoàn toàn thành \ce{CO2} và \ce{H2O}. Khi bài chỉ có một phản ứng như \ce{CaCO3 + HCl}, có thể dùng trực tiếp phương trình phân tử.
+
+\begin{vidu}
+Cho \SI{10.0}{\gram} \ce{CaCO3} tinh khiết phản ứng hoàn toàn với dung dịch \ce{HCl} dư. Tính thể tích \ce{CO2} ở điều kiện có $V_m=\SI{24.8}{\liter\per\mole}$.
+\end{vidu}
+\begin{loigiai}
+\[
+n_{\ce{CaCO3}}=\frac{10.0}{100}=\SI{0.100}{\mole}.
+\]
+\[
+\ce{CaCO3 + 2HCl -> CaCl2 + CO2 + H2O}.
+\]
+Theo phương trình:
+\[
+n_{\ce{CO2}}=\SI{0.100}{\mole}.
+\]
+\[
+V_{\ce{CO2}}=0.100\times24.8=\SI{2.48}{\liter}.
+\]
+
+\textbf{Vậy,} thể tích \ce{CO2} thu được là \SI{2.48}{\liter}.
+\end{loigiai}
+
+\subsection{Tính lượng kết tủa}
+
+Khi tạo kết tủa, nên xác định chất giới hạn trước rồi mới tính lượng kết tủa. Không được lấy toàn bộ lượng của cả hai chất cùng đưa vào sản phẩm.
+
+\begin{vidu}
+Trộn \SI{200}{\milli\liter} dung dịch \ce{CuSO4} \SI{0.20}{\mole\per\liter} với \SI{100}{\milli\liter} dung dịch \ce{NaOH} \SI{0.50}{\mole\per\liter}. Tính khối lượng kết tủa. Cho $M_{\ce{Cu(OH)2}}=98$ g/mol.
+\end{vidu}
+\begin{loigiai}
+\[
+n_{\ce{CuSO4}}=0.200\times0.20=\SI{0.040}{\mole},
+\]
+\[
+n_{\ce{NaOH}}=0.100\times0.50=\SI{0.050}{\mole}.
+\]
+\[
+\ce{CuSO4 + 2NaOH -> Cu(OH)2 v + Na2SO4}.
+\]
+\SI{0.040}{\mole} \ce{CuSO4} cần \SI{0.080}{\mole} \ce{NaOH}, trong khi chỉ có \SI{0.050}{\mole}; vì vậy \ce{NaOH} hết trước.
+\[
+n_{\ce{Cu(OH)2}}=\frac{0.050}{2}=\SI{0.025}{\mole}.
+\]
+\[
+m=0.025\times98=\SI{2.45}{\gram}.
+\]
+
+\textbf{Vậy,} khối lượng kết tủa \ce{Cu(OH)2} là \SI{2.45}{\gram}.
+\end{loigiai}
+
+\subsection{Bài toán sau phản ứng}
+
+Nếu đề hỏi nồng độ dung dịch sau phản ứng, cần thực hiện thêm hai việc:
+\begin{enumerate}
+\item xác định các chất còn lại trong dung dịch sau phản ứng;
+\item xác định thể tích hoặc khối lượng dung dịch sau phản ứng theo giả thiết của đề.
+\end{enumerate}
+
+\begin{notechem}
+Khi có khí thoát ra hoặc kết tủa tách khỏi dung dịch, không được tự động dùng khối lượng ban đầu làm khối lượng dung dịch cuối. Hãy đọc đúng đại lượng đề yêu cầu và giả thiết được cho.
+\end{notechem}
+
+\begin{tuluyen}
+Cho \SI{250}{\milli\liter} dung dịch \ce{HCl} \SI{0.40}{\mole\per\liter} phản ứng vừa đủ với \ce{CaCO3}. Tính khối lượng \ce{CaCO3} đã phản ứng và thể tích \ce{CO2} ở $V_m=\SI{24.8}{\liter\per\mole}$.
+\dapso{\SI{5.00}{\gram} \ce{CaCO3}; \SI{1.24}{\liter} \ce{CO2}.}
+\begin{loigiaiBT}
+\[
+n_{\ce{HCl}}=0.250\times0.40=\SI{0.100}{\mole}.
+\]
+\[
+\ce{CaCO3 + 2HCl -> CaCl2 + CO2 + H2O}.
+\]
+\[
+n_{\ce{CaCO3}}=n_{\ce{CO2}}=\frac{0.100}{2}=\SI{0.050}{\mole}.
+\]
+\[
+m_{\ce{CaCO3}}=0.050\times100=\SI{5.00}{\gram},
+\]
+\[
+V_{\ce{CO2}}=0.050\times24.8=\SI{1.24}{\liter}.
+\]
+
+\textbf{Vậy,} đã phản ứng \SI{5.00}{\gram} \ce{CaCO3} và tạo \SI{1.24}{\liter} \ce{CO2}.
+\end{loigiaiBT}
+\end{tuluyen}
