@@ -1,142 +1,177 @@
-\section{Khai thác bảng số liệu và đồ thị tốc độ phản ứng}
+\section{Năng lượng nhiên liệu và các bài toán thực tiễn}
 
-Phần cốt lõi của chương trình lớp 8 yêu cầu học sinh nhận biết phản ứng nhanh hay chậm và các yếu tố làm thay đổi tốc độ. Trong đề tuyển sinh chuyên, dữ kiện này thường được trình bày dưới dạng bảng số liệu hoặc đồ thị. Vì vậy cần biết chuyển dữ liệu thực nghiệm thành nhận xét định lượng.
+Phần năng lượng trong đề tuyển sinh thường không dừng ở việc tính \(Q\). Dữ kiện có thể gắn với quãng đường xe chạy, chi phí, lượng khí thải hoặc lựa chọn nhiên liệu. Cách làm ổn định nhất là xác định rõ \textbf{đại lượng so sánh} và lập chuỗi tính toán theo từng bước.
 
-\subsection{Đại lượng theo dõi phản ứng}
+\subsection{Năng lượng theo khối lượng và theo thể tích}
 
-Giả sử phản ứng tạo khí. Nếu đo thể tích khí sau mỗi khoảng thời gian, thể tích khí tăng càng nhanh thì phản ứng càng nhanh. Với phản ứng làm mất dần chất tan, có thể theo dõi nồng độ chất đó; nồng độ giảm càng nhanh thì phản ứng càng nhanh.
-
-\begin{ghinho}{Tốc độ trung bình trên một khoảng thời gian}
-Khi đề bài yêu cầu định lượng, có thể dùng độ biến thiên của một đại lượng chia cho thời gian:
-\[
-\text{mức độ biến thiên trung bình}=\frac{|X_2-X_1|}{t_2-t_1}.
-\]
-Trong đó $X$ có thể là thể tích khí, khối lượng hoặc nồng độ tùy cách theo dõi phản ứng.
-
-Nếu dùng nồng độ một chất phản ứng, thường lấy giá trị tuyệt đối vì nồng độ giảm theo thời gian. Đơn vị phải phù hợp với đại lượng đang xét, ví dụ \si{\milli\liter\per\second} hoặc \si{\mole\per\liter\per\second}.
-\end{ghinho}
+Hai nhiên liệu có thể có nhiệt trị theo khối lượng khác nhau, đồng thời có khối lượng riêng khác nhau. Vì vậy, nếu đề hỏi ``cùng một lít'' thì cần đổi thể tích sang khối lượng trước.
 
 \begin{vidu}
-Cho Zn phản ứng với dung dịch \ce{HCl} dư. Thể tích khí \ce{H2} thu được được ghi lại như sau:
-\begin{center}
-\begin{tabular}{c|ccccc}
-$t$ (s) & 0 & 20 & 40 & 60 & 80 \\
-\hline
-$V_{\ce{H2}}$ (mL) & 0 & 36 & 62 & 78 & 86
-\end{tabular}
-\end{center}
-Tính tốc độ tăng thể tích khí trung bình trong các khoảng $0$--$20$ s và $60$--$80$ s. Nhận xét sự thay đổi tốc độ phản ứng.
-\source{Phỏng theo dạng bảng số liệu Zn--HCl trong đề tuyển sinh chuyên Hóa Điện Biên 2026.}
+Nhiên liệu A có nhiệt trị \SI{44}{\mega\joule\per\kilo\gram}, khối lượng riêng \SI{0.74}{\kilo\gram\per\liter}. Nhiên liệu B có nhiệt trị \SI{46}{\mega\joule\per\kilo\gram}, khối lượng riêng \SI{0.68}{\kilo\gram\per\liter}. So sánh năng lượng tỏa ra khi đốt \SI{10}{\liter} mỗi loại.
 \end{vidu}
 \begin{loigiai}
-Trong khoảng $0$--$20$ s:
+Với A:
 \[
-\overline v_1=\frac{36-0}{20-0}=\SI{1.8}{\milli\liter\per\second}.
+m_A=10\times0.74=\SI{7.4}{\kilo\gram},
+\qquad
+Q_A=7.4\times44=\SI{325.6}{\mega\joule}.
 \]
-Trong khoảng $60$--$80$ s:
+Với B:
 \[
-\overline v_2=\frac{86-78}{80-60}=\SI{0.4}{\milli\liter\per\second}.
+m_B=10\times0.68=\SI{6.8}{\kilo\gram},
+\qquad
+Q_B=6.8\times46=\SI{312.8}{\mega\joule}.
 \]
-Vì $\overline v_1>\overline v_2$, phản ứng nhanh hơn ở giai đoạn đầu và chậm dần về sau.
+Mặc dù B có nhiệt trị theo khối lượng lớn hơn, cùng \SI{10}{\liter} thì A cho nhiều năng lượng hơn do có khối lượng riêng lớn hơn.
 
-\textbf{Vậy,} tốc độ tăng thể tích khí trung bình lần lượt là \SI{1.8}{\milli\liter\per\second} và \SI{0.4}{\milli\liter\per\second}; phản ứng chậm dần theo thời gian.
+\textbf{Vậy,} \SI{10}{\liter} nhiên liệu A tỏa \SI{325.6}{\mega\joule}, lớn hơn \SI{312.8}{\mega\joule} của nhiên liệu B.
 \end{loigiai}
 
-\subsection{Đọc xu hướng từ bảng hoặc đồ thị}
+\subsection{Năng lượng và quãng đường}
 
-Khi đọc một bảng hoặc đồ thị, nên trả lời theo thứ tự:
-\begin{enumerate}
-\item Đại lượng nào đang tăng hoặc giảm theo thời gian?
-\item Trong khoảng nào đại lượng thay đổi nhanh nhất?
-\item Độ dốc của đường biểu diễn lớn hay nhỏ ở từng giai đoạn?
-\item Có thời điểm nào đại lượng gần như không đổi nữa không? Nếu có, phản ứng có thể đã kết thúc hoặc chất đang theo dõi đã hết.
-\end{enumerate}
-
-Đối với đồ thị thể tích khí theo thời gian, đường cong càng dốc thì khí được tạo ra càng nhanh. Khi đường cong gần nằm ngang, tốc độ tạo khí rất nhỏ.
+Nếu xe cần \(q\) kJ năng lượng có ích cho mỗi kilomet thì:
+\[
+s=\frac{Q_{\text{ích}}}{q}.
+\]
 
 \begin{vidu}
-Trong một phản ứng, nồng độ chất A thay đổi theo thời gian như bảng sau:
-\begin{center}
-\begin{tabular}{c|ccccc}
-$t$ (s) & 0 & 10 & 20 & 30 & 40 \\
-\hline
-$C_A$ (mol/L) & 0.80 & 0.58 & 0.43 & 0.34 & 0.30
-\end{tabular}
-\end{center}
-Tính độ giảm nồng độ trung bình của A trong hai khoảng $0$--$10$ s và $30$--$40$ s. Khoảng nào phản ứng diễn ra nhanh hơn?
-\source{Phỏng theo dạng đồ thị nồng độ--thời gian trong đề chuyên Hóa Đà Nẵng 2026 và Đắk Lắk 2026.}
+Một xe dùng \SI{4.0}{\liter} nhiên liệu có \(D=\SI{0.75}{\kilo\gram\per\liter}\) và nhiệt trị \SI{44}{\mega\joule\per\kilo\gram}. Hiệu suất biến đổi năng lượng của động cơ là \(30\%\). Xe cần trung bình \SI{600}{\kilo\joule} năng lượng cơ học để đi \SI{1}{\kilo\metre}. Tính quãng đường tối đa theo mô hình trên.
+\source{Phỏng theo dạng bài nhiên liệu E5/E10 trong đề tuyển sinh chuyên Hóa Hà Nội 2025 và Lâm Đồng 2026.}
 \end{vidu}
 \begin{loigiai}
-Trong $0$--$10$ s:
+Khối lượng nhiên liệu:
 \[
-\overline v_1=\frac{0.80-0.58}{10}=\SI{0.022}{\mole\per\liter\per\second}.
+m=4.0\times0.75=\SI{3.0}{\kilo\gram}.
 \]
-Trong $30$--$40$ s:
+Nhiệt lượng tỏa ra:
 \[
-\overline v_2=\frac{0.34-0.30}{10}=\SI{0.004}{\mole\per\liter\per\second}.
+Q=3.0\times44=\SI{132}{\mega\joule}
+=\SI{132000}{\kilo\joule}.
 \]
-Do $\overline v_1>\overline v_2$, giai đoạn đầu phản ứng diễn ra nhanh hơn.
+Năng lượng cơ học có ích:
+\[
+Q_{\text{ích}}=132000\times0.30=\SI{39600}{\kilo\joule}.
+\]
+Quãng đường:
+\[
+s=\frac{39600}{600}=\SI{66}{\kilo\metre}.
+\]
 
-\textbf{Vậy,} độ giảm nồng độ trung bình của A là \SI{0.022}{\mole\per\liter\per\second} và \SI{0.004}{\mole\per\liter\per\second}; phản ứng nhanh hơn trong $0$--$10$ s.
+\textbf{Vậy,} xe đi được tối đa khoảng \SI{66}{\kilo\metre} theo các dữ kiện đã cho.
 \end{loigiai}
 
-\subsection{Thiết kế và đánh giá thí nghiệm so sánh tốc độ}
+\subsection{Năng lượng, chi phí và lựa chọn nhiên liệu}
 
-Muốn xác định ảnh hưởng của một yếu tố, phải xây dựng hai thí nghiệm sao cho chỉ yếu tố đó khác nhau. Ví dụ, để khảo sát ảnh hưởng của nồng độ \ce{HCl} lên phản ứng với Zn, khối lượng Zn, dạng Zn, thể tích acid và nhiệt độ cần được giữ như nhau; chỉ thay đổi nồng độ acid.
-
-Nếu đồng thời thay đổi cả nồng độ và nhiệt độ, không thể kết luận riêng yếu tố nào gây ra sự thay đổi tốc độ.
+Để so sánh kinh tế, không nên chỉ nhìn giá mỗi kilogram hoặc mỗi lít. Cần quy về cùng một lượng năng lượng có ích:
+\[
+\text{chi phí trên một đơn vị năng lượng có ích}
+=
+\frac{\text{giá tiền}}{Q_{\text{ích}}}.
+\]
 
 \begin{vidu}
-Một học sinh muốn khảo sát ảnh hưởng của diện tích bề mặt lên phản ứng giữa \ce{CaCO3} và \ce{HCl}. Bạn đề xuất:
-\begin{itemize}
-\item thí nghiệm 1: \SI{2.0}{\gram} \ce{CaCO3} dạng cục, \SI{50}{\milli\liter} \ce{HCl} \SI{1.0}{\mole\per\liter}, \SI{25}{\degreeCelsius};
-\item thí nghiệm 2: \SI{2.0}{\gram} \ce{CaCO3} dạng bột, \SI{50}{\milli\liter} \ce{HCl} \SI{2.0}{\mole\per\liter}, \SI{25}{\degreeCelsius}.
-\end{itemize}
-Thiết kế trên có cho phép kết luận riêng ảnh hưởng của diện tích bề mặt không? Nếu không, hãy sửa.
+Bếp A dùng LPG giá \(30\,000\) đồng/kg, nhiệt trị \SI{46}{\mega\joule\per\kilo\gram}, hiệu suất \(60\%\). Bếp B dùng một nhiên liệu khác giá \(18\,000\) đồng/kg, nhiệt trị \SI{30}{\mega\joule\per\kilo\gram}, hiệu suất \(75\%\). Hỏi nhiên liệu nào có chi phí thấp hơn để cung cấp \SI{100}{\mega\joule} nhiệt có ích?
 \end{vidu}
 \begin{loigiai}
-Hai thí nghiệm đồng thời thay đổi dạng \ce{CaCO3} và nồng độ \ce{HCl}, nên nếu tốc độ khác nhau thì không biết do yếu tố nào gây ra.
+Với LPG, năng lượng có ích từ \(1\) kg:
+\[
+46\times0.60=\SI{27.6}{\mega\joule}.
+\]
+Khối lượng cần để có \SI{100}{\mega\joule}:
+\[
+m_A=\frac{100}{27.6}\approx\SI{3.623}{\kilo\gram}.
+\]
+Chi phí:
+\[
+C_A\approx3.623\times30000\approx108700\text{ đồng}.
+\]
 
-Cần giữ cùng nồng độ \ce{HCl}, chẳng hạn đều dùng \SI{1.0}{\mole\per\liter}; chỉ thay đổi \ce{CaCO3} dạng cục thành dạng bột.
+Với nhiên liệu B:
+\[
+30\times0.75=\SI{22.5}{\mega\joule\per\kilo\gram},
+\]
+\[
+m_B=\frac{100}{22.5}\approx\SI{4.444}{\kilo\gram},
+\]
+\[
+C_B\approx4.444\times18000\approx80000\text{ đồng}.
+\]
 
-\textbf{Vậy,} thiết kế ban đầu chưa hợp lí; phải giữ nồng độ acid như nhau để khảo sát riêng ảnh hưởng của diện tích bề mặt.
+\textbf{Vậy,} để cung cấp cùng \SI{100}{\mega\joule} nhiệt có ích, nhiên liệu B có chi phí thấp hơn.
 \end{loigiai}
 
-\subsection{Mở rộng: quy tắc hệ số nhiệt độ}
+\subsection{Năng lượng và lượng \texorpdfstring{\ce{CO2}}{CO2} phát thải}
 
-Một số đề tuyển sinh cung cấp hệ số nhiệt độ $\gamma$ để mô tả gần đúng mức tăng tốc độ khi tăng nhiệt độ mỗi \SI{10}{\degreeCelsius}. Nếu đề cho quy tắc này, có thể dùng:
-\[
-\frac{v_2}{v_1}=\gamma^{\frac{T_2-T_1}{10}}.
-\]
-Đây là công cụ \textbf{mở rộng theo dữ kiện đề bài}, không phải nội dung trọng tâm cần ghi nhớ của chương trình lớp 8.
+Khi đề cho công thức nhiên liệu, có thể viết phương trình cháy để tính lượng \ce{CO2}. Nếu so sánh ``mức phát thải'' giữa hai nhiên liệu, cần xem đề yêu cầu so sánh theo cùng khối lượng, cùng thể tích hay cùng năng lượng có ích.
 
 \begin{vidu}
-Một phản ứng có hệ số nhiệt độ $\gamma=2$. Nếu ở \SI{20}{\degreeCelsius} phản ứng cần 16 phút để đạt cùng mức chuyển hóa, ước tính thời gian cần thiết ở \SI{40}{\degreeCelsius}, giả sử các điều kiện khác không đổi.
-\source{Phỏng theo dạng bài hệ số nhiệt độ trong đề tuyển sinh chuyên Hóa Hà Nội 2025.}
+Methane và propane cháy hoàn toàn:
+\[
+\ce{CH4 + 2O2 -> CO2 + 2H2O},
+\]
+\[
+\ce{C3H8 + 5O2 -> 3CO2 + 4H2O}.
+\]
+Biết \(1\) mol methane tỏa \SI{890}{\kilo\joule}; \(1\) mol propane tỏa \SI{2220}{\kilo\joule}. So sánh số mol \ce{CO2} tạo ra khi mỗi nhiên liệu cung cấp \SI{4440}{\kilo\joule}, bỏ qua thất thoát.
 \end{vidu}
 \begin{loigiai}
-Tăng từ \SI{20}{\degreeCelsius} lên \SI{40}{\degreeCelsius} là hai khoảng \SI{10}{\degreeCelsius}, nên tốc độ tăng:
+Với methane:
 \[
-\frac{v_{40}}{v_{20}}=2^2=4.
+n_{\ce{CH4}}=\frac{4440}{890}\approx\SI{4.989}{\mole}.
 \]
-Để đạt cùng mức chuyển hóa, thời gian tỉ lệ nghịch với tốc độ:
+Mỗi mol methane tạo \(1\) mol \ce{CO2}, nên:
 \[
-t_{40}=\frac{16}{4}=4\ \text{phút}.
+n_{\ce{CO2}}^{(\ce{CH4})}\approx\SI{4.989}{\mole}.
 \]
 
-\textbf{Vậy,} ở \SI{40}{\degreeCelsius}, phản ứng cần khoảng 4 phút.
+Với propane:
+\[
+n_{\ce{C3H8}}=\frac{4440}{2220}=\SI{2.00}{\mole}.
+\]
+Mỗi mol propane tạo \(3\) mol \ce{CO2}, nên:
+\[
+n_{\ce{CO2}}^{(\ce{C3H8})}=\SI{6.00}{\mole}.
+\]
+
+\textbf{Vậy,} để cung cấp cùng \SI{4440}{\kilo\joule}, methane tạo ít \ce{CO2} hơn propane theo các dữ kiện đã cho.
 \end{loigiai}
 
 \begin{tuluyen}
-Một phản ứng tạo khí có thể tích khí lần lượt là 0, 25, 43, 54 và 60 mL tại các thời điểm 0, 10, 20, 30 và 40 s. Tính tốc độ tăng thể tích khí trung bình trong từng khoảng 10 s và cho biết khoảng nào phản ứng nhanh nhất.
-\dapso{\SI{2.5}{\milli\liter\per\second}; \SI{1.8}{\milli\liter\per\second}; \SI{1.1}{\milli\liter\per\second}; \SI{0.6}{\milli\liter\per\second}; nhanh nhất ở 0--10 s.}
+Một gia đình cần trung bình \SI{24}{\mega\joule} nhiệt có ích mỗi ngày. Bếp LPG có hiệu suất \(60\%\). LPG có nhiệt trị trung bình \SI{46}{\mega\joule\per\kilo\gram}. Tính khối lượng LPG dùng trong 30 ngày.
+\dapso{\(\approx\SI{26.1}{\kilo\gram}\).}
 \begin{loigiaiBT}
-Các tốc độ trung bình lần lượt là:
+Tổng nhiệt có ích trong 30 ngày:
 \[
-\frac{25}{10}=2.5;\quad \frac{43-25}{10}=1.8;\quad \frac{54-43}{10}=1.1;\quad \frac{60-54}{10}=0.6\ \text{mL/s}.
+Q_{\text{ích}}=24\times30=\SI{720}{\mega\joule}.
 \]
-Giá trị lớn nhất thuộc khoảng 0--10 s.
+Nhiệt lượng LPG phải tỏa:
+\[
+Q=\frac{720}{0.60}=\SI{1200}{\mega\joule}.
+\]
+Khối lượng LPG:
+\[
+m=\frac{1200}{46}\approx\SI{26.1}{\kilo\gram}.
+\]
+\textbf{Vậy,} gia đình cần khoảng \SI{26.1}{\kilo\gram} LPG trong 30 ngày.
+\end{loigiaiBT}
+\end{tuluyen}
 
-\textbf{Vậy,} phản ứng nhanh nhất trong 10 giây đầu và chậm dần về sau.
+\begin{tuluyen}
+Một loại nhiên liệu có giá \(25\,000\) đồng/kg, nhiệt trị \SI{40}{\mega\joule\per\kilo\gram}; bếp sử dụng có hiệu suất \(65\%\). Tính số tiền trung bình phải trả để nhận được \SI{520}{\mega\joule} nhiệt có ích.
+\dapso{\(500\,000\) đồng.}
+\begin{loigiaiBT}
+Mỗi kilogram nhiên liệu cung cấp nhiệt có ích:
+\[
+40\times0.65=\SI{26}{\mega\joule}.
+\]
+Khối lượng cần dùng:
+\[
+m=\frac{520}{26}=\SI{20}{\kilo\gram}.
+\]
+Chi phí:
+\[
+C=20\times25000=500000\text{ đồng}.
+\]
+\textbf{Vậy,} số tiền trung bình cần trả là \(500\,000\) đồng.
 \end{loigiaiBT}
 \end{tuluyen}
