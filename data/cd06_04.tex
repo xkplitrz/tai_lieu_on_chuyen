@@ -1,0 +1,119 @@
+\section{Xác định công thức hydrocarbon}
+
+\subsection{Từ sản phẩm cháy đến thành phần C, H}
+
+Giả sử hydrocarbon có công thức \ce{C_xH_y}. Khi cháy hoàn toàn:
+\[
+\ce{C_xH_y + (x+y/4)O2 -> xCO2 + y/2H2O}.
+\]
+Do đó:
+\[
+n_C=n_{\ce{CO2}},\qquad n_H=2n_{\ce{H2O}}.
+\]
+Từ tỉ lệ $n_C:n_H$ có thể tìm công thức đơn giản nhất. Muốn xác định công thức phân tử, thường cần thêm dữ kiện về khối lượng mol hoặc tỉ khối.
+
+\begin{ghinho}{Các bước giải}
+\begin{enumerate}
+\item Tính số mol các dữ kiện đã cho.
+\item Viết phương trình hoặc sơ đồ cháy.
+\item Từ \ce{CO2}, \ce{H2O} tìm số mol C, H; kết hợp các dữ kiện độc lập để tìm ẩn.
+\item Xác định công thức phân tử và kết luận.
+\end{enumerate}
+\end{ghinho}
+
+\begin{vidu}
+Đốt cháy hoàn toàn \SI{2.8}{\gram} một hydrocarbon A thu được \SI{8.8}{\gram} \ce{CO2} và \SI{3.6}{\gram} \ce{H2O}. Biết $M_A=28$ g/mol. Xác định công thức phân tử A.
+\end{vidu}
+\begin{loigiai}
+\textbf{Bước 1. Tính số mol}
+\[
+n_A=\frac{2.8}{28}=\SI{0.100}{\mole},
+\]
+\[
+n_{\ce{CO2}}=\frac{8.8}{44}=\SI{0.200}{\mole},\qquad
+n_{\ce{H2O}}=\frac{3.6}{18}=\SI{0.200}{\mole}.
+\]
+
+\textbf{Bước 2. Viết sơ đồ phản ứng}
+\[
+\begin{array}{c@{\quad\longrightarrow\quad}c@{\;+\;}c}
+\ce{C_xH_y} & \ce{xCO2} & \ce{y/2H2O}\\
+0.100 & 0.200 & 0.200
+\end{array}
+\]
+
+\textbf{Bước 3. Tính các giá trị trung gian}
+\[
+x=\frac{0.200}{0.100}=2,
+\]
+\[
+\frac{y}{2}=\frac{0.200}{0.100}=2\Rightarrow y=4.
+\]
+
+\textbf{Bước 4. Tìm công thức phân tử và kết luận}
+\[
+A=\ce{C2H4}.
+\]
+Kiểm tra: $M_{\ce{C2H4}}=28$ g/mol, phù hợp dữ kiện.
+
+\textbf{Vậy,} hydrocarbon A là ethylene, \ce{C2H4}.
+\end{loigiai}
+
+\subsection{Hỗn hợp hydrocarbon và hệ phương trình}
+
+Khi hỗn hợp gồm hai hydrocarbon, có thể đặt số mol từng chất là $x,y$. Mỗi dữ kiện độc lập cho một phương trình. Ví dụ với hỗn hợp methane và propane:
+\[
+\begin{cases}
+x+y=n_{\text{hỗn hợp}},\\
+x+3y=n_{\ce{CO2}}.
+\end{cases}
+\]
+
+\begin{notechem}
+Không cần học một phương pháp mới cho hỗn hợp hydrocarbon. Điểm khó nằm ở bước 3: chọn đúng ẩn và biến các dữ kiện về lượng \ce{CO2}, \ce{H2O}, \ce{O2} hoặc tổng số mol thành các phương trình độc lập.
+\end{notechem}
+
+\begin{vidu}
+Hỗn hợp X gồm methane và propane có tổng số mol bằng \SI{0.30}{\mole}. Đốt cháy hoàn toàn X thu được \SI{0.50}{\mole} \ce{CO2}. Tính số mol mỗi khí.
+\end{vidu}
+\begin{loigiai}
+Gọi số mol \ce{CH4}, \ce{C3H8} lần lượt là $x,y$.
+
+\textbf{Bước 1. Tính số mol}
+Các số mol cần thiết đã được đề cho.
+
+\textbf{Bước 2. Viết phương trình hóa học}
+\[
+\begin{array}{c@{\;}c@{\;}c@{\;}c@{\;}c}
+\ce{CH4} & + & \ce{2O2} & \ce{->} & \ce{CO2 + 2H2O}\\
+x & & & & x
+\end{array}
+\]
+\[
+\begin{array}{c@{\;}c@{\;}c@{\;}c@{\;}c}
+\ce{C3H8} & + & \ce{5O2} & \ce{->} & \ce{3CO2 + 4H2O}\\
+y & & & & 3y
+\end{array}
+\]
+
+\textbf{Bước 3. Lập và giải hệ phương trình}
+\[
+\begin{cases}
+x+y=0.30,\\
+x+3y=0.50
+\end{cases}
+\Rightarrow
+\begin{cases}
+x=0.20,\\
+y=0.10.
+\end{cases}
+\]
+
+\textbf{Bước 4. Kết luận}
+\textbf{Vậy,} hỗn hợp chứa \SI{0.20}{\mole} \ce{CH4} và \SI{0.10}{\mole} \ce{C3H8}.
+\end{loigiai}
+
+\begin{tuluyen}
+Đốt cháy hoàn toàn \SI{0.10}{\mole} hydrocarbon A thu được \SI{0.30}{\mole} \ce{CO2} và \SI{0.40}{\mole} \ce{H2O}. Xác định công thức phân tử A.
+\dapso{\ce{C3H8}.}
+\end{tuluyen}
