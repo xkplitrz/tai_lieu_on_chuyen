@@ -102,6 +102,30 @@
 \setlength{\tabcolsep}{5pt}
 \newcolumntype{Y}{>{\RaggedRight\arraybackslash}X}
 \newcolumntype{C}[1]{>{\Centering\arraybackslash}p{#1}}
+
+% Bảng số mol/khối lượng đặt thẳng cột dưới phương trình hóa học.
+% Tham số 1 là số cột; vì vậy không bị cố định ở phản ứng 2, 3 hay nhiều chất.
+% Ví dụ phản ứng A + B -> C + D dùng 7 cột; phản ứng dài có thể dùng 9, 11, 13,... cột.
+\newcommand{\bangmol}[3]{%
+  \par\smallskip
+  \begin{center}
+  \begingroup
+  \renewcommand{\arraystretch}{1.15}%
+  \ifnum#1>11\relax
+    \footnotesize\setlength{\tabcolsep}{1.8pt}%
+  \else\ifnum#1>9\relax
+    \small\setlength{\tabcolsep}{2.5pt}%
+  \else
+    \setlength{\tabcolsep}{3.5pt}%
+  \fi\fi
+  \begin{tabular}{@{}*{#1}{>{$}c<{$}}@{}}
+  #2\\[-1pt]
+  #3
+  \end{tabular}
+  \endgroup
+  \end{center}
+  \smallskip
+}
 \usepackage[inline]{enumitem}
 \setlist{nosep,leftmargin=*}
 \setlist[enumerate,1]{label=\alph*),ref=\alph*)}
