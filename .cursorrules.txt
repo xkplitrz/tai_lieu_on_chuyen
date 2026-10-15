@@ -1,0 +1,37 @@
+System Prompt & Project Rules (.cursorrules)
+Directives & Standards
+1. Ngôn ngữ & Văn phong
+●	Luôn sử dụng tiếng Việt mượt mà, mang văn phong sư phạm phù hợp với học sinh THCS.
+●	Trình bày trực diện, súc tích, tuyệt đối không dùng từ ngữ sáo rỗng hoặc diễn đạt rườm rà.
+2. Cấu trúc LaTeX & File Preamble
+●	Luôn tuân thủ và giữ nguyên cấu trúc định dạng từ preamble.tex.
+●	Không viết lại header/footer, trang bìa, watermark, bảng màu, font chữ hoặc các môi trường dùng chung ngoại trừ khi có lý do kỹ thuật cụ thể và được yêu cầu.
+●	File đầu ra chỉ sử dụng thuần LaTeX, tuyệt đối không chèn mã Markdown hay thẻ HTML vào trong nội dung tài liệu.
+3. Quy chuẩn Soạn thảo Hóa học & Toán học
+●	Công thức hóa học & Phương trình: Bắt buộc dùng \ce{...}.
+●	Đại lượng & Đơn vị: Dùng \SI{...}{...} tương thích với các gói đã khai báo.
+●	Môi trường chính: Sử dụng các môi trường chuẩn bao gồm vidu, loigiai, ghinho, notechem, tuluyen, loigiaiBT, cùng các lệnh \dapso{...}, \source{...}, tasks.
+●	Trình bày phương án/liệt kê:
+○	Câu hỏi/phương án ngắn: Dùng tasks(2).
+○	Câu hỏi/đoạn văn dài: Dùng enumerate hoặc itemize. Không cố ép các đoạn văn dài vào môi trường tasks.
+●	Bảng lượng chất: Dưới phương trình hóa học bắt buộc dùng macro:
+\bangmol{n}{<dòng pt>}{<dòng mol>}
+(Lưu ý: Mỗi chất, dấu +, và mũi tên -> phải chiếm đúng 1 cột trong bảng).
+4. Quy định Lời giải Mẫu
+●	Áp dụng cho Chuyên đề 4 trở đi:
+○	Không ghi tiêu đề hoặc nhãn dạng "Bước 1", "Bước 2", "Bước 3", "Bước 4".
+○	Viết trực tiếp phép tính, lập luận logic và kết thúc lời giải bằng câu kết luận theo mẫu: "Vậy, ..."
+5. Quy trình Biến đổi Lý thuyết
+Khi biên soạn phần lý thuyết, áp dụng quy trình dòng chảy sư phạm:
+
+1.	Chọn câu hỏi/bài tập từ đề nguyên văn làm mục tiêu.
+2.	Suy ra kỹ năng cần đạt.
+3.	Xây dựng lý thuyết nền tảng.
+4.	Tạo bài tập củng cố.
+5.	Tạo bài tập tự luyện.
+
+Ghi chú nguồn: Phải ghi rõ nhãn "Trích nguyên văn" hoặc "Phỏng theo". Không tự ý tạo chuyên đề mới khi chưa chốt danh mục.
+6. Quy trình Git & Biên dịch
+●	Git Commit: Thông điệp commit luôn viết bằng tiếng Việt, phản ánh chính xác các thay đổi.
+●	Git Workflow: Thực hiện fetch/rebase cẩn thận. Không sử dụng các lệnh xóa nguy hiểm (git reset, git restore) khi chưa kiểm tra và xác minh an toàn.
+●	Biên dịch: Bắt buộc biên dịch kiểm tra lỗi bằng LuaLaTeX ngay sau khi chỉnh sửa nội dung.

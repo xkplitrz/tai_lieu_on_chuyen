@@ -1,0 +1,30 @@
+# ==========================================
+# BỘ LỌC TOKEN CHO CURSOR AI (Không cho AI đọc)
+# ==========================================
+
+# 1. Chặn đọc file nhị phân và tài liệu gốc (Rất tốn token)
+*.pdf
+*.docx
+*.doc
+
+# 2. Chặn đọc file hình ảnh (Chỉ đọc khi được nhắc tên cụ thể)
+*.png
+*.jpg
+*.jpeg
+*.svg
+data/assets/
+
+# 3. Chặn các file rác sinh ra khi biên dịch LaTeX
+*.aux
+*.log
+*.out
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.synctex(busy)
+.texpadtmp/
+
+# 4. Chặn file hệ thống và thư mục quản lý phiên bản
+.DS_Store
+.git/
