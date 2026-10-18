@@ -104,3 +104,27 @@
 3. Kiểm chứng nguyên văn/đáp án các bài mới của Chuyên đề 7 từ ảnh đề gốc.
 4. Sửa tiêu đề bìa cho bản in toàn tài liệu; kiểm tra `.texpadtmp/main.synctex(busy)` đang được track để quyết định cách xử lí an toàn.
 5. Compile bản toàn bộ, xem TOC, số trang, ảnh, phần ẩn/hiện theo `\BanHocSinh`/`\BanGiaoVien`, rồi mới phát hành.
+
+
+## 13. Chuyển giao cho Claude và cấu hình Cursor — 13–15/10/2026
+
+- Tạo PROJECT_HANDOVER.md làm bản hướng dẫn vào dự án: mục tiêu, cây thư mục, tiến độ, backward-design, LaTeX, macro \\bangmol, quy tắc Git và các việc còn tồn.
+- Tạo PROJECT_LOG.md để lưu lịch sử quyết định theo phiên; chuẩn hóa Markdown để dễ đọc, ưu tiên các gạch đầu dòng.
+- Thêm .cursorrules.txt và .cursorignore.txt để cung cấp chỉ dẫn cho Cursor. Đọc lại hai file này khi thay đổi workflow/agent.
+- Thêm MEMORY.md làm ghi chú ngắn cho agent; tránh để nội dung mâu thuẫn với PROJECT_HANDOVER.md và nhật kí này.
+- Bổ sung ảnh đề tuyển sinh vào de_vao_chuyen/ (nhiều tỉnh/trường, chủ yếu ảnh trang đề). Đây là nguồn gốc để audit; không chỉ dựa vào OCR hoặc đáp án.
+- Xóa file tạm .texpadtmp/main.synctex(busy) khỏi Git trong commit chuyển giao; không tái thêm file build/tạm vào repo.
+- Commit xác nhận: 6aaf68e (thêm PROJECT_LOG.md); fe56980 (chỉnh định dạng nhật kí); 7d102d0 (thêm tài liệu bàn giao); 0faa59b (chuẩn bị bản in có giáo án và chuyển giao cho Claude, bổ sung quy tắc Cursor, ghi nhớ agent và ảnh đề).
+
+## 14. Trạng thái tại lần cập nhật nhật kí — 18/10/2026
+
+- Nhánh làm việc chính vẫn là main; commit gần nhất đã xác minh trước lần cập nhật này là 0faa59b — “Thay đổi để in lại bản có giáo án và chuyển giao cho Claude” (15/10/2026 UTC).
+- PROJECT_HANDOVER.md và PROJECT_LOG.md đều nằm ở gốc repo. Dùng cả hai khi mở dự án trong Cursor: handover để biết cách làm; log để biết vì sao các quyết định được chốt.
+- Trạng thái Chuyên đề 7: đã thêm nhóm bài mục tiêu được gắn nguồn Lâm Đồng, An Giang, Đắk Lắk, Ninh Bình và Quảng Ninh 2026. Cần xác minh từng câu và đáp án từ ảnh gốc trước khi coi là bản phát hành; ghi “phỏng theo” nếu câu chữ không còn nguyên văn.
+- Việc tiếp theo theo thứ tự:
+  1. Audit kho đề cho Chuyên đề 8 trước khi chốt dàn ý; dự kiến chất béo/lipid, carbohydrate, protein.
+  2. Bổ sung bài mục tiêu nguyên văn cho Chuyên đề 1–6 dựa trên audit thật, không gắn nguồn giả.
+  3. Kiểm tra lại nguồn/đáp án Chuyên đề 7.
+  4. Chốt tiêu đề bìa cho bản in toàn tài liệu và compile toàn bộ bằng LuaLaTeX.
+- Lưu ý lịch sử: main.tex đã được sửa để in toàn bộ chuyên đề, nhưng handover trước đó ghi nhận tiêu đề bìa có thể vẫn mang tên Chuyên đề 2. Kiểm tra trực tiếp source hiện tại trước khi sửa; không dựa hoàn toàn vào ghi chú cũ.
+- Chỉ cập nhật mốc ngày khi có thay đổi/phiên làm việc đáng kể. Phân biệt sự kiện xác minh từ commit với quyết định được chốt trong trao đổi nhưng chưa có commit.
