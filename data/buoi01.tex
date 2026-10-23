@@ -1,8 +1,8 @@
 \section{Tính toán và đơn vị}
+\subsection*{Đơn vị}
+Trong các bài toán Hóa học, sai đơn vị thường dẫn đến sai toàn bộ phép tính dù phương pháp đúng. Trước khi lập công thức hay thay số, cần tập thói quen đọc kỹ \textbf{đại lượng -- đơn vị -- bậc của số liệu}. Ở cấp THPT và trong các bài toán thực tế, các đơn vị thường gặp nhất là \si{\gram}, \si{\kilo\gram}, \si{\ton}, \si{\milli\liter}, \si{\liter}, \si{\cubic\metre}, cùng các đơn vị nồng độ như \si{\gram\per\liter}, \si{\mole\per\liter}, \si{\kilo\gram\per\cubic\metre}.
 
-Trong các bài toán Hóa học, sai đơn vị thường dẫn đến sai toàn bộ phép tính dù phương pháp đúng. Trước khi lập công thức hay thay số, cần tập thói quen đọc kỹ \textbf{đại lượng -- đơn vị -- bậc của số liệu}. Ở cấp THCS và trong các bài toán thực tế, các đơn vị thường gặp nhất là \si{\gram}, \si{\kilo\gram}, \si{\ton}, \si{\milli\liter}, \si{\liter}, \si{\cubic\metre}, cùng các đơn vị nồng độ như \si{\gram\per\liter}, \si{\mole\per\liter}, \si{\kilo\gram\per\cubic\metre}.
-
-\begin{ghinho}{Một số đổi đơn vị thường dùng}
+\begin{ghinho}{Đổi đơn vị trong tính toán}
 \begin{center}
 	\begin{tabular}{ccc}
 		\SI{1}{\ton} = \SI{1000}{\kilo\gram} =  \SI{1e6}{\gram} &
@@ -22,7 +22,7 @@ Cùng một phép tính, kết quả của phép tính có thể \emph{khác nha
 Trong phép tính trên, xuất hiện các \emph{bội số} với k--kilo, M--mega. Một số bội số khác như bên dưới.
 \begin{ghinho}{Bội số}
 	\begin{center}
-		\begin{tabular}{llcllc}
+		\begin{tabular}{llc||llc}
 			Bội số & Kí hiệu & Ý nghĩa & Bội số & Kí hiệu & Ý nghĩa \\
 			\midrule
 			kilo & k & $\cdot 10^3$ & milli & m & $\cdot 10^{-3}$ \\
@@ -33,46 +33,127 @@ Trong phép tính trên, xuất hiện các \emph{bội số} với k--kilo, M--
 \end{ghinho}
 Bội số này học sinh đã được làm quen, ví dụ, trong đơn vị độ dài. Với
 \[ \SI{1}{\metre} = \SI{10}{\deci\metre} = \SI{100}{\centi\metre} = \SI{1000}{\milli\metre}\]
+
+\textbf{Quy tắc tam suất}: dùng để tính toán các lượng tương đương \emph{theo tỉ lệ}. Quy tắc này tính theo: \emph{\textbf{nhân chéo - chia ngang}}.
 \begin{vidu}
-Một nhà máy cần vận chuyển \SI{2.40}{\ton} nguyên liệu bằng các bao, mỗi bao chứa \SI{25}{\kilo\gram}. Tính số bao cần dùng.
+Một mẫu không khí \SI{50}{\liter} chứa \SI{0.012}{\milli\gram} \ce{SO2}. Tính nồng độ khối lượng theo \si{\milli\gram\per\cubic\metre}.
+%\dapso{\SI{0.24}{\milli\gram\per\cubic\metre}.}
 \end{vidu}
 \begin{loigiai}
-\(\SI{2.40}{\ton}=\SI{2400}{\kilo\gram}\), do đó
-\[
-N=\frac{2400}{25}=96.
-\]
-Vậy cần \(96\) bao.
+	\noindent \textsc{Lời giải:}
+	
+	\begin{center}
+	\begin{tabular}{lcccl}
+		\ce{SO2}:	& \SI{0.012}{\mg}	& \ce{->} & \SI{50}{\liter} & \\
+					& $x \,\si{\mg}$		& $\leftarrow$ & $\SI{1000}{\liter}$ & $= \SI{1}{\cubic\metre}$ \\
+	\end{tabular}
+	\end{center}
+	\[ x = \dfrac{1000 \cdot \num{0.012}}{50} = \SI{0.24}{\mg} \]
+	Vậy, nồng độ \ce{SO2} là \SI{0.24}{\mg\per\cbm}
+	
+	\noindent \textsc{Lưu ý}: ở đây đã đổi đơn vị thể tích không khí từ \SI{1}{\cbm} để có sự ``tương đương'' về đơn vị với thể tích đề cho ban đầu là \SI{50}{\L} và hai đơn vị sẽ \emph{triệt tiêu} khi tính theo quy tắc tam suất để xác định giá trị của $x$.
 \end{loigiai}
 
-\begin{vidu}
-Một bể chứa \SI{3.5}{\cubic\metre} dung dịch. Người ta rót dung dịch vào các can \SI{20}{\liter}. Bỏ qua hao hụt, tối đa rót đầy được bao nhiêu can?
-\end{vidu}
-\begin{loigiai}
-\[
-\SI{3.5}{\cubic\metre}=\SI{3500}{\liter},\qquad N=\frac{3500}{20}=175.
-\]
-\end{loigiai}
-
-\begin{ghinho}{Đổi đơn vị tính toán}
-Cách đổi đơn vị ít sai nhất là dùng \textbf{thừa số chuyển đổi}: nhân số liệu với một phân số có giá trị bằng 1 sao cho đơn vị cần khử xuất hiện ở cả tử và mẫu.
-\[
-\SI{1.8}{\ton}\times\frac{\SI{1000}{\kilo\gram}}{\SI{1}{\ton}}=\SI{1800}{\kilo\gram},
-\]
-\[
-\SI{2.5}{\cubic\metre}\times\frac{\SI{1000}{\liter}}{\SI{1}{\cubic\metre}}=\SI{2500}{\liter}.
-\]
+\subsection*{Đổi đơn vị}
+Cách đổi đơn vị chính xác nhất là dùng \textbf{thừa số chuyển đổi}: nhân số liệu với một phân số có giá trị bằng 1 sao cho đơn vị cần khử xuất hiện ở cả tử và mẫu.
+\begin{align*}
+	& \textrm{tấn sang kg:} & \SI{1.8}{\ton} &= \SI{1.8}{\ton}\cdot\dfrac{\SI{1000}{\kilo\gram}}{\SI{1}{\ton}}=\SI{1800}{\kilo\gram} \\
+	& \textrm{\si{\klrl} sang \si{\kg\per\L}:} & \SI{0.79}{\klrl} &= \num{0.79} \cdot \dfrac{\si{\gram}}{\si{\mL}}\cdot \dfrac{\SI{1}{\kg}}{\SI{1000}{\g}} \cdot \dfrac{\SI{1000}{\mL}}{\SI{1}{\L}} = \SI{0.79}{\kg\per\L}
+\end{align*}
 Trong bài nhiều bước, nên đổi đơn vị trước rồi mới thay số.
-\end{ghinho}
 
 \begin{vidu}
-Khối lượng riêng của ethanol là \SI{0.789}{\gram\per\milli\liter}. Tính khối lượng của \SI{300}{\milli\liter} ethanol theo gam và kg.
+	Xăng E10 chứa \(10\%\) ethanol theo thể tích, phần còn lại là xăng khoán có \(D=\SI{0.70}{\gram\per\milli\liter}\). Ethanol có \(D=\SI{0.789}{\gram\per\milli\liter}\). Trong \SI{3.0}{\liter} E10 chứa khối lượng (theo \si{\kg}) ethanol và xăng khoáng là bao nhiêu?
+%\source{Rút gọn từ bài nhiên liệu E10, đề chuyên Hóa Lâm Đồng 2026.}
+%\dapso{\SI{236.7}{\gram} ethanol; \SI{1.89}{\kilo\gram} xăng.}
 \end{vidu}
 \begin{loigiai}
-Từ \(D=m/V\):
-\[
-m=DV=0.789\times300=\SI{236.7}{\gram}=\SI{0.2367}{\kilo\gram}.
-\]
+	Đổi: $\SI{0.70}{klrl} = \SI{0.70}{\kg\per\L}$ và $\SI{0.79}{klrl} = \SI{0.79}{\kg\per\L}$
+	Khối lượng ethanol có trong \SI{3.0}{\L} xăng E10 là
+	\[ \SI{3.0}{\L} \cdot \dfrac{10}{100} \cdot \SI{0.79}{\kg\per\L} = \SI{0.267}{\g} \]
+	Khối lượng xăng khoáng có trong \SI{3.0}{\L} xăng E10 là
+	\[ \SI{3.0}{\L} \cdot \dfrac{90}{100} \cdot \SI{0.70}{\kg\per\L} = \SI{1.89}{\kg} \]
 \end{loigiai}
+
+\subsection*{Sử dụng máy tính CASIO$^{\textregistered{}}$}
+Hiện nay trong các bài tập tính toán ở cấp THPT, chỉ được làm tròn ở phép tính cuối cùng ra kết quả chứ không thực hiện ở các phép tính trung gian. Do đó việc sử dụng nhanh kết quả của phép tính trước đưa vào phép tính sau, đặc biệt ở những bài tập tính toán phức tạp, là rất quan trọng.
+
+\subsubsection*{Bộ nhớ và tham số}
+Với các bài tập phức tạp có nhiều kết quả ở các bước tính trung gian, cần phải biết sử dụng 9 bộ nhớ có sẵn trong máy tính CASIO$^{\textregistered{}}$, chính là các chữ cái \textsc{A, B, C, D, E, F,} $x$, $y$ và \textsc{M}.
+
+Để lưu giá trị (với máy tính CASIO$^{\textregistered{}}$ 580 và tương tự):
+\begin{itemize}
+	\item Bấm phép tính (không cần bấm dấu bằng \fbox{$=$}  )
+	\item Bấm phím \fbox{STO} (store, lưu)
+	\item Bấm phím tương ứng với bộ nhớ. Ví dụ, nếu muốn nhớ vào \textsc{A} thì bấm \fbox{(--)}
+\end{itemize}
+
+Để gọi giá trị ra tính toán: bấm \fbox{ALPHA} $+$ phím bộ nhớ.
+
+Ví dụ: muốn gọi bộ nhớ \textsc{C} thì bấm: \fbox{ALPHA} \fbox{$x^{-1}$}
+
+Các bộ nhớ này thực tế có thể sử dụng như một \emph{tham số} trong các công cụ CALC và SOLVE.
+
+\begin{vidu}
+	Một nhà máy dùng \SI{1.5}{\ton} quặng sphalerite chứa \(80\%\) \ce{ZnS}. Toàn bộ \ce{ZnS} được đốt thành \ce{SO2}: \(\ce{2ZnS + 3O2 -> 2ZnO + 2SO2}\). Toàn bộ \ce{SO2} dùng sản xuất \ce{H2SO4}; hiệu suất từ \ce{SO2} đến \ce{H2SO4} là \(80\%\). Sản phẩm cuối là dung dịch \ce{H2SO4} \(98\%\), \(D=\SI{1.84}{\gram\per\milli\liter}\). Tính thể tích dung dịch acid. Cho \(M_{\ce{ZnS}}=97\), \(M_{\ce{H2SO4}}=98\) g/mol.
+%\source{Phỏng theo Câu 4.2b, đề chuyên Hóa Lâm Đồng 2026.}
+%\dapso{\(\approx\SI{0.538}{\cubic\metre}\), tức khoảng \SI{538}{\liter}.}
+\end{vidu}
+\begin{loigiaiBT}
+Khối lượng \ce{ZnS} tinh khiết:
+\[
+m_{\ce{ZnS}}=1.5\times0.80=\SI{1.20}{\ton}.
+\]
+Theo sơ đồ phản ứng, \(1\) mol \ce{ZnS} tạo \(1\) mol \ce{SO2}, rồi \(1\) mol \ce{SO2} tạo \(1\) mol \ce{H2SO4}. Vì vậy
+\[
+m_{\ce{H2SO4,lt}}=1.20\times\frac{98}{97}\approx\SI{1.212}{\ton}.
+\]
+Tính hiệu suất \(80\%\):
+\[
+m_{\ce{H2SO4}}=1.212\times0.80\approx\SI{0.970}{\ton}.
+\]
+Khối lượng dung dịch acid \(98\%\):
+\[
+m_{\text{dd}}=\frac{0.970}{0.98}\approx\SI{0.990}{\ton}=\SI{990}{\kilo\gram}.
+\]
+Với \(D=\SI{1.84}{\kilo\gram\per\liter}\):
+\[
+V=\frac{990}{1.84}\approx\SI{538}{\liter}=\SI{0.538}{\cubic\metre}.
+\]
+\end{loigiaiBT}
+\end{tuluyen}
+
+\end{vidu}
+
+\subsubsection*{CALC}
+Công cụ CALC dùng để tính toán các giá trị khác nhau của cùng một biểu thức theo một hoặc nhiều tham số. Mỗi tham số khi đó chính là các chữ cái được sử dụng làm bộ nhớ như bên trên đã đề cập.
+
+Để tính giá trị biểu thức theo tham số:
+\begin{itemize}
+	\item Nhập biểu thức, thay thế các tham số bằng các chữ cái bộ nhớ
+	\item Bấm \fbox{CALC}
+	\item Nhập giá trị từng tham số tương ứng. Có thể di chuyển lên xuống, nhập xong thì bấm dấu \fbox{$=$}
+	\item Bấm dầu \fbox{$=$} sau khi nhập xong giá trị tham số cuối cùng để máy tính ra giá trị đầu tiên
+	\item Tiếp tục bấm dấu \fbox{$=$} (hoặc \fbox{CALC}) để nhập lại tham số tính giá trị tiếp theo
+\end{itemize}
+\emph{Mẹo nhỏ:} Giá trị của tham số không nhất thiết phải nhập một số, mà có thể nhập phép tính, thậm chí phép tính phức tạp tính từ các bộ nhớ khác.
+
+\subsubsection*{SOLVE}
+Công cụ SOLVE dùng để tìm nghiệm của phương trình một ẩn. Ẩn số của phương trình có thể là bất kì chữ nào trong số các bộ nhớ trên, tuy nhiên để cho dễ dàng người ta thường chọn ẩn số là $x$.
+
+Để tìm nghiệm của phương trình:
+\begin{itemize}
+	\item Nhập phương trình với ẩn số và có thể có tham số, dấu `$=$' của phương trình được lấy bằng cách nhấn \fbox{ALPHA} \fbox{CALC}
+	\item Bấm \fbox{SHIFT} \fbox{CALC} (để lấy SOLVE)
+	\item Nhập giá trị tham số nếu có
+	\item Nhấn mũi tên lên hoặc xuống để tìm đến ẩn số, giả sử là $x$, nhập giá trị \num{0.01}. Bấm \fbox{$=$}
+	\item Bấm dấu \fbox{$=$} ngay tại chữ $x$ thêm một lần nữa, máy sẽ cho ra giá trị của nghiệm
+\end{itemize}
+\emph{Mẹo nhỏ 1}: Bấm dấu \fbox{$=$} hai lần ở bất kì tham số nào trong quá trình nhập giá trị của SOLVE, máy tính sẽ coi đó là nghiệm và giải ra giá trị của tham số đó.
+
+\emph{Mẹo nhỏ 2}: Hãy nhập phương trình dạng tích $a \cdot b = c \cdot d$ (với $a,\, b,\, c,\, d$ là các biểu thức có thể chứa nghiệm hoặc tham số) thay vì dạng thương $\dfrac{a}{b} = \dfrac{c}{d}$ máy sẽ giải ra nghiệm nhanh hơn.
+
+\textbf{Giải thích cơ chế}: Công cụ SOLVE của máy tính sẽ thay thế các giá trị vào phương trình cho đến khi vé trái bằng vế phải (máy hiện \fbox{L -- R $= 0$} sau khi giải ra nghiệm). Việc nhập giá trị vào ẩn, ví dụ như trên là nhập \num{0.01} cho $x$, sẽ báo với máy là ``Hãy tìm nghiệm từ giá trị này tới $+\infty$. Do Hóa học thường lấy giá trị dương, việc nhập như vậy giúp máy tính nhanh hơn.
 
 \begin{casiobox}
 \textbf{Bộ nhớ:} dùng làm tham số hoặc ẩn số. Mỗi máy tính có khoảng 9 bộ nhớ, tương ứng với các chữ cái \textsc{A, B, C, D, E, F}, \textit{x, y} và \textsc{M}.\par
@@ -86,7 +167,7 @@ Dung dịch \ce{NaCl} có \(C_M=\SI{0.53}{\mole\per\liter}\). Tính nồng độ
 \begin{loigiai}
 Trong \SI{1}{\liter} dung dịch có \SI{0.53}{\mole} \ce{NaCl}:
 \[
-m=0.53\times58.5\approx\SI{31.0}{\gram}.
+m=0.53\cdot58.5\approx\SI{31.0}{\gram}.
 \]
 Vậy nồng độ khối lượng xấp xỉ \SI{31.0}{\gram\per\liter}.
 \end{loigiai}
@@ -101,7 +182,7 @@ Chuyển đổi các đại lượng sau:
 \task \SI{1.35}{\gram\per\milli\liter} sang \si{\kilo\gram\per\liter}.
 \task \SI{0.80}{\gram\per\cubic\centi\metre} sang \si{\kilo\gram\per\cubic\metre}.
 \end{tasks}
-\dapso{\(4.25\times10^6\) g; \(7.80\times10^{-4}\) tấn; \SI{2700}{\liter}; \SI{1.250}{\cubic\metre}; \SI{1.35}{\kilo\gram\per\liter}; \SI{800}{\kilo\gram\per\cubic\metre}.}
+\dapso{\(4.25\cdot10^6\) g; \(7.80\cdot10^{-4}\) tấn; \SI{2700}{\liter}; \SI{1.250}{\cubic\metre}; \SI{1.35}{\kilo\gram\per\liter}; \SI{800}{\kilo\gram\per\cubic\metre}.}
 \end{tuluyen}
 
 \begin{tuluyen}
@@ -112,9 +193,4 @@ Một bồn chứa \SI{6.0}{\cubic\metre} nước. Mỗi ngày sử dụng \SI{7
 \begin{tuluyen}
 Một dung dịch có khối lượng riêng \SI{1.20}{\gram\per\milli\liter}. Tính khối lượng của \SI{2.5}{\liter} dung dịch theo kilogram.
 \dapso{\SI{3.00}{\kilo\gram}.}
-\end{tuluyen}
-
-\begin{tuluyen}
-Một mẫu không khí \SI{50}{\liter} chứa \SI{0.012}{\milli\gram} \ce{SO2}. Tính nồng độ khối lượng theo \si{\milli\gram\per\cubic\metre}.
-\dapso{\SI{0.24}{\milli\gram\per\cubic\metre}.}
 \end{tuluyen}

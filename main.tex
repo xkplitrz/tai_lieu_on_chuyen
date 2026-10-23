@@ -1,18 +1,18 @@
 \documentclass[12pt,a4paper,twoside,openany]{book}
 
 % ================== THÔNG TIN TÀI LIỆU ==================
-\newcommand{\TenTaiLieu}{ÔN THI VÀO 10 CHUYÊN HÓA}
-\newcommand{\TenChuyenDe}{NĂNG LƯỢNG VÀ TỐC ĐỘ PHẢN ỨNG}
-\newcommand{\TenTruong}{TRUNG TÂM DẠY HỌC NGOÀI GIỜ NHÂN TRÍ SƠN}
+\newcommand{\TenTaiLieu}{TÀI LIỆU ÔN TẬP THI TỐT NGHIỆP THPT}
+\newcommand{\TenChuyenDe}{NĂM 2027}
+\newcommand{\TenTruong}{CƠ SỞ DẠY THÊM HOÀN NGỌC}
 \newcommand{\ToBoMon}{}
-\newcommand{\NamHoc}{2026--2027}
+\newcommand{\NamHoc}{Lưu hành nội bộ}
 
 \input{preamble}
 \BanHocSinh % cấu hình tài liệu về bản dành cho học sinh = không có đáp số, ẩn nguồn, lời giải
 
 % Biên dịch nhanh theo chuyên đề:
 % \TatCaChuyenDe        % in toàn bộ tài liệu (mặc định)
-% \ChiChuyenDe{2}       % chỉ in Chuyên đề 2
+ \ChiChuyenDe{1}       % chỉ in Chuyên đề 2
 % Hoặc chọn nhiều chuyên đề:
 % \TatTatCaChuyenDe
 % \BatChuyenDe{2}
@@ -31,7 +31,7 @@
   \fill[ChemBlue] (current page.south west) rectangle ([yshift=7mm]current page.south east);
 \end{tikzpicture}
 \centering
-\vspace*{2.2cm}
+\vspace*{5.2cm}
 {\large\bfseries \TenTruong\par}
 {\large\bfseries \ToBoMon\par}
 \vspace{2.3cm}
@@ -39,7 +39,7 @@
 \vspace{8mm}
 {\LARGE\bfseries\color{ChemRed}\TenChuyenDe\par}
 \vfill
-{\large Năm học \NamHoc\par}
+{\Large Năm học \NamHoc\par}
 \end{titlepage}
 
 \frontmatter
@@ -47,7 +47,7 @@
 \mainmatter
 
 \iftoggle{InChuyenDeMot}{%
-\chapter{Công cụ định lượng trong hóa học}
+\chapter{Phương pháp giải bài tập tính toán}
 \chaptertoc
 
 \input{data/buoi01}
