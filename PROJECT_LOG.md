@@ -144,3 +144,23 @@
 - Không tìm thấy bài protein trực tiếp trong các trang đề chính thức đã xác minh; một số câu protein/peptide nằm ở phần tài liệu phụ trợ ngoài số trang đề chính thức nên không gắn nguồn nguyên văn.
 - Kiểm tra lại bài Cần Thơ: khối lượng mỡ cần dùng xấp xỉ 370,83 kg (80% triglyceride, hiệu suất 90%); sửa số cột bảng phản ứng glucose–Ag2O thành 7 cột.
 - Chưa xác nhận compile toàn chương trong môi trường local; cần compile Chuyên đề 8 và hồi quy Chuyên đề 7 trước khi phát hành.
+
+## 16. Chuyên đề 8 — cập nhật dàn ý và WU8.1 — 09/11/2026
+
+- Dàn ý mới được người dùng duyệt, giữ đúng 6 buổi 32–37:
+  1. Buổi 32: Chất béo và phản ứng xà phòng hóa.
+  2. Buổi 33: Glucose và saccharose.
+  3. Buổi 34: Tinh bột và cellulose.
+  4. Buổi 35: Bài toán carbohydrate và ứng dụng.
+  5. Buổi 36: Protein.
+  6. Buổi 37: Tổng hợp lipid – carbohydrate – protein.
+- Dàn ý này thay thế cách chia buổi ở mục 15; các bài mục tiêu đã có cần được phân bổ lại theo sáu buổi mới, không tự động giữ nguyên thứ tự cũ.
+- WU8.1: rà soát và cập nhật hai file hiện có để cùng tạo thành một buổi học logic:
+  - \`data/cd08_01.tex\`: lipid, chất béo, cấu tạo, trạng thái tự nhiên, tính chất vật lí, vai trò và cách sử dụng.
+  - \`data/cd08_02.tex\`: chuyển thành các subsection tiếp nối của Buổi 32; bổ sung xà phòng hóa, quy trình sản xuất, bài toán lượng nguyên liệu/sản phẩm/hiệu suất; giữ chỉ số acid và chỉ số ester hóa ở phần mở rộng.
+- Đối chiếu Câu 6 Cần Thơ trên bản scan trang 5; sửa sự không thống nhất ở kết luận đáp số thành khoảng 370,83 kg. Ghi nguồn theo năm học 2026–2027.
+- YCCD KHTN 8–9 về chất béo được dùng làm giới hạn nội dung: khái niệm/cấu tạo khái quát, trạng thái tự nhiên, tính chất vật lí, phản ứng xà phòng hóa, vai trò và sử dụng phù hợp.
+- Giữ mapping Lâm Đồng 3.1, 3.2 theo dàn ý đã duyệt; trước khi đưa câu vào phần bài tập mục tiêu phải đối chiếu nguyên văn với ảnh đề trong \`de_vao_chuyen/LamDong_2026/\`.
+- \`main.tex\` hiện vẫn input \`cd08_01\`–\`cd08_05\`; chưa thêm các file cho Buổi 35 và Buổi 37 khi nội dung chưa được biên soạn. Sau khi hai buổi này có file ổn định, cập nhật thứ tự input để phản ánh đủ sáu buổi.
+- Đã cập nhật trên \`main\`: \`cd08_01\` (125c5ce), \`cd08_02\` (3e6a87f), \`baitap_chuyende8\` đáp số (f7eadab) và nhãn nguồn Cần Thơ (75a2bb7).
+- Chưa chạy biên dịch LuaLaTeX trong phiên này; cần compile Chuyên đề 8 sau khi hoàn tất các file còn thiếu và kiểm tra hồi quy.
