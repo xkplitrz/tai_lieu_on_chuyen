@@ -8,7 +8,7 @@
 ## 2. Repo và trạng thái
 - Repo: https://github.com/xkplitrz/tai_lieu_on_chuyen ; branch chính: main.
 - HEAD lúc lập handover: ff00f44167b438186c6b0829714f9a32bc3e5216 — “Sửa để in toàn bộ chuyên đề”. Luôn fetch/refetch trước khi sửa.
-- Đã có Chuyên đề 1–7; chưa có Chuyên đề 8 trở đi.
+- Đã có Chuyên đề 1–8; Chuyên đề 8 được bổ sung ngày 09/11/2026.
 - Kế hoạch toàn khóa khoảng 50 buổi; đã chốt gần đây: Chuyên đề 5 = 8 buổi, 6 = 6 buổi, 7 = 4 buổi. Kiểm tra lịch tổng trước khi chốt lại tổng số buổi.
 
 ## 3. Cấu trúc repo
@@ -36,7 +36,7 @@
 - 5. Kim loại và tài nguyên khoáng sản — tính chất/dãy hoạt động, bài toán kim loại, dữ kiện gián tiếp/hệ ẩn, quặng/luyện kim, gang–thép, đá vôi/silicate.
 - 6. Carbon, hydrocarbon và nhiên liệu — CTPT/CTCT, cháy, sản phẩm cháy, xác định hydrocarbon, alkene, LPG; không lặp năng lượng của Chuyên đề 2.
 - 7. Ethylic alcohol – Acetic acid – Ester — độ cồn, phản ứng acid, giấm/chuẩn độ, ester hóa và thí nghiệm. Đã thêm mục Bài tập mục tiêu với câu gắn nguồn Lâm Đồng, An Giang, Đắk Lắk, Ninh Bình, Quảng Ninh 2026; các bài phỏng theo phải ghi rõ. Kiểm tra lại nguyên văn và đáp án với ảnh đề gốc trước bản phát hành.
-- Dự kiến tiếp: Chuyên đề 8 lipid/chất béo, carbohydrate, protein; Chuyên đề 9 polymer; sau đó audit và bố trí bài tích hợp/ôn tổng kết.
+- Tiếp theo: Chuyên đề 9 polymer; sau đó audit và bố trí bài tích hợp/ôn tổng kết.
 
 ## 5. Backward-design — bắt buộc
 1. Audit kho đề tuyển sinh trước khi lập dàn ý hoặc viết LaTeX.
@@ -62,7 +62,7 @@
   - array/aligned vẫn có thể dùng cho hệ phương trình; “không dùng array” chỉ áp dụng cho bảng lượng chất dưới PTHH.
 - Không chèn Markdown/HTML vào .tex; chỉ LaTeX.
 - BanHocSinh: hiện lời giải ví dụ, ẩn nguồn/đáp số/lời giải bài tự luyện. BanGiaoVien: hiện đủ nguồn, đáp số, lời giải bài tập. Biết rõ đang compile chế độ nào.
-- Toggle hiện có ChiChuyenDe{1}…ChiChuyenDe{7}, TatTatCaChuyenDe, BatChuyenDe{n}, TatCaChuyenDe. Khi test riêng, hoàn nguyên lựa chọn trước commit nếu không định đổi mặc định.
+- Toggle hiện có ChiChuyenDe{1}…ChiChuyenDe{8}, TatTatCaChuyenDe, BatChuyenDe{n}, TatCaChuyenDe. Khi test riêng, hoàn nguyên lựa chọn trước commit nếu không định đổi mặc định.
 
 ## 7. Quy tắc bài tập và lời giải
 - Bài tập mục tiêu tuyển sinh là đích cuối của mỗi chuyên đề, không phải phần trang trí. Bài tập tự tạo không được thay thế toàn bộ câu đích.
@@ -89,3 +89,11 @@
 - Quay lại audit Chuyên đề 1–6 để bổ sung mục tiêu từ đề thật như Chuyên đề 7; phân biệt rõ nguyên văn/phỏng theo.
 - Rà soát nguyên văn và đáp án tất cả câu đã gắn nhãn “Trích nguyên văn” trong Chuyên đề 7 bằng ảnh gốc.
 - Chốt tiêu đề bìa trước khi biên dịch/phát hành bản tổng.
+
+
+## 11. Trạng thái sau Chuyên đề 8 — 09/11/2026
+- Chuyên đề 8 có 5 bài mục tiêu trích nguyên văn: Thái Nguyên 2026, Cần Thơ 2026, Phú Thọ 2026, Lâm Đồng 2026 và Ninh Bình 2026.
+- Protein hiện được triển khai theo YCCD và bài luyện tự xây dựng; chưa xác minh được câu protein phù hợp trong trang đề chính thức đã audit. Không lấy nội dung ở trang phụ trợ làm câu trích đề.
+- Lâm Đồng Câu 16 và Ninh Bình Câu 5.2 đã chuyển từ Chuyên đề 7 sang Chuyên đề 8 để tránh lặp.
+- Toggle \ChiChuyenDe{8} đã được thêm vào preamble và main.tex.
+- Việc cần làm: compile Chuyên đề 7 và 8 sau thay đổi, kiểm tra nguồn/đáp số, sau đó mới phát hành.

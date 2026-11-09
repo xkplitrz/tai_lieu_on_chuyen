@@ -267,6 +267,7 @@
 \newtoggle{InChuyenDeNam}
 \newtoggle{InChuyenDeSau}
 \newtoggle{InChuyenDeBay}
+\newtoggle{InChuyenDeTam}
 
 \newcommand{\TatCaChuyenDe}{%
   \toggletrue{InChuyenDeMot}%
@@ -276,6 +277,7 @@
   \toggletrue{InChuyenDeNam}%
   \toggletrue{InChuyenDeSau}%
   \toggletrue{InChuyenDeBay}%
+  \toggletrue{InChuyenDeTam}%
 }
 \newcommand{\TatTatCaChuyenDe}{%
   \togglefalse{InChuyenDeMot}%
@@ -285,6 +287,7 @@
   \togglefalse{InChuyenDeNam}%
   \togglefalse{InChuyenDeSau}%
   \togglefalse{InChuyenDeBay}%
+  \togglefalse{InChuyenDeTam}%
 }
 \newcommand{\BatChuyenDe}[1]{%
   \ifcase#1\relax
@@ -295,6 +298,7 @@
   \or\toggletrue{InChuyenDeNam}%
   \or\toggletrue{InChuyenDeSau}%
   \or\toggletrue{InChuyenDeBay}%
+  \or\toggletrue{InChuyenDeTam}%
   \else\PackageWarning{tai-lieu-on-chuyen}{Chuyen de #1 chua duoc khai bao}%
   \fi
 }

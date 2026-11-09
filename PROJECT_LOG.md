@@ -128,3 +128,19 @@
   4. Chốt tiêu đề bìa cho bản in toàn tài liệu và compile toàn bộ bằng LuaLaTeX.
 - Lưu ý lịch sử: main.tex đã được sửa để in toàn bộ chuyên đề, nhưng handover trước đó ghi nhận tiêu đề bìa có thể vẫn mang tên Chuyên đề 2. Kiểm tra trực tiếp source hiện tại trước khi sửa; không dựa hoàn toàn vào ghi chú cũ.
 - Chỉ cập nhật mốc ngày khi có thay đổi/phiên làm việc đáng kể. Phân biệt sự kiện xác minh từ commit với quyết định được chốt trong trao đổi nhưng chưa có commit.
+
+
+## 15. Chuyên đề 8 — Lipid, carbohydrate và protein — 09/11/2026
+
+- Audit YCCD và các trang đề gốc trước khi viết; chốt 6 buổi: lipid/chất béo; xà phòng hóa; glucose/saccharose; tinh bột/cellulose; protein; luyện tập tích hợp.
+- Bổ sung 5 bài mục tiêu từ trang đề tuyển sinh đã xác minh:
+  - Thái Nguyên 2026, Câu 1: dầu/mỡ thực phẩm so với dầu bôi trơn; sự cố tràn dầu và nguyên tắc ly tâm.
+  - Cần Thơ 2026, Câu 6: sản xuất xà phòng từ mỡ động vật, có thành phần triglyceride và hiệu suất.
+  - Phú Thọ 2026, Câu 5.2: chỉ số acid/ester hóa và sản xuất xà phòng; đề cung cấp định nghĩa hai chỉ số.
+  - Lâm Đồng 2026, Câu 16: rơm rạ/cellulose → glucose → ethylic alcohol.
+  - Ninh Bình 2026, Câu 5.2: đồ thị lên men glucose, xác định khoảng tốc độ lớn nhất, tốc độ trung bình và hiệu suất.
+- Các file nội dung: cd08_01–cd08_05 và baitap_chuyende8. Toggle thứ 8: \ChiChuyenDe{8}.
+- Chuyển hai bài carbohydrate (Lâm Đồng Câu 16 và Ninh Bình Câu 5.2) ra khỏi mục tiêu Chuyên đề 7 để tránh lặp; Chuyên đề 7 vẫn còn 7 bài mục tiêu khác.
+- Không tìm thấy bài protein trực tiếp trong các trang đề chính thức đã xác minh; một số câu protein/peptide nằm ở phần tài liệu phụ trợ ngoài số trang đề chính thức nên không gắn nguồn nguyên văn.
+- Kiểm tra lại bài Cần Thơ: khối lượng mỡ cần dùng xấp xỉ 370,83 kg (80% triglyceride, hiệu suất 90%); sửa số cột bảng phản ứng glucose–Ag2O thành 7 cột.
+- Chưa xác nhận compile toàn chương trong môi trường local; cần compile Chuyên đề 8 và hồi quy Chuyên đề 7 trước khi phát hành.
