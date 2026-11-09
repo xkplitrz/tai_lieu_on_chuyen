@@ -85,15 +85,25 @@
 - Không xóa/đổi tên file cũ, tái cấu trúc thư mục hoặc thay macro chung khi chưa tìm hết tham chiếu và compile hồi quy.
 
 ## 10. Ưu tiên tiếp theo
-- Chuyên đề 8: audit đề trước, chọn câu nguyên văn làm mục tiêu, chốt dàn ý rồi mới viết.
-- Quay lại audit Chuyên đề 1–6 để bổ sung mục tiêu từ đề thật như Chuyên đề 7; phân biệt rõ nguyên văn/phỏng theo.
-- Rà soát nguyên văn và đáp án tất cả câu đã gắn nhãn “Trích nguyên văn” trong Chuyên đề 7 bằng ảnh gốc.
-- Chốt tiêu đề bìa trước khi biên dịch/phát hành bản tổng.
+- Chuyên đề 8: tiếp tục biên soạn theo dàn ý sáu buổi 32–37 đã được người dùng duyệt; không thay đổi thời lượng.
+- Bổ sung bài mục tiêu theo đúng mapping đã chốt: Cần Thơ 4.2c/d, Lâm Đồng 5.1a/b, Lâm Đồng 3.1/3.2; phân biệt câu trích nguyên văn và câu tự biên soạn.
+- Hoàn thành Buổi 33–37, bổ sung hai phần còn thiếu là bài toán carbohydrate và buổi tích hợp; chỉ cập nhật thứ tự input trong main.tex sau khi các file tương ứng đã tồn tại.
+- Compile Chuyên đề 8 và kiểm tra hồi quy Chuyên đề 7 sau khi hoàn thành các file, kiểm tra nguồn/đáp số trước phát hành.
+- Quay lại audit Chuyên đề 1–6 để bổ sung bài mục tiêu từ đề thật; rà soát các câu “Trích nguyên văn” trong Chuyên đề 7 bằng ảnh gốc; chốt tiêu đề bìa trước khi phát hành bản tổng.
 
-
-## 11. Trạng thái sau Chuyên đề 8 — 09/11/2026
-- Chuyên đề 8 có 5 bài mục tiêu trích nguyên văn: Thái Nguyên 2026, Cần Thơ 2026, Phú Thọ 2026, Lâm Đồng 2026 và Ninh Bình 2026.
-- Protein hiện được triển khai theo YCCD và bài luyện tự xây dựng; chưa xác minh được câu protein phù hợp trong trang đề chính thức đã audit. Không lấy nội dung ở trang phụ trợ làm câu trích đề.
-- Lâm Đồng Câu 16 và Ninh Bình Câu 5.2 đã chuyển từ Chuyên đề 7 sang Chuyên đề 8 để tránh lặp.
-- Toggle \ChiChuyenDe{8} đã được thêm vào preamble và main.tex.
-- Việc cần làm: compile Chuyên đề 7 và 8 sau thay đổi, kiểm tra nguồn/đáp số, sau đó mới phát hành.
+## 11. Trạng thái Chuyên đề 8 — cập nhật 09/11/2026
+- Dàn ý hiện hành gồm sáu buổi:
+  - Buổi 32: Chất béo và phản ứng xà phòng hóa.
+  - Buổi 33: Glucose và saccharose.
+  - Buổi 34: Tinh bột và cellulose.
+  - Buổi 35: Bài toán carbohydrate và ứng dụng.
+  - Buổi 36: Protein.
+  - Buổi 37: Tổng hợp lipid – carbohydrate – protein.
+- Dàn ý này thay thế cách chia buổi cũ ghi ở PROJECT_LOG mục 15. Giữ lại các bài mục tiêu đã có nhưng cần phân bổ lại theo nội dung và kiểm tra trùng lặp.
+- WU8.1 đã cập nhật hai file hiện có thành một Buổi 32 logic: \`cd08_01.tex\` (lipid/chất béo) và \`cd08_02.tex\` (xà phòng hóa/sản xuất xà phòng/bài toán). Hai file nối tiếp nhau trong cấu trúc section/subsection.
+- Câu 6 Cần Thơ (đề tuyển sinh THPT năm học 2026–2027, môn KHTN chuyên Hóa) được giữ làm bài mục tiêu Buổi 32; đáp số đã chuẩn hóa thành khoảng 370,83 kg.
+- Nội dung Buổi 32 bám YCCD KHTN 8–9: khái niệm/cấu tạo khái quát, trạng thái tự nhiên, tính chất vật lí, phản ứng xà phòng hóa, vai trò và sử dụng phù hợp. Chỉ số acid/ester hóa được đánh dấu là mở rộng.
+- Các bài mục tiêu đang có trong \`baitap_chuyende8.tex\`: Thái Nguyên 2026 Câu 1; Cần Thơ 2026 Câu 6; Phú Thọ 2026 Câu 5.2; Lâm Đồng 2026 Câu 16; Ninh Bình 2026 Câu 5.2. Cần phân lại vị trí cho phù hợp Buổi 32–37; các mapping mới của Cần Thơ 4.2c/d và Lâm Đồng 5.1a/b cần được bổ sung/đối chiếu trong WU tiếp theo.
+- Protein tiếp tục dùng câu tự biên soạn nếu không có câu tuyển sinh trực tiếp phù hợp; không gắn nguồn đề khi chưa có chứng cứ.
+- \`main.tex\` hiện input \`cd08_01\`–\`cd08_05\`. Chưa có nội dung riêng cho Buổi 35 và Buổi 37; sẽ bổ sung input sau khi biên soạn hai buổi này.
+- Toggle \`\\ChiChuyenDe{8}\` đã có trong preamble/main.tex. WU8.1 đã cập nhật trên nhánh \`main\`; chưa chạy compile LuaLaTeX trong phiên hiện tại.
