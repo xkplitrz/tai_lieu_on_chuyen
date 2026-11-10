@@ -86,12 +86,12 @@
 
 ## 10. Ưu tiên tiếp theo
 - Chuyên đề 8: tiếp tục biên soạn theo dàn ý sáu buổi 32–37 đã được người dùng duyệt; không thay đổi thời lượng.
-- WU8.2 đã bổ sung Cần Thơ 4.2c (nguyên văn, đã đối chiếu ảnh scan) và Lâm Đồng 5.1b (phỏng theo, bản chữ từ tài liệu tập hợp; chưa đối chiếu trực tiếp scan gốc). Cần Thơ 4.2d là phép thử iodine/tinh bột, để dành Buổi 34.
+- Mapping mới đã xử lý: Cần Thơ 4.2c (nguyên văn, đã đối chiếu ảnh scan) và Lâm Đồng 5.1b (phỏng theo, bản chữ từ tài liệu tập hợp; chưa đối chiếu trực tiếp scan gốc). Cần Thơ 4.2d là phép thử iodine/tinh bột, dành cho Buổi 34.
 - Hoàn thành Buổi 34–37; phân bổ lại các bài mục tiêu còn có (đặc biệt Cần Thơ 4.2d sang Buổi 34) và bổ sung bài toán carbohydrate cùng buổi tích hợp. Chỉ cập nhật thứ tự input trong main.tex sau khi file tương ứng tồn tại.
 - Compile Chuyên đề 8 và kiểm tra hồi quy Chuyên đề 7 sau khi hoàn thành các file, kiểm tra nguồn/đáp số trước phát hành.
 - Quay lại audit Chuyên đề 1–6 để bổ sung bài mục tiêu từ đề thật; rà soát các câu “Trích nguyên văn” trong Chuyên đề 7 bằng ảnh gốc; chốt tiêu đề bìa trước khi phát hành bản tổng.
 
-## 11. Trạng thái Chuyên đề 8 — cập nhật 09/11/2026
+## 11. Trạng thái Chuyên đề 8 — cập nhật 10/11/2026
 - Dàn ý hiện hành gồm sáu buổi:
   - Buổi 32: Chất béo và phản ứng xà phòng hóa.
   - Buổi 33: Glucose và saccharose.
