@@ -87,7 +87,7 @@
 ## 10. Ưu tiên tiếp theo
 - Chuyên đề 8: tiếp tục biên soạn theo dàn ý sáu buổi 32–37 đã được người dùng duyệt; không thay đổi thời lượng.
 - Mapping mới đã xử lý: Cần Thơ 4.2c (nguyên văn, đã đối chiếu ảnh scan) và Lâm Đồng 5.1b (phỏng theo, bản chữ từ tài liệu tập hợp; chưa đối chiếu trực tiếp scan gốc). Cần Thơ 4.2d là phép thử iodine/tinh bột, dành cho Buổi 34.
-- Hoàn thành Buổi 36–37; bổ sung/phân bổ các bài mục tiêu còn lại và bài tích hợp. Lâm Đồng 3.1/3.2 vẫn cần xác minh scan gốc. Lâm Đồng 5.1a đã được đưa vào dưới dạng phỏng theo.
+- Hoàn thành Buổi 37; phân bổ lại các bài mục tiêu còn lại và làm buổi tích hợp. Lâm Đồng 3.1/3.2 vẫn cần xác minh scan gốc. Lâm Đồng 5.1a đã được đưa vào dưới dạng phỏng theo.
 - Compile Chuyên đề 8 và kiểm tra hồi quy Chuyên đề 7 sau khi hoàn thành các file, kiểm tra nguồn/đáp số trước phát hành.
 - Quay lại audit Chuyên đề 1–6 để bổ sung bài mục tiêu từ đề thật; rà soát các câu “Trích nguyên văn” trong Chuyên đề 7 bằng ảnh gốc; chốt tiêu đề bìa trước khi phát hành bản tổng.
 
@@ -104,7 +104,7 @@
 - Câu 6 Cần Thơ (đề tuyển sinh THPT năm học 2026–2027, môn KHTN chuyên Hóa) được giữ làm bài mục tiêu Buổi 32; đáp số đã chuẩn hóa thành khoảng 370,83 kg.
 - Nội dung Buổi 32 bám YCCD KHTN 8–9: khái niệm/cấu tạo khái quát, trạng thái tự nhiên, tính chất vật lí, phản ứng xà phòng hóa, vai trò và sử dụng phù hợp. Chỉ số acid/ester hóa được đánh dấu là mở rộng.
 - Các bài mục tiêu hiện có trong \`baitap_chuyende8.tex\`: Thái Nguyên 2026 Câu 1; Cần Thơ 2026–2027 Câu 6, 4.2c, 4.2d; Phú Thọ 2026 Câu 5.2; Lâm Đồng 2026 Câu 16, bài toán gương phỏng theo Câu 5.1b và bài G-5 phỏng theo Câu 5.1a; Ninh Bình 2026–2027 Câu 5.2. Các bài cần được giữ đúng buổi như mapping trong dàn ý.
-- Protein tiếp tục dùng câu tự biên soạn nếu không có câu tuyển sinh trực tiếp phù hợp; không gắn nguồn đề khi chưa có chứng cứ.
+- Protein không có câu tuyển sinh trực tiếp phù hợp đã xác minh trong kho đề; WU8.5 đã bổ sung câu tự biên soạn trong \`baitap_chuyende8.tex\`, không gắn nguồn đề.
 - \`main.tex\` hiện input \`cd08_01\`–\`cd08_04\`, \`cd08_baitoan\` (Buổi 35), \`cd08_05\` (Buổi 36) và \`baitap_chuyende8\`. Chưa có nội dung riêng cho Buổi 37.
 - Toggle \`\\ChiChuyenDe{8}\` đã có trong preamble/main.tex. WU8.1–WU8.4 đã cập nhật trên nhánh \`main\`. Kiểm tra LuaLaTeX tối giản cho đơn vị/công thức/bảng đã thành công; chưa compile toàn bộ Chuyên đề 8.
 
@@ -112,3 +112,4 @@
 - WU8.3 đã hoàn thiện Buổi 34: tinh bột/cellulose, nhận biết bằng iodine, thủy phân, ứng dụng. Cần Thơ 4.2d được chép nguyên văn từ ảnh scan trang 3; thêm hai bài tự biên soạn. Tại thời điểm WU8.3, Lâm Đồng 5.1a chưa xác minh được scan.
 - WU8.3 đã cập nhật \`cd08_04.tex\` và thêm Cần Thơ 4.2d cùng hai bài tự biên soạn trong \`baitap_chuyende8.tex\`. LuaLaTeX tối giản cho phần lý thuyết và bài tập mới đã thành công; chưa compile toàn bộ chuyên đề. Vấn đề Lâm Đồng 5.1a được xử lí tiếp trong WU8.4 bằng nhãn “phỏng theo”.
 - WU8.4 đã thêm \`cd08_baitoan.tex\` cho Buổi 35, cập nhật thứ tự input trong main.tex và bổ sung bài Lâm Đồng 5.1a (phỏng theo), bài toán nhiều công đoạn, bài tính ngược và lời giải đồ thị Ninh Bình 2026–2027. Các giá trị đọc đồ thị đã được đối chiếu: glucose giảm 40 g/L trong 60 h; ethanol cực đại 17,8 g/L. Đồng thời sửa lỗi cấu trúc bài tập từ WU8.2 và gỡ bài G-5 bị trùng khỏi Chuyên đề 1; hiện chỉ còn một bản ở Buổi 35.
+- WU8.5 đã hoàn thiện \`cd08_05.tex\` và bổ sung các câu tự biên soạn về cấu tạo/vai trò, thủy phân, đông tụ/biến tính, phân hủy mạnh, phân biệt len/tơ tằm với nylon. Câu hỏi protein cũ chưa có lời giải đã được thay bằng bộ tình huống có đáp án. \`main.tex\` đã input file này; chưa cần sửa thứ tự.
