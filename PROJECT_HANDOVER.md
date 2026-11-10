@@ -86,8 +86,8 @@
 
 ## 10. Ưu tiên tiếp theo
 - Chuyên đề 8: tiếp tục biên soạn theo dàn ý sáu buổi 32–37 đã được người dùng duyệt; không thay đổi thời lượng.
-- Bổ sung bài mục tiêu theo đúng mapping đã chốt: Cần Thơ 4.2c/d, Lâm Đồng 5.1a/b, Lâm Đồng 3.1/3.2; phân biệt câu trích nguyên văn và câu tự biên soạn.
-- Hoàn thành Buổi 33–37, bổ sung hai phần còn thiếu là bài toán carbohydrate và buổi tích hợp; chỉ cập nhật thứ tự input trong main.tex sau khi các file tương ứng đã tồn tại.
+- WU8.2 đã bổ sung Cần Thơ 4.2c (nguyên văn, đã đối chiếu ảnh scan) và Lâm Đồng 5.1b (phỏng theo, bản chữ từ tài liệu tập hợp; chưa đối chiếu trực tiếp scan gốc). Cần Thơ 4.2d là phép thử iodine/tinh bột, để dành Buổi 34.
+- Hoàn thành Buổi 34–37; phân bổ lại các bài mục tiêu còn có (đặc biệt Cần Thơ 4.2d sang Buổi 34) và bổ sung bài toán carbohydrate cùng buổi tích hợp. Chỉ cập nhật thứ tự input trong main.tex sau khi file tương ứng tồn tại.
 - Compile Chuyên đề 8 và kiểm tra hồi quy Chuyên đề 7 sau khi hoàn thành các file, kiểm tra nguồn/đáp số trước phát hành.
 - Quay lại audit Chuyên đề 1–6 để bổ sung bài mục tiêu từ đề thật; rà soát các câu “Trích nguyên văn” trong Chuyên đề 7 bằng ảnh gốc; chốt tiêu đề bìa trước khi phát hành bản tổng.
 
@@ -103,9 +103,9 @@
 - WU8.1 đã cập nhật hai file hiện có thành một Buổi 32 logic: \`cd08_01.tex\` (lipid/chất béo) và \`cd08_02.tex\` (xà phòng hóa/sản xuất xà phòng/bài toán). Hai file nối tiếp nhau trong cấu trúc section/subsection.
 - Câu 6 Cần Thơ (đề tuyển sinh THPT năm học 2026–2027, môn KHTN chuyên Hóa) được giữ làm bài mục tiêu Buổi 32; đáp số đã chuẩn hóa thành khoảng 370,83 kg.
 - Nội dung Buổi 32 bám YCCD KHTN 8–9: khái niệm/cấu tạo khái quát, trạng thái tự nhiên, tính chất vật lí, phản ứng xà phòng hóa, vai trò và sử dụng phù hợp. Chỉ số acid/ester hóa được đánh dấu là mở rộng.
-- Các bài mục tiêu đang có trong \`baitap_chuyende8.tex\`: Thái Nguyên 2026 Câu 1; Cần Thơ 2026 Câu 6; Phú Thọ 2026 Câu 5.2; Lâm Đồng 2026 Câu 16; Ninh Bình 2026 Câu 5.2. Cần phân lại vị trí cho phù hợp Buổi 32–37; các mapping mới của Cần Thơ 4.2c/d và Lâm Đồng 5.1a/b cần được bổ sung/đối chiếu trong WU tiếp theo.
+- Các bài mục tiêu đang có trong \`baitap_chuyende8.tex\`: Thái Nguyên 2026 Câu 1; Cần Thơ 2026 Câu 6 và Câu 4.2c; Phú Thọ 2026 Câu 5.2; Lâm Đồng 2026 Câu 16 và bài toán gương phỏng theo Câu 5.1b; Ninh Bình 2026 Câu 5.2. Cần phân lại vị trí theo Buổi 32–37; Cần Thơ 4.2d chuyển sang Buổi 34.
 - Protein tiếp tục dùng câu tự biên soạn nếu không có câu tuyển sinh trực tiếp phù hợp; không gắn nguồn đề khi chưa có chứng cứ.
 - \`main.tex\` hiện input \`cd08_01\`–\`cd08_05\`. Chưa có nội dung riêng cho Buổi 35 và Buổi 37; sẽ bổ sung input sau khi biên soạn hai buổi này.
-- Toggle \`\\ChiChuyenDe{8}\` đã có trong preamble/main.tex. WU8.1 đã cập nhật trên nhánh \`main\`; chưa chạy compile LuaLaTeX trong phiên hiện tại.
+- Toggle \`\\ChiChuyenDe{8}\` đã có trong preamble/main.tex. WU8.1 và WU8.2 đã cập nhật trên nhánh \`main\`; chưa chạy compile LuaLaTeX toàn chuyên đề.
 
-- WU8.2 đã tăng cường Buổi 33 và bổ sung hai mục tiêu: Cần Thơ 4.2c (nguyên văn, có ảnh scan) và Lâm Đồng 5.1b (phỏng theo do chưa đối chiếu scan gốc). Bài toán gương có đáp số tối đa 1593 chiếc; xem lời giải trong \`baitap_chuyende8.tex\`.
+- WU8.2 đã hoàn thiện Buổi 33: glucose/saccharose, phản ứng Tollens, lên men, thủy phân, phân biệt hai chất. Bài mục tiêu Cần Thơ 4.2c được chép từ ảnh scan trang 3; Cần Thơ 4.2d (iodine/chuối xanh) dành cho Buổi 34. Bài toán gương Lâm Đồng 5.1b được ghi “phỏng theo” do chưa so trực tiếp scan gốc; kết quả tối đa 1593 gương.
