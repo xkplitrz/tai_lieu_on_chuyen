@@ -174,5 +174,5 @@
 - Bổ sung bài toán tráng $x$ gương từ 650 g glucose, diện tích 0,35 m²/gương, độ dày bạc 0,1 µm, hiệu suất 75%, khối lượng riêng Ag 10,49 g/cm³. Bản chữ trích từ tài liệu tập hợp đề; chưa đối chiếu trực tiếp scan gốc trong repo nên giữ nhãn “Phỏng theo Câu 5.1b, Lâm Đồng 2026–2027”. Đáp số độc lập: 585 g Ag tạo thành; 0,36715 g Ag/gương; tối đa 1593 gương.
 - Giới hạn kiến thức theo YCCD KHTN 8–9: thành phần/công thức chung ở mức khái quát; công thức phân tử, trạng thái tự nhiên, tính chất vật lí; glucose tráng bạc và lên men; saccharose thủy phân trong acid/enzyme; vai trò và ứng dụng. Không mở rộng sâu sang cấu trúc dạng vòng hoặc cơ chế hữu cơ.
 - Đã cập nhật \`data/cd08_03.tex\` và \`data/baitap_chuyende8.tex\`; chưa thêm/bớt input trong \`main.tex\`.
-- Chưa chạy LuaLaTeX trong phiên này; cần compile Chuyên đề 8 sau khi hoàn tất các buổi còn lại và kiểm tra hồi quy.
+- Chưa compile toàn bộ Chuyên đề 8 trong phiên này. Đã chạy một kiểm tra LuaLaTeX tối giản cho các đơn vị SI và cú pháp phương trình mhchem đang dùng; kiểm tra này thành công. Cần compile cả chuyên đề sau khi hoàn tất các buổi còn lại.
 - Commit WU8.2: \`cf91aad\` (lý thuyết Buổi 33), \`176c647\` (bài tập mục tiêu), \`dad7831\` (sửa ký hiệu công thức thể tích lớp bạc), \`667e420\` (nhật kí), \`d0559d4\` (bàn giao).
