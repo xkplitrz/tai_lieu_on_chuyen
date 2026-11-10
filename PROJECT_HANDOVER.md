@@ -110,4 +110,4 @@
 
 - WU8.2 đã hoàn thiện Buổi 33: glucose/saccharose, phản ứng Tollens, lên men, thủy phân, phân biệt hai chất. Bài mục tiêu Cần Thơ 4.2c được chép từ ảnh scan trang 3; bài toán gương Lâm Đồng 5.1b được ghi “phỏng theo” do chưa so trực tiếp scan gốc; kết quả tối đa 1593 gương.
 - WU8.3 đã hoàn thiện Buổi 34: tinh bột/cellulose, nhận biết bằng iodine, thủy phân, ứng dụng. Cần Thơ 4.2d được chép nguyên văn từ ảnh scan trang 3; thêm hai bài tự biên soạn. Lâm Đồng 5.1a chưa xác minh được scan nên chưa đưa vào tài liệu.
-- WU8.3 đã cập nhật \`cd08_04.tex\` và thêm Cần Thơ 4.2d cùng hai bài tự biên soạn trong \`baitap_chuyende8.tex\`. Lâm Đồng 5.1a còn mở do chưa xem được ảnh scan; không ghi nguồn khi chưa xác minh.
+- WU8.3 đã cập nhật \`cd08_04.tex\` và thêm Cần Thơ 4.2d cùng hai bài tự biên soạn trong \`baitap_chuyende8.tex\`. Lâm Đồng 5.1a còn mở do chưa xem được ảnh scan; không ghi nguồn khi chưa xác minh. LuaLaTeX tối giản cho phần lý thuyết và bài tập mới đã thành công; chưa compile toàn bộ chuyên đề.
