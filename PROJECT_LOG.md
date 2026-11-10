@@ -187,3 +187,4 @@
 - Lưu ý phạm vi: không suy ra tinh bột và cellulose có cấu trúc/tính chất giống nhau chỉ vì cùng công thức dạng \`(C6H10O5)n\`; không dạy chi tiết cơ chế phản ứng màu iodine vượt yêu cầu.
 - Đã cập nhật \`data/cd08_04.tex\`, \`data/baitap_chuyende8.tex\`, nhật kí và handover; chưa đổi \`main.tex\` vì file này đã input \`cd08_04\`.
 - Chưa compile toàn bộ Chuyên đề 8 trong phiên này; sau khi hoàn tất Buổi 35–37 cần compile riêng Chuyên đề 8 và kiểm tra hồi quy Chuyên đề 7.
+- Kiểm tra LuaLaTeX tối giản cho phần lý thuyết Buổi 34 (bảng \`tabularx\`, \`booktabs\`, công thức \`mhchem\`) và ba bài tập mới đều thành công. Đây không phải compile toàn bộ Chuyên đề 8; cần compile hồi quy sau khi đủ sáu buổi.
