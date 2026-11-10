@@ -198,4 +198,5 @@
 - Rà soát phép tính: 1,8 t gạo × 75% tinh bột → 1.350 kg tinh bột; thủy phân lí thuyết 1.500 kg glucose; thực tế 1.200 kg; mỗi chai 500 mL chứa 25 g; tổng 48.000 chai. Bài toán ngược 46 kg ethanol cho ra 120 kg glucose, 135 kg tinh bột và 187,5 kg sắn.
 - Sửa lỗi cấu trúc phát hiện từ WU8.2 trong \`baitap_chuyende8.tex\`: bài tráng gương thiếu phần source/answer/solution trước; câu Cần Thơ 4.2d bị lồng trong environment bài tráng gương. Hai bài đã được tách thành các \`tuluyen\` riêng; bài tráng gương được khôi phục trọn vẹn.
 - Giữ nguồn Lâm Đồng 5.1a ở nhãn “Phỏng theo” theo cách ghi trong tài liệu bài tập cũ; chưa đổi sang nguyên văn.
-- Đã cập nhật \`main.tex\`, \`data/baitap_chuyende8.tex\`, thêm \`data/cd08_baitoan.tex\`; cần rà biên dịch toàn bộ sau khi hoàn thành Buổi 36–37.
+- Đã cập nhật \`main.tex\`, \`data/baitap_chuyende8.tex\`, thêm \`data/cd08_baitoan.tex\`. Bài G-5 trùng trong \`data/baitap_chuyende.tex\` của Chuyên đề 1 đã được gỡ khỏi vị trí cũ để chỉ còn một bản ở Buổi 35.
+- Đã audit thứ tự mở/đóng tất cả environment trong \`cd08_baitoan.tex\` và \`baitap_chuyende8.tex\`: cân bằng. LuaLaTeX tối giản cho mhchem, đơn vị SI (gồm \`\ton\`, \`\hou\`), số mũ khoa học và tabularx/booktabs thành công. Đây không phải compile toàn bộ Chuyên đề 8; chưa compile hồi quy Chuyên đề 7.
