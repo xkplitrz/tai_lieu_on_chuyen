@@ -188,3 +188,14 @@
 - Đã cập nhật \`data/cd08_04.tex\`, \`data/baitap_chuyende8.tex\`, nhật kí và handover; chưa đổi \`main.tex\` vì file này đã input \`cd08_04\`.
 - Chưa compile toàn bộ Chuyên đề 8 trong phiên này; sau khi hoàn tất Buổi 35–37 cần compile riêng Chuyên đề 8 và kiểm tra hồi quy Chuyên đề 7.
 - Kiểm tra LuaLaTeX tối giản cho phần lý thuyết Buổi 34 (bảng \`tabularx\`, \`booktabs\`, công thức \`mhchem\`) và ba bài tập mới đều thành công. Đây không phải compile toàn bộ Chuyên đề 8; cần compile hồi quy sau khi đủ sáu buổi.
+
+## 19. WU8.4 — Buổi 35: Bài toán carbohydrate và ứng dụng — 10/11/2026
+
+- Thêm file \`data/cd08_baitoan.tex\` cho Buổi 35, đặt sau \`cd08_04\` và trước \`cd08_05\` (Protein) trong \`main.tex\`.
+- Nội dung phương pháp: sơ đồ nhiều công đoạn; xử lí hàm lượng/purity; tỉ lệ khối lượng 162 g mắt xích tinh bột → 180 g glucose; 180 g glucose → 92 g ethanol; 180 g glucose → 216 g Ag; nhân hiệu suất khi đi xuôi, chia ngược hiệu suất khi tìm nguyên liệu; hiệu suất chung là tích các hiệu suất nối tiếp.
+- Có ví dụ đầy đủ gạo → glucose → G-5 và bài tính ngược sắn → tinh bột → glucose → ethanol.
+- Bổ sung trong \`baitap_chuyende8.tex\`: Lâm Đồng 5.1a (phỏng theo, G-5; 48.000 chai); hai bài tự biên soạn nhiều công đoạn/giải ngược; lời giải Câu 5.2 Ninh Bình (đọc đồ thị lên men, khoảng nhanh nhất 36–48 h; tốc độ trung bình khoảng 0,67 g/(L.h); hiệu suất khoảng 87,07%).
+- Rà soát phép tính: 1,8 t gạo × 75% tinh bột → 1.350 kg tinh bột; thủy phân lí thuyết 1.500 kg glucose; thực tế 1.200 kg; mỗi chai 500 mL chứa 25 g; tổng 48.000 chai. Bài toán ngược 46 kg ethanol cho ra 120 kg glucose, 135 kg tinh bột và 187,5 kg sắn.
+- Sửa lỗi cấu trúc phát hiện từ WU8.2 trong \`baitap_chuyende8.tex\`: bài tráng gương thiếu phần source/answer/solution trước; câu Cần Thơ 4.2d bị lồng trong environment bài tráng gương. Hai bài đã được tách thành các \`tuluyen\` riêng; bài tráng gương được khôi phục trọn vẹn.
+- Giữ nguồn Lâm Đồng 5.1a ở nhãn “Phỏng theo” theo cách ghi trong tài liệu bài tập cũ; chưa đổi sang nguyên văn.
+- Đã cập nhật \`main.tex\`, \`data/baitap_chuyende8.tex\`, thêm \`data/cd08_baitoan.tex\`; cần rà biên dịch toàn bộ sau khi hoàn thành Buổi 36–37.
