@@ -176,3 +176,14 @@
 - Đã cập nhật \`data/cd08_03.tex\` và \`data/baitap_chuyende8.tex\`; chưa thêm/bớt input trong \`main.tex\`.
 - Chưa compile toàn bộ Chuyên đề 8 trong phiên này. Đã chạy một kiểm tra LuaLaTeX tối giản cho các đơn vị SI và cú pháp phương trình mhchem đang dùng; kiểm tra này thành công. Cần compile cả chuyên đề sau khi hoàn tất các buổi còn lại.
 - Commit WU8.2: \`cf91aad\` (lý thuyết Buổi 33), \`176c647\` (bài tập mục tiêu), \`dad7831\` (sửa ký hiệu công thức thể tích lớp bạc), \`667e420\` (nhật kí), \`d0559d4\` (bàn giao).
+
+## 18. WU8.3 — Buổi 34: Tinh bột và cellulose — 10/11/2026
+
+- Hoàn thiện \`data/cd08_04.tex\`: nguồn gốc và trạng thái tự nhiên; tính chất vật lí; so sánh tinh bột/cellulose; phản ứng iodine của hồ tinh bột; thủy phân tinh bột và cellulose; sự tạo thành, vai trò trong cây xanh và ứng dụng.
+- Đã đối chiếu YCCD KHTN 8–9 ở phần carbohydrate: trạng thái tự nhiên/tính chất vật lí; thủy phân; phản ứng màu của hồ tinh bột với iodine; quan sát thí nghiệm; vai trò/ứng dụng và sự tạo thành trong cây xanh.
+- Đã đối chiếu ảnh scan trang 3 Cần Thơ 2026–2027: Câu 4.2d mô tả nhỏ dung dịch cồn iodine lên lát cắt chuối xanh, bề mặt chuyển xanh tím. Bổ sung câu này vào bài tập mục tiêu, nhãn “Trích nguyên văn”.
+- Thêm hai bài tự biên soạn: vận dụng phép thử iodine trên mẫu thực phẩm; viết phương trình thủy phân hoàn toàn tinh bột/cellulose và so sánh mức độ dễ thủy phân.
+- Lâm Đồng 5.1a: chưa đối chiếu được ảnh scan gốc trong phiên này; các trang scan nằm trong repo GitHub ở dạng JPEG mà công cụ đọc file hiện tại không giải mã được. Không tự dựng lại nội dung câu và không gắn nhãn trích nguyên văn. Giữ mapping này trong danh sách cần xác minh trước phát hành.
+- Lưu ý phạm vi: không suy ra tinh bột và cellulose có cấu trúc/tính chất giống nhau chỉ vì cùng công thức dạng \`(C6H10O5)n\`; không dạy chi tiết cơ chế phản ứng màu iodine vượt yêu cầu.
+- Đã cập nhật \`data/cd08_04.tex\`, \`data/baitap_chuyende8.tex\`, nhật kí và handover; chưa đổi \`main.tex\` vì file này đã input \`cd08_04\`.
+- Chưa compile toàn bộ Chuyên đề 8 trong phiên này; sau khi hoàn tất Buổi 35–37 cần compile riêng Chuyên đề 8 và kiểm tra hồi quy Chuyên đề 7.
