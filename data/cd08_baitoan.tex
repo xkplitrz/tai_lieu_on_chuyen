@@ -1,0 +1,181 @@
+\section{Bài toán carbohydrate và ứng dụng}
+
+\subsection{Sơ đồ chung khi giải bài toán nhiều công đoạn}
+
+Các bài toán sản xuất từ carbohydrate thường gồm một hoặc nhiều công đoạn: nguyên liệu thực vật chứa tinh bột được thủy phân tạo glucose; glucose tiếp tục lên men tạo ethanol hoặc tham gia phản ứng tráng bạc.
+
+Khi giải, nên lập sơ đồ theo đúng thứ tự chuyển hóa:
+\[
+\text{Nguyên liệu}
+\longrightarrow \text{Tinh bột}
+\longrightarrow \text{Glucose}
+\longrightarrow \text{Sản phẩm}.
+\]
+
+Ở mỗi công đoạn, cần xác định:
+\begin{enumerate}
+\item Lượng chất thực sự tham gia phản ứng (đã tính độ tinh khiết hoặc hàm lượng trong nguyên liệu).
+\item Tỉ lệ mol, tỉ lệ khối lượng theo phương trình hóa học.
+\item Hiệu suất của riêng công đoạn đó.
+\item Lượng sản phẩm thực tế được chuyển sang công đoạn tiếp theo.
+\end{enumerate}
+
+\begin{ghinho}{Nguyên tắc quan trọng}
+Hiệu suất của các công đoạn nối tiếp không cộng với nhau. Nếu các công đoạn có hiệu suất lần lượt là $H_1$, $H_2$, \ldots (viết dưới dạng số thập phân), thì hiệu suất chung là:
+\[
+H_{\text{chung}}=H_1H_2\cdots.
+\]
+Chỉ nhân các hiệu suất của những công đoạn thực sự nối tiếp và cùng tính trên lượng chất chuyển hóa qua quy trình.
+\end{ghinho}
+
+\subsection{Các tỉ lệ khối lượng cần sử dụng}
+
+\textbf{Thủy phân tinh bột tạo glucose}
+
+Phương trình biểu diễn quá trình thủy phân hoàn toàn:
+\[
+\ce{(C6H10O5)_n + nH2O ->[H^+,\ t^\circ] nC6H12O6}.
+\]
+Một mắt xích tinh bột có khối lượng mol \SI{162}{\gram\per\mole} tạo một mol glucose có khối lượng \SI{180}{\gram\per\mole}. Vì vậy:
+\[
+162\ \text{g tinh bột}\longrightarrow180\ \text{g glucose}.
+\]
+Nếu hiệu suất thủy phân là $H_1$:
+\[
+m_{\text{glucose thực tế}}
+=m_{\text{tinh bột}}\cdot\frac{180}{162}\cdot H_1.
+\]
+
+\textbf{Lên men glucose tạo ethanol}
+
+\[
+\ce{C6H12O6 ->[enzyme] 2C2H5OH + 2CO2}.
+\]
+Theo phương trình:
+\[
+180\ \text{g glucose}\longrightarrow92\ \text{g ethanol}.
+\]
+Nếu hiệu suất lên men là $H_2$:
+\[
+m_{\text{ethanol thực tế}}
+=m_{\text{glucose}}\cdot\frac{92}{180}\cdot H_2.
+\]
+
+\textbf{Phản ứng tráng bạc của glucose}
+
+Có thể biểu diễn phản ứng theo phương trình giản lược:
+\[
+\ce{C6H12O6 + Ag2O ->[NH3,\ t^\circ] C6H12O7 + 2Ag}.
+\]
+Theo phương trình:
+\[
+180\ \text{g glucose}\longrightarrow216\ \text{g Ag}.
+\]
+Nếu hiệu suất tráng bạc là $H_3$:
+\[
+m_{\ce{Ag}\text{ thực tế}}
+=m_{\text{glucose}}\cdot\frac{216}{180}\cdot H_3.
+\]
+
+\subsection{Tính lượng sản phẩm khi biết nguyên liệu}
+
+Khi nguyên liệu là gạo, ngô, sắn hoặc phụ phẩm nông nghiệp, đề có thể cho phần trăm tinh bột. Khi đó, phải tính khối lượng tinh bột trước:
+\[
+m_{\text{tinh bột}}=m_{\text{nguyên liệu}}\cdot
+\frac{\%\text{ tinh bột}}{100}.
+\]
+Sau đó mới tính lượng glucose hoặc sản phẩm tiếp theo theo phương trình và hiệu suất từng công đoạn.
+
+\begin{vidu}
+Một cơ sở dùng \SI{1800}{\kilo\gram} gạo chứa $75\%$ tinh bột để sản xuất glucose. Hiệu suất thủy phân đạt $80\%$. Toàn bộ glucose thu được dùng để pha dung dịch G-5, có nồng độ khối lượng \SI{5}{\gram} glucose trong \SI{100}{\milli\liter} dung dịch. Mỗi chai chứa \SI{500}{\milli\liter}. Tính số chai G-5 có thể pha được.
+\end{vidu}
+\begin{loigiai}
+Khối lượng tinh bột có trong gạo:
+\[
+m_{\text{tinh bột}}=1800\times0.75
+=\SI{1350}{\kilo\gram}.
+\]
+
+Theo tỉ lệ khối lượng $162$ g tinh bột tạo $180$ g glucose, khối lượng glucose theo lí thuyết:
+\[
+m_{\text{glucose, lt}}=1350\times\frac{180}{162}
+=\SI{1500}{\kilo\gram}.
+\]
+
+Tính đến hiệu suất thủy phân $80\%$:
+\[
+m_{\text{glucose}}=1500\times0.80
+=\SI{1200}{\kilo\gram}.
+\]
+
+Khối lượng glucose cần cho một chai \SI{500}{\milli\liter}:
+\[
+m_{\text{glucose, 1 chai}}=5\times\frac{500}{100}
+=\SI{25}{\gram}.
+\]
+
+Số chai pha được:
+\[
+N=\frac{1200\times10^3}{25}=48000.
+\]
+
+\textbf{Vậy,} có thể pha được \textbf{48000 chai} dung dịch G-5.
+\end{loigiai}
+
+\subsection{Tính ngược lượng nguyên liệu cần dùng}
+
+Một số bài toán cho trước lượng sản phẩm cần thu và yêu cầu xác định lượng nguyên liệu ban đầu. Khi đó, cần đi ngược từ sản phẩm cuối cùng:
+\[
+\text{Sản phẩm thực tế}
+\longrightarrow\text{Sản phẩm lí thuyết}
+\longrightarrow\text{Chất trung gian}
+\longrightarrow\text{Nguyên liệu}.
+\]
+
+Ở mỗi công đoạn, phải chia cho hiệu suất tương ứng để tìm lượng chất cần có trước công đoạn đó. Không lấy lượng sản phẩm thực tế nhân thêm hiệu suất.
+
+\begin{vidu}
+Một cơ sở cần sản xuất \SI{46}{\kilo\gram} ethanol từ sắn chứa $72\%$ tinh bột. Hiệu suất thủy phân tinh bột là $80\%$, hiệu suất lên men glucose là $75\%$. Tính khối lượng sắn tối thiểu cần dùng. Giả sử chỉ có tinh bột trong sắn tham gia quy trình.
+\end{vidu}
+\begin{loigiai}
+Khối lượng glucose thực tế cần có trước khi lên men:
+\[
+m_{\text{glucose}}
+=\frac{46}{(92/180)\times0.75}
+=\SI{120}{\kilo\gram}.
+\]
+
+Khối lượng tinh bột cần dùng trước công đoạn thủy phân:
+\[
+m_{\text{tinh bột}}
+=\frac{120}{(180/162)\times0.80}
+=\SI{135}{\kilo\gram}.
+\]
+
+Do sắn chứa $72\%$ tinh bột, khối lượng sắn tối thiểu:
+\[
+m_{\text{sắn}}=\frac{135}{0.72}
+=\SI{187.5}{\kilo\gram}.
+\]
+
+\textbf{Vậy,} cần tối thiểu \SI{187.5}{\kilo\gram} sắn.
+\end{loigiai}
+
+\subsection{Khai thác dữ liệu đồ thị trong bài toán lên men}
+
+Khi đồ thị biểu diễn nồng độ glucose và ethanol theo thời gian:
+\begin{itemize}
+\item Tốc độ chuyển hóa trung bình của glucose trong khoảng $t_1$ đến $t_2$ được xác định từ độ giảm nồng độ glucose:
+\[
+v_{\text{tb}}=\frac{C_{\text{glucose},t_1}-C_{\text{glucose},t_2}}{t_2-t_1}.
+\]
+\item Khoảng có tốc độ chuyển hóa lớn nhất là khoảng mà đường biểu diễn nồng độ glucose giảm nhanh nhất.
+\item Hiệu suất lên men được tính bằng cách so sánh lượng ethanol thực tế với lượng ethanol lí thuyết tạo ra từ lượng glucose đã chuyển hóa:
+\[
+H=\frac{m_{\text{ethanol thực tế}}}
+{m_{\text{glucose đã chuyển hóa}}\cdot(92/180)}
+\times100\%.
+\]
+\end{itemize}
+
+Cần đọc đúng đơn vị trên hai trục. Nếu nồng độ biểu diễn theo \si{\gram\per\liter}, thời gian theo giờ thì tốc độ trung bình có đơn vị \si{\gram\per\liter\per\hour}.
