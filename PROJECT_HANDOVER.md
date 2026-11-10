@@ -87,7 +87,7 @@
 ## 10. Ưu tiên tiếp theo
 - Chuyên đề 8: tiếp tục biên soạn theo dàn ý sáu buổi 32–37 đã được người dùng duyệt; không thay đổi thời lượng.
 - Mapping mới đã xử lý: Cần Thơ 4.2c (nguyên văn, đã đối chiếu ảnh scan) và Lâm Đồng 5.1b (phỏng theo, bản chữ từ tài liệu tập hợp; chưa đối chiếu trực tiếp scan gốc). Cần Thơ 4.2d là phép thử iodine/tinh bột, dành cho Buổi 34.
-- Hoàn thành Buổi 34–37; phân bổ lại các bài mục tiêu còn có (đặc biệt Cần Thơ 4.2d sang Buổi 34) và bổ sung bài toán carbohydrate cùng buổi tích hợp. Chỉ cập nhật thứ tự input trong main.tex sau khi file tương ứng tồn tại.
+- Hoàn thành Buổi 35–37; phân bổ lại các bài mục tiêu còn có, đặc biệt các câu tính toán carbohydrate và bài tích hợp. Lâm Đồng 5.1a vẫn cần xác minh scan gốc. Chỉ cập nhật thứ tự input trong main.tex sau khi file tương ứng tồn tại.
 - Compile Chuyên đề 8 và kiểm tra hồi quy Chuyên đề 7 sau khi hoàn thành các file, kiểm tra nguồn/đáp số trước phát hành.
 - Quay lại audit Chuyên đề 1–6 để bổ sung bài mục tiêu từ đề thật; rà soát các câu “Trích nguyên văn” trong Chuyên đề 7 bằng ảnh gốc; chốt tiêu đề bìa trước khi phát hành bản tổng.
 
@@ -108,4 +108,6 @@
 - \`main.tex\` hiện input \`cd08_01\`–\`cd08_05\`. Chưa có nội dung riêng cho Buổi 35 và Buổi 37; sẽ bổ sung input sau khi biên soạn hai buổi này.
 - Toggle \`\\ChiChuyenDe{8}\` đã có trong preamble/main.tex. WU8.1 và WU8.2 đã cập nhật trên nhánh \`main\`; chưa chạy compile LuaLaTeX toàn chuyên đề.
 
-- WU8.2 đã hoàn thiện Buổi 33: glucose/saccharose, phản ứng Tollens, lên men, thủy phân, phân biệt hai chất. Bài mục tiêu Cần Thơ 4.2c được chép từ ảnh scan trang 3; Cần Thơ 4.2d (iodine/chuối xanh) dành cho Buổi 34. Bài toán gương Lâm Đồng 5.1b được ghi “phỏng theo” do chưa so trực tiếp scan gốc; kết quả tối đa 1593 gương.
+- WU8.2 đã hoàn thiện Buổi 33: glucose/saccharose, phản ứng Tollens, lên men, thủy phân, phân biệt hai chất. Bài mục tiêu Cần Thơ 4.2c được chép từ ảnh scan trang 3; bài toán gương Lâm Đồng 5.1b được ghi “phỏng theo” do chưa so trực tiếp scan gốc; kết quả tối đa 1593 gương.
+- WU8.3 đã hoàn thiện Buổi 34: tinh bột/cellulose, nhận biết bằng iodine, thủy phân, ứng dụng. Cần Thơ 4.2d được chép nguyên văn từ ảnh scan trang 3; thêm hai bài tự biên soạn. Lâm Đồng 5.1a chưa xác minh được scan nên chưa đưa vào tài liệu.
+- WU8.3 đã cập nhật \`cd08_04.tex\` và thêm Cần Thơ 4.2d cùng hai bài tự biên soạn trong \`baitap_chuyende8.tex\`. Lâm Đồng 5.1a còn mở do chưa xem được ảnh scan; không ghi nguồn khi chưa xác minh.
