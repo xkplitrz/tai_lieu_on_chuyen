@@ -210,3 +210,12 @@
 - Không có câu mục tiêu protein tuyển sinh trực tiếp đã xác minh trong bộ đề rà soát; tất cả câu protein mới đều ghi rõ \`Bài tập tự biên soạn\`, không gán nguồn đề.
 - Ưu tiên quan sát video hoặc giáo viên làm minh họa phép thử đốt sợi; không yêu cầu học sinh tự đốt hoặc hít khói.
 - \`main.tex\` đã input \`data/cd08_05\`; không cần đổi thứ tự input. Chưa biên dịch toàn bộ Chuyên đề 8; cần rà hồi quy sau khi hoàn thành Buổi 37.
+
+## 21. WU8.6 — Buổi 37: Tổng hợp lipid – carbohydrate – protein — 10/11/2026
+
+- Tạo \`data/cd08_tonghop.tex\` cho Buổi 37; tích hợp bảng so sánh ba nhóm chất, đặc điểm cấu tạo/tính chất, phản ứng nhận biết và ứng dụng.
+- Xây dựng trình tự nhận biết cho bộ mẫu xác định: dầu ăn, hồ tinh bột, glucose, saccharose, lòng trắng trứng. Nhấn mạnh dùng các phần mẫu riêng; iodine nhận biết tinh bột; Tollens nhận biết chất khử (chỉ kết luận glucose khi phạm vi mẫu đã biết); nhiệt/acid dùng nhận biết protein trong mẫu phù hợp; nước và xà phòng hóa hỗ trợ nhận biết triglyceride.
+- Nêu rõ giới hạn của phép thử: phản ứng âm tính không chứng minh tuyệt đối không có chất; đông tụ protein không phải phép thử đặc hiệu trong mọi hỗn hợp; cần tách/làm sạch mẫu thực tế và phối hợp bằng chứng.
+- Thêm 3 bài tập tổng hợp tự biên soạn vào \`baitap_chuyende8.tex\`: (1) thiết kế trình tự nhận biết 5 mẫu thực phẩm; (2) rơm rạ/cellulose → glucose → ethanol với hiệu suất 70% và 80%, kết quả khoảng 63,6 kg ethanol từ 500 kg rơm rạ chứa 40% cellulose; (3) giải thích hiện tượng của bột gạo, lòng trắng trứng và dầu thực vật trong chế biến/sản xuất.
+- Cập nhật \`main.tex\` để input \`cd08_tonghop\` sau \`cd08_05\` và trước bài tập chuyên đề. Không có câu mục tiêu tuyển sinh mới được gắn nguồn; các bài mới đều là tự biên soạn.
+- Đây là WU hoàn thành nội dung sáu buổi. Công việc tiếp theo là WU8.7 audit toàn chuyên đề: kiểm tra phân bổ/không trùng câu mục tiêu, lỗi hóa học và số học, thứ tự section/input, biên dịch LuaLaTeX bản Chuyên đề 8 riêng và kiểm tra hồi quy Chuyên đề 7.
