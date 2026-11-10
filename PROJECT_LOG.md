@@ -175,3 +175,4 @@
 - Giới hạn kiến thức theo YCCD KHTN 8–9: thành phần/công thức chung ở mức khái quát; công thức phân tử, trạng thái tự nhiên, tính chất vật lí; glucose tráng bạc và lên men; saccharose thủy phân trong acid/enzyme; vai trò và ứng dụng. Không mở rộng sâu sang cấu trúc dạng vòng hoặc cơ chế hữu cơ.
 - Đã cập nhật \`data/cd08_03.tex\` và \`data/baitap_chuyende8.tex\`; chưa thêm/bớt input trong \`main.tex\`.
 - Chưa chạy LuaLaTeX trong phiên này; cần compile Chuyên đề 8 sau khi hoàn tất các buổi còn lại và kiểm tra hồi quy.
+- Commit WU8.2: \`cf91aad\` (lý thuyết Buổi 33), \`176c647\` (bài tập mục tiêu), \`dad7831\` (sửa ký hiệu công thức thể tích lớp bạc), \`667e420\` (nhật kí), \`d0559d4\` (bàn giao).
