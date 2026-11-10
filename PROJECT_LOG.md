@@ -200,3 +200,13 @@
 - Giữ nguồn Lâm Đồng 5.1a ở nhãn “Phỏng theo” theo cách ghi trong tài liệu bài tập cũ; chưa đổi sang nguyên văn.
 - Đã cập nhật \`main.tex\`, \`data/baitap_chuyende8.tex\`, thêm \`data/cd08_baitoan.tex\`. Bài G-5 trùng trong \`data/baitap_chuyende.tex\` của Chuyên đề 1 đã được gỡ khỏi vị trí cũ để chỉ còn một bản ở Buổi 35.
 - Đã audit thứ tự mở/đóng tất cả environment trong \`cd08_baitoan.tex\` và \`baitap_chuyende8.tex\`: cân bằng. LuaLaTeX tối giản cho mhchem, đơn vị SI (gồm \`\ton\`, \`\hou\`), số mũ khoa học và tabularx/booktabs thành công. Đây không phải compile toàn bộ Chuyên đề 8; chưa compile hồi quy Chuyên đề 7.
+
+## 20. WU8.5 — Buổi 36: Protein — 10/11/2026
+
+- Hoàn thiện \`data/cd08_05.tex\`: thành phần nguyên tố chủ yếu; protein được tạo từ nhiều amino acid nối bằng liên kết peptide; vai trò đối với cơ thể; thủy phân; biến tính/đông tụ do nhiệt độ hoặc acid/base; phân hủy khi đun nóng mạnh; phân biệt len/tơ tằm với nylon.
+- Làm rõ ba quá trình không được nhầm: thủy phân cắt liên kết peptide và tạo amino acid; biến tính/đông tụ làm thay đổi cấu trúc/trạng thái protein; đun nóng mạnh có thể phân hủy protein và tạo sản phẩm có mùi đặc trưng.
+- Giữ phạm vi ở mức YCCD KHTN 8–9, không đưa phản ứng màu biuret, cấu trúc không gian bậc 2–4, phân loại amino acid hoặc công thức cấu trúc protein vào buổi này.
+- Thay câu hỏi protein cũ chưa có đáp án trong \`baitap_chuyende8.tex\` bằng tình huống có đáp án/lời giải; thêm bốn câu tự biên soạn về đông tụ do nhiệt/acid, phân biệt đông tụ với thủy phân, nhận biết len–nylon qua video và vai trò/dinh dưỡng.
+- Không có câu mục tiêu protein tuyển sinh trực tiếp đã xác minh trong bộ đề rà soát; tất cả câu protein mới đều ghi rõ \`Bài tập tự biên soạn\`, không gán nguồn đề.
+- Ưu tiên quan sát video hoặc giáo viên làm minh họa phép thử đốt sợi; không yêu cầu học sinh tự đốt hoặc hít khói.
+- \`main.tex\` đã input \`data/cd08_05\`; không cần đổi thứ tự input. Chưa biên dịch toàn bộ Chuyên đề 8; cần rà hồi quy sau khi hoàn thành Buổi 37.
