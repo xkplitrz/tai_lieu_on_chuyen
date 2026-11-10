@@ -87,7 +87,7 @@
 ## 10. Ưu tiên tiếp theo
 - Chuyên đề 8: tiếp tục biên soạn theo dàn ý sáu buổi 32–37 đã được người dùng duyệt; không thay đổi thời lượng.
 - Mapping mới đã xử lý: Cần Thơ 4.2c (nguyên văn, đã đối chiếu ảnh scan) và Lâm Đồng 5.1b (phỏng theo, bản chữ từ tài liệu tập hợp; chưa đối chiếu trực tiếp scan gốc). Cần Thơ 4.2d là phép thử iodine/tinh bột, dành cho Buổi 34.
-- Hoàn thành Buổi 37; phân bổ lại các bài mục tiêu còn lại và làm buổi tích hợp. Lâm Đồng 3.1/3.2 vẫn cần xác minh scan gốc. Lâm Đồng 5.1a đã được đưa vào dưới dạng phỏng theo.
+- WU8.6 đã hoàn thành Buổi 37; tiếp theo là WU8.7 audit toàn chuyên đề, phân bổ lại bài mục tiêu, rà lỗi và compile. Lâm Đồng 3.1/3.2 vẫn cần xác minh scan gốc. Lâm Đồng 5.1a đã được đưa vào dạng phỏng theo.
 - Compile Chuyên đề 8 và kiểm tra hồi quy Chuyên đề 7 sau khi hoàn thành các file, kiểm tra nguồn/đáp số trước phát hành.
 - Quay lại audit Chuyên đề 1–6 để bổ sung bài mục tiêu từ đề thật; rà soát các câu “Trích nguyên văn” trong Chuyên đề 7 bằng ảnh gốc; chốt tiêu đề bìa trước khi phát hành bản tổng.
 
@@ -113,3 +113,4 @@
 - WU8.3 đã cập nhật \`cd08_04.tex\` và thêm Cần Thơ 4.2d cùng hai bài tự biên soạn trong \`baitap_chuyende8.tex\`. LuaLaTeX tối giản cho phần lý thuyết và bài tập mới đã thành công; chưa compile toàn bộ chuyên đề. Vấn đề Lâm Đồng 5.1a được xử lí tiếp trong WU8.4 bằng nhãn “phỏng theo”.
 - WU8.4 đã thêm \`cd08_baitoan.tex\` cho Buổi 35, cập nhật thứ tự input trong main.tex và bổ sung bài Lâm Đồng 5.1a (phỏng theo), bài toán nhiều công đoạn, bài tính ngược và lời giải đồ thị Ninh Bình 2026–2027. Các giá trị đọc đồ thị đã được đối chiếu: glucose giảm 40 g/L trong 60 h; ethanol cực đại 17,8 g/L. Đồng thời sửa lỗi cấu trúc bài tập từ WU8.2 và gỡ bài G-5 bị trùng khỏi Chuyên đề 1; hiện chỉ còn một bản ở Buổi 35.
 - WU8.5 đã hoàn thiện \`cd08_05.tex\` và bổ sung các câu tự biên soạn về cấu tạo/vai trò, thủy phân, đông tụ/biến tính, phân hủy mạnh, phân biệt len/tơ tằm với nylon. Câu hỏi protein cũ chưa có lời giải đã được thay bằng bộ tình huống có đáp án. \`main.tex\` đã input file này; chưa cần sửa thứ tự.
+- WU8.6 đã tạo \`data/cd08_tonghop.tex\`, bổ sung ba bài tập tổng hợp tự biên soạn, cập nhật input trong \`main.tex\`. Nội dung đã đủ sáu buổi 32–37; WU tiếp theo cần audit/compile toàn chuyên đề.
