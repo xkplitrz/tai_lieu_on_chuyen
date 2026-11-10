@@ -164,3 +164,14 @@
 - \`main.tex\` hiện vẫn input \`cd08_01\`–\`cd08_05\`; chưa thêm các file cho Buổi 35 và Buổi 37 khi nội dung chưa được biên soạn. Sau khi hai buổi này có file ổn định, cập nhật thứ tự input để phản ánh đủ sáu buổi.
 - Đã cập nhật trên \`main\`: \`cd08_01\` (125c5ce), \`cd08_02\` (3e6a87f), \`baitap_chuyende8\` đáp số (f7eadab) và nhãn nguồn Cần Thơ (75a2bb7).
 - Chưa chạy biên dịch LuaLaTeX trong phiên này; cần compile Chuyên đề 8 sau khi hoàn tất các file còn thiếu và kiểm tra hồi quy.
+
+## 17. WU8.2 — Buổi 33: Glucose và saccharose — 10/11/2026
+
+- Hoàn thiện \`data/cd08_03.tex\`: thành phần/công thức khái quát của carbohydrate; nguồn gốc, tính chất vật lí và vai trò của glucose/saccharose; phản ứng tráng bạc của glucose; lên men glucose; thủy phân saccharose; cách nhận biết glucose và saccharose.
+- Nhấn mạnh tỉ lệ phản ứng tráng bạc: 1 mol glucose tạo 2 mol Ag; tỉ lệ này được dùng trong bài toán tráng gương.
+- Đã đối chiếu ảnh gốc trang 3 Cần Thơ 2026–2027: Câu 4.2c nói về nước ép nho chín tác dụng với \`AgNO3/NH3\`, đun nóng, tạo bạc bám lên thành ống nghiệm. Đã đưa vào bài tập mục tiêu với nhãn trích nguyên văn.
+- Cùng trang Cần Thơ, Câu 4.2d là phép thử iodine trên chuối xanh, thuộc tinh bột; chuyển mục tiêu này sang Buổi 34, không đưa vào Buổi 33.
+- Bổ sung bài toán tráng $x$ gương từ 650 g glucose, diện tích 0,35 m²/gương, độ dày bạc 0,1 µm, hiệu suất 75%, khối lượng riêng Ag 10,49 g/cm³. Bản chữ trích từ tài liệu tập hợp đề; chưa đối chiếu trực tiếp scan gốc trong repo nên giữ nhãn “Phỏng theo Câu 5.1b, Lâm Đồng 2026–2027”. Đáp số độc lập: 585 g Ag tạo thành; 0,36715 g Ag/gương; tối đa 1593 gương.
+- Giới hạn kiến thức theo YCCD KHTN 8–9: thành phần/công thức chung ở mức khái quát; công thức phân tử, trạng thái tự nhiên, tính chất vật lí; glucose tráng bạc và lên men; saccharose thủy phân trong acid/enzyme; vai trò và ứng dụng. Không mở rộng sâu sang cấu trúc dạng vòng hoặc cơ chế hữu cơ.
+- Đã cập nhật \`data/cd08_03.tex\` và \`data/baitap_chuyende8.tex\`; chưa thêm/bớt input trong \`main.tex\`.
+- Chưa chạy LuaLaTeX trong phiên này; cần compile Chuyên đề 8 sau khi hoàn tất các buổi còn lại và kiểm tra hồi quy.
