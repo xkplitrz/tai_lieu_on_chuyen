@@ -107,3 +107,5 @@
 - Protein tiếp tục dùng câu tự biên soạn nếu không có câu tuyển sinh trực tiếp phù hợp; không gắn nguồn đề khi chưa có chứng cứ.
 - \`main.tex\` hiện input \`cd08_01\`–\`cd08_05\`. Chưa có nội dung riêng cho Buổi 35 và Buổi 37; sẽ bổ sung input sau khi biên soạn hai buổi này.
 - Toggle \`\\ChiChuyenDe{8}\` đã có trong preamble/main.tex. WU8.1 đã cập nhật trên nhánh \`main\`; chưa chạy compile LuaLaTeX trong phiên hiện tại.
+
+- WU8.2 đã tăng cường Buổi 33 và bổ sung hai mục tiêu: Cần Thơ 4.2c (nguyên văn, có ảnh scan) và Lâm Đồng 5.1b (phỏng theo do chưa đối chiếu scan gốc). Bài toán gương có đáp số tối đa 1593 chiếc; xem lời giải trong \`baitap_chuyende8.tex\`.
